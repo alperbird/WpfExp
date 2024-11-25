@@ -22,32 +22,51 @@ namespace WpfExp
     /// </summary>
     public partial class MainWindow : Window
     {
-        string connectionString = @"Data Source=C:\\Users\\root\\source\\repos\\WpfExp\\WpfExp\\bin\\DebugTurbocut-400-500.db;Version=3;";
+        private string connectionString = @"Data Source=C:\\Users\\root\\source\\repos\\WpfExp\\WpfExp\\bin\\Debug\\Turbocut-400-500.db;Version=3;";
         private SQLiteConnection conn;
         public MainWindow() 
         {
             InitializeComponent();
+            LoadCountry();
             conn = new SQLiteConnection(connectionString);
             conn.Open();
             
         }
 
-        private void countries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LoadCountry()
+        {
+           
+        
+            List<string> countries = new List<string>();
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT name FROM COUNTRIES"; 
+                using (var command = new SQLiteCommand(query, connection))
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        countries.Add(reader["name"].ToString());
+                    }
+                }
+                ulkeler.ItemsSource = countries;
+            }
+        }
+        
+        private void cities_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             conn.Open();
-            string countriesQuery = "SELECT * FROM COUNTRIES";
+            string countriesQuery = "SELECT name FROM CITIES";
             SQLiteCommand command = new SQLiteCommand(countriesQuery, conn);
             SQLiteDataAdapter adapt = new SQLiteDataAdapter(command);
             conn.Close();
         }
 
-        private void cities_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void countries_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            conn.Open();
-            string countriesQuery = "SELECT * FROM CITIES";
-            SQLiteCommand command = new SQLiteCommand(countriesQuery, conn);
-            SQLiteDataAdapter adapt = new SQLiteDataAdapter(command);
-            conn.Close();
+            string selectedCountry = (string)ulkeler.SelectedItem;
         }
     }
 }

@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <ComboBox Name="countries" Margin="114,40,419,157" SelectionChanged="countries_SelectionChanged">
+        <ComboBox Name="ulkeler" Margin="114,40,419,157" SelectionChanged="countries_SelectionChanged">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
