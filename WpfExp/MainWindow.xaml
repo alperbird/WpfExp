@@ -22,7 +22,7 @@
         </ComboBox>
         <TextBox HorizontalAlignment="Left" Margin="53,43,0,0" TextWrapping="Wrap" Text="Ülkeler:" VerticalAlignment="Top" Width="50" Height="16"/>
         <Label Content="Şehirler:" HorizontalAlignment="Left" Margin="362,35,0,0" VerticalAlignment="Top" Width="61" Height="24"/>
-        <ComboBox Name="cities" Margin="432,40,101,157" SelectionChanged="cities_SelectionChanged">
+        <ComboBox Name="sehirler" Margin="432,40,101,157">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SQLite;
 using System.Runtime.InteropServices.ComTypes;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace WpfExp
 {
@@ -32,18 +33,18 @@ namespace WpfExp
             conn.Open();
             
         }
-
+        // Ülke seçimi
         private void LoadCountry()
         {
            
         
             List<string> countries = new List<string>();
 
-            using (var connection = new SQLiteConnection(connectionString))
+            using (var conn = new SQLiteConnection(connectionString))
             {
-                connection.Open();
+                conn.Open();
                 string query = "SELECT name FROM COUNTRIES"; 
-                using (var command = new SQLiteCommand(query, connection))
+                using (var command = new SQLiteCommand(query, conn))
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -55,18 +56,42 @@ namespace WpfExp
             }
         }
         
-        private void cities_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            conn.Open();
-            string countriesQuery = "SELECT name FROM CITIES";
-            SQLiteCommand command = new SQLiteCommand(countriesQuery, conn);
-            SQLiteDataAdapter adapt = new SQLiteDataAdapter(command);
-            conn.Close();
-        }
-
         private void countries_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string selectedCountry = (string)ulkeler.SelectedItem;
+            if(ulkeler.SelectedItem != null)
+            {
+                string selectedCountry = ulkeler.SelectedItem.ToString(); 
+                LoadCities(selectedCountry);
+            }
+        }
+        // Ülke id'sine göre şehir seçimi
+        private void LoadCities(string selectedCountry)
+        {
+            List<string> cities = new List<string>();
+
+            using (var conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                string citiesQuery = "SELECT CITIES.name FROM CITIES " +
+                                     "INNER JOIN COUNTRIES ON CITIES.CountryID = COUNTRIES.CountriesID " +
+                                     "WHERE COUNTRIES.CountriesID = @CountryID";
+
+                using (var command = new SQLiteCommand(citiesQuery, conn))
+                {
+                    
+                    
+                    command.Parameters.AddWithValue("@CountryID", selectedCountry);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                            while (reader.Read())
+                            {
+                                cities.Add(reader["name"].ToString());
+                            }
+                    }
+                }
+                sehirler.ItemsSource = cities;
+            }
         }
     }
 }
