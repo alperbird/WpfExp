@@ -23,75 +23,66 @@ namespace WpfExp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string connectionString = @"Data Source=C:\\Users\\root\\source\\repos\\WpfExp\\WpfExp\\bin\\Debug\\Turbocut-400-500.db;Version=3;";
-        private SQLiteConnection conn;
-        public MainWindow() 
+        public int selectedIndex { get; set; }
+        private Connection conn;
+
+        public MainWindow()
         {
             InitializeComponent();
+            conn = new Connection();
             LoadCountry();
-            conn = new SQLiteConnection(connectionString);
-            conn.Open();
-            
         }
-        // Ülke seçimi
+
         private void LoadCountry()
         {
-           
-        
-            List<string> countries = new List<string>();
+            List<string> countries = conn.GetCountry();
+            ulkeler.ItemsSource = countries;
 
-            using (var conn = new SQLiteConnection(connectionString))
-            {
-                conn.Open();
-                string query = "SELECT name FROM COUNTRIES"; 
-                using (var command = new SQLiteCommand(query, conn))
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        countries.Add(reader["name"].ToString());
-                    }
-                }
-                ulkeler.ItemsSource = countries;
-            }
         }
-        
+
+        private void selectCities(string selectedCountry)
+        {
+            List<string> cities = conn.GetCities(selectedCountry);
+            sehirler.ItemsSource = cities;
+
+        }
+
         private void countries_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(ulkeler.SelectedItem != null)
+
+            var cmbx = sender as ComboBox;
+            selectedIndex = cmbx.SelectedIndex;
+            if (ulkeler.SelectedItem != null)
             {
-                string selectedCountry = ulkeler.SelectedItem.ToString(); 
-                LoadCities(selectedCountry);
-            }
-        }
-        // Ülke id'sine göre şehir seçimi
-        private void LoadCities(string selectedCountry)
+                string selectedCountry = ulkeler.SelectedItem.ToString();
+                selectCities(selectedCountry);
+                
+            } }
+        
+        private void selectCustomers(string selectedCities)
         {
-            List<string> cities = new List<string>();
+            List<string> customer = conn.GetCustomers(selectedCities);
+            musteri.ItemsSource = customer;
 
-            using (var conn = new SQLiteConnection(connectionString))
-            {
-                conn.Open();
-                string citiesQuery = "SELECT CITIES.name FROM CITIES " +
-                                     "INNER JOIN COUNTRIES ON CITIES.CountryID = COUNTRIES.CountriesID " +
-                                     "WHERE COUNTRIES.CountriesID = @CountryID";
-
-                using (var command = new SQLiteCommand(citiesQuery, conn))
-                {
-                    
-                    
-                    command.Parameters.AddWithValue("@CountryID", selectedCountry);
-
-                    using (var reader = command.ExecuteReader())
-                    {
-                            while (reader.Read())
-                            {
-                                cities.Add(reader["name"].ToString());
-                            }
-                    }
-                }
-                sehirler.ItemsSource = cities;
-            }
         }
+
+
+        private void sehirler_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var cmbx = sender as ComboBox;
+            selectedIndex = cmbx.SelectedIndex;
+            if (sehirler.SelectedItem != null)
+            {
+                string selectedCities = sehirler.SelectedItem.ToString();
+                List<string> customerList = conn.GetCustomers(selectedCities);
+                musteri.ItemsSource = customerList;
+                
+
+            }
+            
+        }
+
+
     }
-}
+
+    }

@@ -22,7 +22,7 @@
         </ComboBox>
         <TextBox HorizontalAlignment="Left" Margin="53,43,0,0" TextWrapping="Wrap" Text="Ülkeler:" VerticalAlignment="Top" Width="50" Height="16"/>
         <Label Content="Şehirler:" HorizontalAlignment="Left" Margin="362,35,0,0" VerticalAlignment="Top" Width="61" Height="24"/>
-        <ComboBox Name="sehirler" Margin="432,40,101,157">
+        <ComboBox Name="sehirler" Margin="432,40,101,157" SelectionChanged="sehirler_SelectionChanged">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -33,6 +33,16 @@
             </ComboBox.RenderTransform>
         </ComboBox>
         <Label Content="Müşteri: " HorizontalAlignment="Left" Margin="53,109,0,0" VerticalAlignment="Top" Width="50"/>
+        <ComboBox x:Name="musteri" Margin="114,108,419,89">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-360.37"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
     </Grid>
 
 </Window>
