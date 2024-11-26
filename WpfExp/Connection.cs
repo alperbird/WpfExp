@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Data;
 
 namespace WpfExp
 {
@@ -95,6 +96,32 @@ namespace WpfExp
             }
             return customers;
         }
+
+        public DataTable GetMachines(int selectedCustomerId)
+        {
+            DataTable machineTbl = new DataTable();
+
+            using (var conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                string machineQuery = "SELECT MACHINES.machID, MACHINES.name, MACHINES.description, MACHINES.custID, MACHINES.tag " +
+                                      "FROM MACHINES " +
+                                      "INNER JOIN CUSTOMER ON MACHINES.custID = CUSTOMER.CustomerID " +
+                                      "WHERE MACHINES.custID = @custID";
+
+                using (var command = new SQLiteCommand(machineQuery, conn))
+                {
+                    command.Parameters.AddWithValue("@custID", selectedCustomerId);
+                    using (var adapter = new SQLiteDataAdapter(command))
+                    {
+                        adapter.Fill(machineTbl);
+                    }
+                }
+            }
+
+            return machineTbl;
+        }
+
     }
-   
 }
+   

@@ -32,7 +32,7 @@ namespace WpfExp
             conn = new Connection();
             LoadCountry();
         }
-
+        //Ülkeleri çeken fonksiyon
         private void LoadCountry()
         {
             List<string> countries = conn.GetCountry();
@@ -65,8 +65,6 @@ namespace WpfExp
             musteri.ItemsSource = customer;
 
         }
-
-
         private void sehirler_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var cmbx = sender as ComboBox;
@@ -81,8 +79,23 @@ namespace WpfExp
             }
             
         }
+        
+        private void musteri_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var a = sender as ComboBox;
+            if (musteri.SelectedItem != null)
+            {
+                int selectedCustomerId = selectedIndex;
+                LoadMachines(a.SelectedIndex+1);
+            }
+        }
 
+        private void LoadMachines(int selectedCustomerId)
+        {
+            var machineData = conn.GetMachines(selectedCustomerId); 
+            dgMakina.ItemsSource = machineData.DefaultView;         
+        }
 
     }
 
-    }
+}
