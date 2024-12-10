@@ -111,6 +111,21 @@
     <Reference Include="SQLitePCLRaw.core, Version=2.1.10.2445, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLitePCLRaw.core.2.1.10\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Data.WPF, Version=27.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Data.WPF.27.2.5\lib\net462\Syncfusion.Data.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=27.2462.5.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.27.2.5\lib\net462\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.WPF, Version=27.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfChart.WPF.27.2.5\lib\net462\Syncfusion.SfChart.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGrid.WPF, Version=27.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfGrid.WPF.27.2.5\lib\net462\Syncfusion.SfGrid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=27.2462.5.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.WPF.27.2.5\lib\net462\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -171,21 +186,85 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="PageBrand\CRUDWindowProfileBrand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageCity\CRUDWindowCity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageCountry\CRUDWindowCountry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageCustomer\CRUDWindowCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GoButtonsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="PageBrand\CRUDWindowProfileBrand.xaml.cs">
+      <DependentUpon>CRUDWindowProfileBrand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageCity\CRUDWindowCity.xaml.cs">
+      <DependentUpon>CRUDWindowCity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageCountry\CRUDWindowCountry.xaml.cs">
+      <DependentUpon>CRUDWindowCountry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageCustomer\CRUDCustomer.cs" />
+    <Compile Include="PageCustomer\CRUDWindowCustomer.xaml.cs">
+      <DependentUpon>CRUDWindowCustomer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Connection.cs" />
+    <Compile Include="MainPage\Connection.cs" />
+    <Compile Include="GoButtonsWindow.xaml.cs">
+      <DependentUpon>GoButtonsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageExample\CRUDWindowProfieExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageMachine\CRUDWindowMachine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSeries\CRUDWindowProfileSeries.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Cities.cs" />
+    <Compile Include="Models\Countries.cs" />
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Machines.cs" />
+    <Compile Include="Models\ProfileBrands.cs" />
+    <Compile Include="Models\ProfileExm.cs" />
+    <Compile Include="Models\ProfileSeries.cs" />
+    <Compile Include="PageExample\CRUDWindowProfieExample.xaml.cs">
+      <DependentUpon>CRUDWindowProfieExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMachine\CRUDWindowMachine.xaml.cs">
+      <DependentUpon>CRUDWindowMachine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSeries\CRUDWindowProfileSeries.xaml.cs">
+      <DependentUpon>CRUDWindowProfileSeries.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -212,6 +291,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -17,30 +17,68 @@
         <!-- Üst Filtreler -->
         <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Left">
             <Label Content="Ülkeler" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox x:Name="ulkeler" Width="150" SelectionChanged="countries_SelectionChanged" Margin="0,0,15,0"/>
+            <ComboBox x:Name="ulkeler"
+                      Width="150"
+                      IsTextSearchEnabled="True"
+                      SelectionChanged="countries_SelectionChanged"
+                      
+                      Margin="0,0,15,0"/>
 
             <Label Content="Şehirler" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox x:Name="sehirler" Width="150" SelectionChanged="sehirler_SelectionChanged" Margin="0,0,15,0"/>
+            <ComboBox x:Name="sehirler"
+                      Width="150"
+                      SelectionChanged="sehirler_SelectionChanged"
+                      Margin="0,0,15,0"/>
 
             <Label Content="Müşteri" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox x:Name="musteri" Width="150" SelectionChanged="musteri_SelectionChanged" Margin="0,0,15,0"/>
+            <ComboBox x:Name="musteri" 
+                      DisplayMemberPath="name" 
+                      SelectedValuePath="CustomerID" 
+                      Width="150" 
+                      SelectionChanged="musteri_SelectionChanged" 
+                      Margin="0,0,15,0"/>
         </StackPanel>
 
         <!-- DataGrid -->
         <DataGrid x:Name="dgMakina"
-                  
                   Grid.Row="1"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   HeadersVisibility="Column"
-                  IsReadOnly="True">
+                  IsReadOnly="True"
+                  LoadingRowDetails="DataGrid_LoadingRowDetails">
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="Profil Markaları :" FontWeight="Bold" />
+                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}"/>
+
+                        <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0" />
+                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}"/>
+
+                        <TextBlock Text="Profil Örnekleri :" FontWeight="Bold" Margin="0,10,0,0" />
+                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailExamples}" />
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
             <DataGrid.Columns>
+                <!--<DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="details">Makina Detay</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
                 <DataGridTextColumn Header="ID" Binding="{Binding machID}" Width="50"/>
                 <DataGridTextColumn Header="Makine Adı" Binding="{Binding name}" Width="*"/>
                 <DataGridTextColumn Header="Açıklama" Binding="{Binding description}" Width="2*"/>
                 <DataGridTextColumn Header="Müşteri ID" Binding="{Binding custID}" Width="100"/>
                 <DataGridTextColumn Header="Etiket" Binding="{Binding tag}" Width="100"/>
+
             </DataGrid.Columns>
+
         </DataGrid>
+        <Button Content="Buton Sayfası" HorizontalAlignment="Left" Margin="688,6,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click"/>
+
     </Grid>
 </Window>

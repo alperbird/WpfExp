@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfExp.GoButtonsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sadece buton var evet" Height="350" Width="500" Background="DarkSlateBlue">
+    <Grid>
+        <!-- Satır ve sütun tanımları -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Esnek yükseklik -->
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- Esnek genişlik -->
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Butonlar -->
+        <Button Content="Ülke Buton" Grid.Row="0" Grid.Column="0" Click="countryCRUD" Background="DarkSlateBlue"/>
+        <Button Content="Şehir Buton" Grid.Row="0" Grid.Column="1" Click="cityCRUD" Background="DarkSlateBlue"/>
+        <Button Content="Marka Buton" Grid.Row="0" Grid.Column="2" Click="brandCRUD" Background="DarkSlateBlue" />
+
+        <Button Content="Müşteri Buton" Grid.Row="1" Grid.Column="0" Click="customerCRUD" Background="DarkSlateBlue"/>
+        <Button Content="Makina Buton" Grid.Row="1" Grid.Column="1" Click="machineCRUD" Background="DarkSlateBlue"/>
+        <Button Content="Profil Seri Buton" Grid.Row="1" Grid.Column="2" Click="pseriesCRUD" Background="DarkSlateBlue"/>
+
+        <Button Content="Profil Örn Buton" Grid.Row="2" Grid.Column="1" Click="pexmCRUD" Background="DarkSlateBlue"/>
+    </Grid>
+</Window>
+
