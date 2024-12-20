@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfExp.VisitorPage.VisitorButtonPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExp.VisitorPage"
+        mc:Ignorable="d"
+        Title="VisitorButtonPage" Height="450" Width="800">
+    <Grid Background="DarkSlateBlue">
+        <!-- Satır ve sütun tanımları -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Esnek yükseklik -->
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- Esnek genişlik -->
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Butonlar -->
+        <Button Content="Ülke Tablosu" Grid.Row="0" Grid.Column="0" Click="countryRead" Background="DarkSlateBlue"/>
+        <Button Content="Şehir Tablosu" Grid.Row="0" Grid.Column="1" Click="cityRead" Background="DarkSlateBlue"/>
+        <Button Content="Marka Tablosu" Grid.Row="0" Grid.Column="2" Click="brandRead" Background="DarkSlateBlue" />
+
+        <Button Content="Müşteri Tablosu" Grid.Row="1" Grid.Column="0" Click="customerRead" Background="DarkSlateBlue"/>
+        <Button Content="Makina Tablosu" Grid.Row="1" Grid.Column="1" Click="machineRead" Background="DarkSlateBlue"/>
+        <Button Content="Profil Seri Tablosu" Grid.Row="1" Grid.Column="2" Click="pseriesRead" Background="DarkSlateBlue"/>
+
+        <Button Content="Profil Örn Tablosu" Grid.Row="2" Grid.Column="0" Click="pexmRead" Background="DarkSlateBlue"/>
+        <Button Content="Makine İşlem Tablosu" Grid.Row="2" Grid.Column="1" Click="machineTypeRead" Background="DarkSlateBlue"/>
+    </Grid>
+</Window>

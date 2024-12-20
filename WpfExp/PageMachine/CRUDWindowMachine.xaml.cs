@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
+using System.Data.Sql;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfExp.Models;
+using System.Data.SqlClient;
+using WpfExp.LogRecords;
 
 namespace WpfExp.PageMachine
 {
@@ -22,7 +24,7 @@ namespace WpfExp.PageMachine
     /// </summary>
     public partial class CRUDWindowMachine : Window
     {
-        public string connStr = "Data Source= Turbocut-400-500.db; Version=3;";
+        public string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
         public CRUDWindowMachine()
         {
             InitializeComponent();
@@ -32,16 +34,14 @@ namespace WpfExp.PageMachine
 
         public void TableRead()
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string machQuery = "SELECT m.machID,m.name AS 'Makine Adı', m.description AS 'Açıklama', c.name AS 'Müşteri Adı'," +
-                    "m.tag AS 'Etiket No' FROM MACHINES m " +
-                    "INNER JOIN CUSTOMER c ON " +
-                    "m.custID = c.CustomerID";
-                using (SQLiteCommand cmd = new SQLiteCommand(machQuery, conn))
+                string machQuery = "SELECT ma.Id, ma.name AS 'Makine Adı', ma.description AS 'Açıklama', mt.name AS 'Makine Türü' FROM MACHINES ma " +
+                    "JOIN MACHINE_TYPE mt ON ma.typeId = mt.Id";
+                using (SqlCommand cmd = new SqlCommand(machQuery, conn))
                 {
-                    SQLiteDataAdapter adapt = new SQLiteDataAdapter(cmd);
+                    SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adapt.Fill(dt);
 
@@ -51,18 +51,18 @@ namespace WpfExp.PageMachine
         }
         private void cmbxFull()
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string query = "SELECT CustomerID, name FROM CUSTOMER";
-                SQLiteCommand cucmd = new SQLiteCommand(query, conn);
-                SQLiteDataAdapter daCust = new SQLiteDataAdapter(cucmd);
+                string query = "SELECT name FROM MACHINE_TYPE";
+                SqlCommand cucmd = new SqlCommand(query, conn);
+                SqlDataAdapter daCust = new SqlDataAdapter(cucmd);
                 DataTable dt = new DataTable();
                 daCust.Fill(dt);
 
-                cmbCustomer.ItemsSource = dt.DefaultView;
-                cmbCustomer.DisplayMemberPath = "name";
-                cmbCustomer.SelectedValuePath = "CustomerID";
+                cmbType.ItemsSource = dt.DefaultView;
+                cmbType.DisplayMemberPath = "name";
+                cmbType.SelectedValuePath = "Id";
 
             }
         }
@@ -70,19 +70,19 @@ namespace WpfExp.PageMachine
         {
             try
             {
-                if(dgMachines.SelectedItem is DataRowView row)
+                if (dgMachines.SelectedItem is DataRowView row)
                 {
                     txtMachineName.Text = row["Makine Adı"].ToString();
                     txtMachDesc.Text = row["Açıklama"].ToString();
-                    var selectedCustomer = cmbCustomer.Items
+                    var selectedCustomer = cmbType.Items
                         .Cast<DataRowView>()
-                        .FirstOrDefault(item => item["name"].ToString() == row["Müşteri Adı"].ToString());
-                    cmbCustomer.SelectedItem = selectedCustomer;
-                    txtTag.Text = row["Etiket No"].ToString();
+                        .FirstOrDefault(item => item["name"].ToString() == row["Makine Türü"].ToString());
+                    cmbType.SelectedItem = selectedCustomer;
+
                 }
             }
 
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("HATA!\n" + ex.Message);
             }
@@ -90,19 +90,22 @@ namespace WpfExp.PageMachine
 
         private void insertBtn(object sender, RoutedEventArgs e)
         {
-            using(SQLiteConnection conn = new SQLiteConnection(connStr))
+            int currentUserId = LoginPage.FindUserId.CurrentUserId;
+
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO MACHINES(name, description, custID, tag) " +
-                    "VALUES(@name, @description, @custID, @tag)";
-                SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn);
+                string insertQuery = "INSERT INTO MACHINES(name, description, typeId) " +
+                    "VALUES(@name, @description, @typeId)";
+                SqlCommand cmd = new SqlCommand(insertQuery, conn);
                 cmd.Parameters.AddWithValue("@name", txtMachineName.Text);
                 cmd.Parameters.AddWithValue("@description", txtMachDesc.Text);
-                cmd.Parameters.AddWithValue("@custID", cmbCustomer.SelectedValue);
-                cmd.Parameters.AddWithValue("@tag", txtTag.Text);
+                cmd.Parameters.AddWithValue("@typeId", cmbType.SelectedValue);
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Kayıt işlemi başarılı bir şekilde gerçekleştirildi");
+                LogUserProcess.AddLog(currentUserId, $"Makine Kaydı Eklendi: {txtMachineName}");
+
                 Clean();
                 TableRead();
             }
@@ -110,58 +113,119 @@ namespace WpfExp.PageMachine
 
         private void updateBtn(object sender, RoutedEventArgs e)
         {
-            if(dgMachines.SelectedItem is DataRowView row)
+            int currentUserId = LoginPage.FindUserId.CurrentUserId;
+
+            if (dgMachines.SelectedItem is DataRowView row)
             {
-                using (SQLiteConnection conn = new SQLiteConnection(connStr))
+                string oldName = "";
+                string oldDesc = "";
+                int oldTypeId = 0;
+
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    string selectedQuery = "SELECT name, description, typeId FROM MACHINES WHERE Id = @Id";
+
+                    SqlCommand selectcmd = new SqlCommand(selectedQuery, conn);
+                    selectcmd.Parameters.AddWithValue("@Id", row["Id"]);
+
+                    using (SqlDataReader reader = selectcmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            oldName = reader["name"].ToString();
+                            oldDesc = reader["description"].ToString();
+                            oldTypeId = Convert.ToInt32(reader["typeId"]);
+                        }
+                    }
+                }
+
+                string newName = txtMachineName.Text;
+                string newDesc = txtMachDesc.Text;
+                int newTypeId = Convert.ToInt32(cmbType.SelectedValue);
+
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     conn.Open();
                     string updateQuery = "UPDATE MACHINES SET " +
                         "name = @name," +
                         "description = @description," +
-                        "custID = @custID," +
-                        "tag = @tag " +
-                        "WHERE machID = @machID ";
+                        "typeId = @typeId," +
+                        "WHERE Id = @Id ";
 
-                    SQLiteCommand cmd = new SQLiteCommand(updateQuery, conn);
+                    SqlCommand cmd = new SqlCommand(updateQuery, conn);
 
                     cmd.Parameters.AddWithValue("@name", txtMachineName.Text);
                     cmd.Parameters.AddWithValue("@description", txtMachDesc.Text);
-                    cmd.Parameters.AddWithValue("@custID", Convert.ToInt32(cmbCustomer.SelectedValue));
-                    cmd.Parameters.AddWithValue("@tag", txtTag.Text);
-                    cmd.Parameters.AddWithValue("@machID", row["machID"]);
+                    cmd.Parameters.AddWithValue("@typeId", Convert.ToInt32(cmbType.SelectedValue));
+                    cmd.Parameters.AddWithValue("@Id", row["Id"]);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Güncelleme işlemi başarılı bir şekilde gerçekleştirildi.");
                     Clean();
                     TableRead();
                 }
-            
-                
+
+                string action = $"Seçilen Makina Güncellendi: " +
+                                $"Makine Adı: {oldName} -> {newName}, " +
+                                $"Açıklama: {oldDesc} -> {newDesc}, " +
+                                $"Makine Tipi: {oldTypeId} -> {newTypeId}";
+                LogUserProcess.AddLog(currentUserId, action);
+
             }
         }
 
         private void deleteBtn(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Silmek istediğine emin misin?", "Silme Onayı", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if(result == MessageBoxResult.Yes)
+            if (result == MessageBoxResult.Yes)
             {
-            if (dgMachines.SelectedItem is DataRowView row)
-            {
-                using(SQLiteConnection conn = new SQLiteConnection( connStr))
+                if (dgMachines.SelectedItem is DataRowView row)
                 {
-                    conn.Open();
-                    string deleteQuery = "DELETE FROM MACHINES " +
-                        "WHERE machID = @machID";
+                    int currentUserId = LoginPage.FindUserId.CurrentUserId;
 
-                    SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn);
-                    cmd.Parameters.AddWithValue("@machID", row["machID"]);
+                    string deletedName = "";
+                    string deletedDesc = "";
+                    int deletedTypeId = 0;
+                    using (SqlConnection conn = new SqlConnection(connStr))
+                    {
+                        conn.Open();
+                        string selectQuery = "SELECT name, description, typeId FROM CITIES WHERE Id = @Id";
+                        SqlCommand selectCmd = new SqlCommand(selectQuery, conn);
+                        selectCmd.Parameters.AddWithValue("@Id", row["Id"]);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Seçilen makine silindi.");
-                    Clean();
-                    TableRead();
+                        using (SqlDataReader reader = selectCmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                deletedName = reader["name"].ToString();
+                                deletedDesc = reader["description"].ToString();
+                                deletedTypeId = Convert.ToInt32(reader["countryId"]);
+                            }
+                        }
+                    }
+
+                    using (SqlConnection conn = new SqlConnection(connStr))
+                    {
+                        conn.Open();
+                        string deleteQuery = "DELETE FROM MACHINES " +
+                            "WHERE Id = @Id";
+
+                        SqlCommand cmd = new SqlCommand(deleteQuery, conn);
+                        cmd.Parameters.AddWithValue("@Id", row["Id"]);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Seçilen makine silindi.");
+
+                        string logMessage = $"Kayıt Silindi: " +
+                                        $"Şehir Adı: {deletedName}, " +
+                                        $"Açıklama: {deletedDesc}, " +
+                                        $"Ülke: {deletedTypeId}";
+                        LogUserProcess.AddLog(currentUserId, logMessage);
+                        Clean();
+                        TableRead();
+                    }
                 }
-            }
 
             }
         }
@@ -170,8 +234,7 @@ namespace WpfExp.PageMachine
         {
             txtMachineName.Text = "";
             txtMachDesc.Text = "";
-            cmbCustomer.SelectedIndex = -1;
-            txtTag.Text = "";
+            cmbType.SelectedIndex = -1;
         }
     }
 }

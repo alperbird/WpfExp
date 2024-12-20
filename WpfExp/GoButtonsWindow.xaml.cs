@@ -17,6 +17,7 @@ using WpfExp.PageCity;
 using WpfExp.PageCountry;
 using WpfExp.PageExample;
 using WpfExp.PageMachine;
+using WpfExp.PageMachineType;
 using WpfExp.PageSeries;
 
 
@@ -72,6 +73,11 @@ namespace WpfExp
         private void pexmCRUD(object sender, RoutedEventArgs e) // dıdıdımın dıdısının dıdısının dısıdısının dıdısı
         {
             OpenNewWindow(new CRUDWindowProfieExample());
+        }
+
+        private void machineTypeCRUD(object sender, RoutedEventArgs e)
+        {
+            OpenNewWindow(new CRUDWindowMachineType());
         }
     }
 }

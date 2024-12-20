@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfExp"
         mc:Ignorable="d"
-        Title="Maraba Dünya" Height="450" Width="800">
+        Closed="ClosedWindow"
+        Title="Machines Detail" Height="450" Width="800">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -69,11 +70,10 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>-->
-                <DataGridTextColumn Header="ID" Binding="{Binding machID}" Width="50"/>
                 <DataGridTextColumn Header="Makine Adı" Binding="{Binding name}" Width="*"/>
                 <DataGridTextColumn Header="Açıklama" Binding="{Binding description}" Width="2*"/>
-                <DataGridTextColumn Header="Müşteri ID" Binding="{Binding custID}" Width="100"/>
-                <DataGridTextColumn Header="Etiket" Binding="{Binding tag}" Width="100"/>
+                <DataGridTextColumn Header="Müşteri Adı" Binding="{Binding customerName}" Width="100"/>
+                <DataGridTextColumn Header="Seri No" Binding="{Binding serialNum}" Width="100"/>
 
             </DataGrid.Columns>
 

@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfExp.AdminLoginPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExp"
+        mc:Ignorable="d"
+        Closed="ClosedWindow"
+        Title="AdminLoginPanel" Height="450" Width="800">
+    <Grid  Background="BlueViolet">
+        <TextBlock Text="Hangi işlemi yapmak istiyorsunuz?" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" 
+                   FontSize="16" 
+                   FontWeight="Bold" 
+                   Margin="0,10,0,0" 
+                   TextWrapping="Wrap" />
+
+        <!-- Butonlar -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Veritabanı Giriş" Width="150" Height="40" Background="#2196F3" Foreground="White" FontSize="14" Click="btnAdminPanel"/>
+            <Button Content="Log Kayıtları" Width="150" Height="40" Background="#4CAF50" Foreground="White" FontSize="14" Click="btnLogPanel"/>
+        </StackPanel>
+
+        <!-- Resim Alanı -->
+        <Border BorderBrush="#D3D3D3" BorderThickness="1" 
+                VerticalAlignment="Bottom" Height="150" Margin="0,0,0,10">
+            <Image Source="C:\Users\root\source\repos\WpfExp\WpfExp\Images\yatıklogo.png" Stretch="Uniform" Margin="0,1,0,-1" />
+        </Border>
+    </Grid>
+</Window>

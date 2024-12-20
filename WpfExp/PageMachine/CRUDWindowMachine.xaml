@@ -24,13 +24,10 @@
             <Label Content="Açıklama:" Margin="5,10,5,0" Width="75"/>
             <TextBox Name="txtMachDesc" Margin="5,0,5,10" Width="200"/>
 
-            <Label Content="Müşteri Adı:" Margin="5,10,5,0" Width="75"/>
-            <ComboBox Name="cmbCustomer" Margin="5,0,5,10" Width="200"
-                      SelectedValuePath="CustomerID"
+            <Label Content="Makine Türü:" Margin="5,10,5,0" Width="80"/>
+            <ComboBox Name="cmbType" Margin="5,0,5,10" Width="200"
+                      SelectedValuePath="Id"
                       DisplayMemberPath="name"/>
-
-            <Label Content="Etiket No:" Margin="5,10,5,0" Width="75"/>
-            <TextBox Name="txtTag" Margin="5,0,5,10" Width="200"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                 <Button Content="Ekle" Width="75" Margin="5" Click="insertBtn"/>

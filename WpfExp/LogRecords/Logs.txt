@@ -1,0 +1,16 @@
+2024-12-20 11:21:20 | UserID: 1 | Action: Ülke Kaydı Eklendi: 
+2024-12-20 11:21:38 | UserID: 1 | Action: Kayıt Güncellendi. Eski Ad: logtxtdeneme, Yeni Ad: , Eski Açıklama: 31654, Yeni Açıklama: 
+2024-12-20 11:21:41 | UserID: 1 | Action: Kayıt Silindi. Ad: logtxtdeneme, Açıklama: yeni açiklama
+2024-12-20 12:23:05 | UserID: 1 | Action: Ülke Kaydı Eklendi: 
+2024-12-20 12:23:22 | UserID: 1 | Action: Seçili Ülke Güncellendi. Ülke adı: deneme -> ülke, Açıklama: 13214 -> 12354, 
+2024-12-20 12:23:25 | UserID: 1 | Action: Kayıt Silindi. Ad: ülke, Açıklama: 12354
+2024-12-20 12:28:59 | UserID: 1 | Action: Ülke Kaydı Eklendi: System.Windows.Controls.TextBox
+2024-12-20 12:29:01 | UserID: 1 | Action: Kayıt Silindi. Ad: deneme, Açıklama: 15684
+2024-12-20 12:40:01 | UserID: 1 | Action: Ülke Kaydı Eklendi: buson deneme
+2024-12-20 12:40:04 | UserID: 1 | Action: Kayıt Silindi. Ad: buson deneme, Açıklama: 1546
+2024-12-20 14:45:40 | UserID: 1 | Action: Şehir Kaydı Eklendi: İstanbul
+2024-12-20 15:04:08 | UserID: 2 | Action: Marka Kaydı Eklendi: ZORT
+2024-12-20 15:04:31 | UserID: 1 | Action: Kayıt Silindi. Ad: ZORT, Açıklama: tets
+2024-12-20 15:35:23 | UserID: 1 | Action: Şehir Kaydı Eklendi: İstanbul
+2024-12-20 15:37:28 | UserID: 2 | Action: Şehir Kaydı Eklendi: İstanblue
+2024-12-20 16:24:42 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
+using System.Data.Sql;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Windows.Controls.Primitives;
+using System.Xml.Linq;
+using WpfExp.LogRecords;
 
 namespace WpfExp.PageExample
 {
@@ -21,24 +25,21 @@ namespace WpfExp.PageExample
     /// </summary>
     public partial class CRUDWindowProfieExample : Window
     {
-        public string connStr = "Data Source= Turbocut-400-500.db; Version=3;";
+        public string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
         public CRUDWindowProfieExample()
         {
             InitializeComponent();
             TableRead();
-            cmbxFull();
         }
         public void TableRead()
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string exmQuery = "SELECT pe.ID, pe.name AS 'Ad', pe.description AS 'Açıklama', ps.name 'Seri Adı' FROM PROFILE_TBL pe " +
-                    "INNER JOIN PROFILE_SERIES ps ON " +
-                    "pe.seriesID = ps.SeriesID";
-                using (SQLiteCommand cmd = new SQLiteCommand(exmQuery, conn))
+                string exmQuery = "SELECT Id, name AS 'Ad', description AS 'Açıklama' FROM PROFILE_EXAMPLE";
+                using (SqlCommand cmd = new SqlCommand(exmQuery, conn))
                 {
-                    SQLiteDataAdapter adapt = new SQLiteDataAdapter(cmd);
+                    SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adapt.Fill(dt);
 
@@ -47,23 +48,6 @@ namespace WpfExp.PageExample
             }
         }
 
-        private void cmbxFull()
-        {
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-                string query = "SELECT SeriesID, name FROM PROFILE_SERIES";
-
-                SQLiteCommand pbcmd = new SQLiteCommand(query, conn);
-                SQLiteDataAdapter adpb = new SQLiteDataAdapter(pbcmd);
-                DataTable dt = new DataTable();
-                adpb.Fill(dt);
-
-                cmbSerie.ItemsSource = dt.DefaultView;
-                cmbSerie.DisplayMemberPath = "name";
-                cmbSerie.SelectedValuePath = "SeriesID";
-            }
-        }
         private void dgExample(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -72,12 +56,6 @@ namespace WpfExp.PageExample
                 {
                     txtExmName.Text = row["Ad"].ToString();
                     txtExmDesc.Text = row["Açıklama"].ToString();
-
-                    var selectedSerie = cmbSerie.Items
-                        .Cast<DataRowView>()
-                        .FirstOrDefault(item => item["name"].ToString() == row["Seri Adı"].ToString());
-                    cmbSerie.SelectedItem = selectedSerie;
-
                 }
             }
             catch (Exception ex)
@@ -88,20 +66,21 @@ namespace WpfExp.PageExample
 
         private void insertBtn(object sender, RoutedEventArgs e)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            int currentUserId = LoginPage.FindUserId.CurrentUserId;
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO PROFILE_TBL (name, description, seriesID) " +
-                    "VALUES(@name, @description, @seriesID)";
+                string insertQuery = "INSERT INTO PROFILE_EXAMPLE (name, description) " +
+                    "VALUES(@name, @description)";
 
-                SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn);
+                SqlCommand cmd = new SqlCommand(insertQuery, conn);
 
                 cmd.Parameters.AddWithValue("@name", txtExmName.Text);
                 cmd.Parameters.AddWithValue("@description", txtExmDesc.Text);
-                cmd.Parameters.AddWithValue("@seriesID", cmbSerie.SelectedValue);
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Kayıt işlemi başarılı bir şekilde gerçekleştirildi.");
+                LogUserProcess.AddLog(currentUserId, $"Örnek eklendi: {txtExmName.Text}");
                 Clean();
                 TableRead();
             }
@@ -109,29 +88,54 @@ namespace WpfExp.PageExample
 
         private void updateBtn(object sender, RoutedEventArgs e)
         {
+            int currentUserId = LoginPage.FindUserId.CurrentUserId;
             if (dgExamples.SelectedItem is DataRowView row)
             {
-                using (SQLiteConnection conn = new SQLiteConnection(connStr))
+                string oldName = "";
+                string oldDesc = "";
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     conn.Open();
-                    string updateQuery = "UPDATE PROFILE_TBL SET " +
+                    string query = "SELECT Id, name, description FROM PROFILE_EXAMPLE WHERE Id = @Id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            oldName = reader["name"].ToString();
+                            oldDesc = reader["description"].ToString();
+                        }
+                    }
+                }
+
+
+                string newName = txtExmName.Text;
+                string newDesc = txtExmDesc.Text;
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    string updateQuery = "UPDATE PROFILE_EXAMPLE SET " +
                         "name = @name," +
                         "description = @description," +
-                        "seriesID = @seriesID " +
-                        "WHERE ID = @ID";
+                        "fileType = @fileType " +
+                        "WHERE Id = @Id";
 
-                    SQLiteCommand cmd = new SQLiteCommand(updateQuery, conn);
+                    SqlCommand cmd = new SqlCommand(updateQuery, conn);
 
                     cmd.Parameters.AddWithValue("@name", txtExmName.Text);
                     cmd.Parameters.AddWithValue("@description", txtExmDesc.Text);
-                    cmd.Parameters.AddWithValue("@seriesID", Convert.ToInt32(cmbSerie.SelectedValue));
-                    cmd.Parameters.AddWithValue("@ID", row["ID"]);
+                    cmd.Parameters.AddWithValue("@Id", row["Id"]);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Güncelleme işlemi başarılı bir şekilde gerçekleştirildi.");
                     Clean();
                     TableRead();
                 }
+                string logMessage = $"Seçilen Örnek Güncellendi: " +
+                                    $"Örnek Adı: {oldName} -> {newName}, " +
+                                    $"Açıklama: {oldDesc} -> {newDesc}";
+                LogUserProcess.AddLog(currentUserId, logMessage);
             }
         }
 
@@ -140,19 +144,43 @@ namespace WpfExp.PageExample
             MessageBoxResult result = MessageBox.Show("Silmek istediğine emin misin?", "Silme Onayı", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
+                int currentUserId = LoginPage.FindUserId.CurrentUserId;
+
                 if (dgExamples.SelectedItem is DataRowView row)
                 {
-                    using (SQLiteConnection conn = new SQLiteConnection(connStr))
+                    string deletedName = "";
+                    string deletedDesc = "";
+                    using (SqlConnection conn = new SqlConnection(connStr))
                     {
                         conn.Open();
-                        string deleteQuery = "DELETE FROM PROFILE_TBL " +
-                            "WHERE ID = @ID";
+                        string query = "SELECT Id, name, description FROM PROFILE_EXAMPLE WHERE Id = @Id";
+                        SqlCommand cmd = new SqlCommand(query, conn);
 
-                        SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                deletedName = reader["name"].ToString();
+                                deletedDesc = reader["description"].ToString();
+                            }
+                        }
+                    }
 
-                        cmd.Parameters.AddWithValue("@ID", row["ID"]);
+                    using (SqlConnection conn = new SqlConnection(connStr))
+                    {
+                        conn.Open();
+                        string deleteQuery = "DELETE FROM PROFILE_EXAMPLE " +
+                            "WHERE Id = @Id";
+
+                        SqlCommand cmd = new SqlCommand(deleteQuery, conn);
+
+                        cmd.Parameters.AddWithValue("@Id", row["Id"]);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Seçilen örnek silindi.");
+                        string logMessage = $"Kayıt Silindi: " +
+                                        $"Şehir Adı: {deletedName}, " +
+                                        $"Açıklama: {deletedDesc}";
+                        LogUserProcess.AddLog(currentUserId, logMessage);
                         Clean();
                         TableRead();
 
@@ -165,7 +193,6 @@ namespace WpfExp.PageExample
         {
             txtExmName.Text = "";
             txtExmDesc.Text = "";
-            cmbSerie.SelectedIndex = -1;
         }
     }
 }

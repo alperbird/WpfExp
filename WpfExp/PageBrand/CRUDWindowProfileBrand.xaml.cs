@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SQLite;
+using System.Data.Sql;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfExp.LogRecords;
 
 namespace WpfExp.PageBrand
 {
@@ -21,49 +23,28 @@ namespace WpfExp.PageBrand
     /// </summary>
     public partial class CRUDWindowProfileBrand : Window
     {
-        public string connStr = "Data Source= Turbocut-400-500.db; Version=3;";
+        public string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
         public CRUDWindowProfileBrand()
         {
             InitializeComponent();
             TableRead();
-            cmbxFull();
         }
 
         public void TableRead()
         {
-            using(SQLiteConnection conn = new SQLiteConnection(connStr))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string brandQuery = "SELECT b.ProfileID, b.name AS 'Marka Adı', b.description AS 'Açıklama', m.name AS 'Makine' FROM PROFILES_BRANDS b " +
-                    "INNER JOIN MACHINES m ON " +
-                    "b.machineID = m.machID";
+                string brandQuery = "SELECT Id, name AS 'Marka Adı', description AS 'Açıklama' FROM PROFILE_BRANDS";
 
-                using(SQLiteCommand cmd = new SQLiteCommand(brandQuery, conn))
+                using (SqlCommand cmd = new SqlCommand(brandQuery, conn))
                 {
-                    SQLiteDataAdapter adapt = new SQLiteDataAdapter(cmd);
+                    SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adapt.Fill(dt);
 
                     dgBrands.ItemsSource = dt.DefaultView;
                 }
-            }
-        }
-
-        private void cmbxFull()
-        {
-            using(SQLiteConnection conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-                string query = "SELECT machID, name FROM MACHINES";
-
-                SQLiteCommand mcmd = new SQLiteCommand(query, conn);
-                SQLiteDataAdapter dam = new SQLiteDataAdapter(mcmd);
-                DataTable dt = new DataTable();
-                dam.Fill(dt);
-
-                cmbMachine.ItemsSource = dt.DefaultView;
-                cmbMachine.DisplayMemberPath = "name";
-                cmbMachine.SelectedValuePath = "machID";
             }
         }
 
@@ -75,11 +56,6 @@ namespace WpfExp.PageBrand
                 {
                     txtBrandName.Text = row["Marka Adı"].ToString();
                     txtBrandDesc.Text = row["Açıklama"].ToString();
-
-                    var selectedMach = cmbMachine.Items
-                        .Cast<DataRowView>()
-                        .FirstOrDefault(item => item["name"].ToString() == row["Makine"].ToString());
-                    cmbMachine.SelectedItem = selectedMach;
                 }
             }
 
@@ -91,20 +67,22 @@ namespace WpfExp.PageBrand
 
         private void insertBtn(object sender, RoutedEventArgs e)
         {
-            using(SQLiteConnection conn = new SQLiteConnection(connStr))
+            int currentUserId = LoginPage.FindUserId.CurrentUserId;
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO PROFILES_BRANDS(name, description, machineID) " +
-                    "VALUES(@name, @description, @machineID)";
+                string insertQuery = "INSERT INTO PROFILE_BRANDS(name, description) " +
+                    "VALUES(@name, @description)";
 
-                SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn);
+                SqlCommand cmd = new SqlCommand(insertQuery, conn);
 
                 cmd.Parameters.AddWithValue("@name", txtBrandName.Text);
                 cmd.Parameters.AddWithValue("@description", txtBrandDesc);
-                cmd.Parameters.AddWithValue("@machineID", cmbMachine.SelectedValue);
+
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Kayıt işlemi başarılı bir şekilde gerçekleştirildi.");
+                LogUserProcess.AddLog(currentUserId, $"Marka Kaydı Eklendi: {txtBrandName.Text}");
                 Clean();
                 TableRead();
             }
@@ -112,54 +90,106 @@ namespace WpfExp.PageBrand
 
         private void updateBtn(object sender, RoutedEventArgs e)
         {
-            if(dgBrands.SelectedItem is DataRowView row)
+            int currentUserId = LoginPage.FindUserId.CurrentUserId;
+            if (dgBrands.SelectedItem is DataRowView row)
             {
-                using(SQLiteConnection conn = new SQLiteConnection(connStr))
+                string oldName = "";
+                string oldDesc = "";
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     conn.Open();
-                    string updateQuery = "UPDATE PROFİLES_BRANDS SET " +
+                    string query = "SELECT Id, name, description FROM PROFILE_BRANDS WHERE Id = @Id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@Id", row["Id"]);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            oldName = reader["name"].ToString();
+                            oldDesc = reader["description"].ToString();
+                        }
+                    }
+                }
+
+
+                string newName = txtBrandName.Text;
+                string newDesc = txtBrandDesc.Text;
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    string updateQuery = "UPDATE PROFİLE_BRANDS SET " +
                         "name = @name," +
                         "description = @description," +
-                        "machineID = @machine_ID " +
-                        "WHERE ProfileID = @ProfileID";
+                        "WHERE Id = @Id";
 
-                    SQLiteCommand cmd = new SQLiteCommand(updateQuery);
+                    SqlCommand cmd = new SqlCommand(updateQuery);
 
                     cmd.Parameters.AddWithValue("@name", txtBrandName.Text);
                     cmd.Parameters.AddWithValue("@description", txtBrandDesc.Text);
-                    cmd.Parameters.AddWithValue("@machineID", Convert.ToInt32(cmbMachine.SelectedValue));
-                    cmd.Parameters.AddWithValue("@ProfileID", row["ProfileID"]);
+                    cmd.Parameters.AddWithValue("@Id", row["Id"]);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Güncelleme işlemi başarılı bir şekilde gerçekleştirildi.");
                     Clean();
                     TableRead();
                 }
+                string logMessage = $"Seçili Marka Güncellendi: " +
+                                    $"Marka Adı: {oldName} -> {newName}, " +
+                                    $"Açıklama: {oldDesc} -> {newDesc}";
+                LogUserProcess.AddLog(currentUserId, logMessage);
             }
         }
 
         private void deleteBtn(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Silmek istediğine emin misin?", "Silme Onayı", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if(result == MessageBoxResult.Yes)
+            if (result == MessageBoxResult.Yes)
             {
-            if (dgBrands.SelectedItem is DataRowView row)
-            {
-                using(SQLiteConnection conn = new SQLiteConnection(connStr))
+                if (dgBrands.SelectedItem is DataRowView row)
                 {
-                    conn.Open();
-                    string deleteQuery = "DELETE FROM PROFILES_BRANDS " +
-                        "WHERE ProfileID = @ProfileID";
+                    int currentUserId = LoginPage.FindUserId.CurrentUserId;
+                    string deletedName = "";
+                    string deletedDesc = "";
+                    using (SqlConnection conn = new SqlConnection(connStr)) 
+                    {
+                        conn.Open();
+                        string query = "SELECT Id, name, description FROM PROFILE_BRANDS WHERE Id = @Id";
+                        SqlCommand cmd = new SqlCommand(query, conn);
 
-                    SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn);
+                        cmd.Parameters.AddWithValue("@Id", row["Id"]);
 
-                    cmd.Parameters.AddWithValue("@ProfileID", row["ProfileID"]);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                deletedName = reader["name"].ToString();
+                                deletedDesc = reader["description"].ToString();
+                            }
+                        }
+                    }
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Seçilen marka silindi.");
-                    Clean();
-                    TableRead();
+                    using (SqlConnection conn = new SqlConnection(connStr))
+                    {
+                        conn.Open();
+                        string deleteQuery = "DELETE FROM PROFILE_BRANDS " +
+                            "WHERE Id = @Id";
+
+                        SqlCommand cmd = new SqlCommand(deleteQuery, conn);
+
+                        cmd.Parameters.AddWithValue("@Id", row["Id"]);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Seçilen marka silindi.");
+                        string logMessage = $"Kayıt Silindi. " +
+                                            $"Ad: {deletedName}, " +
+                                            $"Açıklama: {deletedDesc}";
+                        LogUserProcess.AddLog(currentUserId, logMessage);
+
+                        Clean();
+                        TableRead();
+                    }
                 }
-            }
 
             }
         }
@@ -168,7 +198,7 @@ namespace WpfExp.PageBrand
         {
             txtBrandName.Text = "";
             txtBrandDesc.Text = "";
-            cmbMachine.SelectedIndex = -1;
+
         }
     }
 }

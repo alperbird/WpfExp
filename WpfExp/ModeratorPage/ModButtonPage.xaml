@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfExp.ModeratorPage.ModButtonPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExp.ModeratorPage"
+        mc:Ignorable="d"
+        Title="ModButtonPage" Height="450" Width="800">
+    <Grid Background="DarkSlateBlue"> 
+        <!-- Satır ve sütun tanımları -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Esnek yükseklik -->
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- Esnek genişlik -->
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Butonlar -->
+        <Button Content="Ülke Ekleme" Grid.Row="0" Grid.Column="0" Click="countryCreate" Background="DarkSlateBlue"/>
+        <Button Content="Şehir Ekleme" Grid.Row="0" Grid.Column="1" Click="cityCreate" Background="DarkSlateBlue"/>
+        <Button Content="Marka Ekleme" Grid.Row="0" Grid.Column="2" Click="brandCreate" Background="DarkSlateBlue" />
+
+        <Button Content="Müşteri Ekleme" Grid.Row="1" Grid.Column="0" Click="customerCreate" Background="DarkSlateBlue"/>
+        <Button Content="Makina Ekleme" Grid.Row="1" Grid.Column="1" Click="machineCreate" Background="DarkSlateBlue"/>
+        <Button Content="Profil Seri Ekleme" Grid.Row="1" Grid.Column="2" Click="pseriesCreate" Background="DarkSlateBlue"/>
+
+        <Button Content="Profil Örn Ekleme" Grid.Row="2" Grid.Column="0" Click="pexmCreate" Background="DarkSlateBlue"/>
+        <Button Content="Makine İşlem Ekleme" Grid.Row="2" Grid.Column="1" Click="machineTypeCreate" Background="DarkSlateBlue"/>
+    </Grid>
+</Window>

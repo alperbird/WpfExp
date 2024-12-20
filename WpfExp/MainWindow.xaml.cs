@@ -18,6 +18,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using System.Data;
 using WpfExp.Models;
 using Syncfusion.Windows.Tools.Controls;
+using WpfExp.LoginPage;
 
 namespace WpfExp
 {
@@ -48,12 +49,12 @@ namespace WpfExp
             var rowData = e.Row.Item as DataRowView;
             if (rowData == null) return;
 
-            int brandId = Convert.ToInt32(rowData["machID"]);
+            int custId = Convert.ToInt32(rowData["Id"]);
             //string sname = rowData["name"].ToString();
             
-            var brandDetails = conn.DetailBrands(brandId);
-            var seriesDetails = conn.DetailSeries(brandId);
-            var exampleDetails = conn.DetailExamples(brandId);
+            var brandDetails = conn.DetailBrands(custId);
+            var seriesDetails = conn.DetailSeries(custId);
+            var exampleDetails = conn.DetailExamples(custId);
  
             var detailsContext = new
             {
@@ -151,12 +152,18 @@ namespace WpfExp
                 }
         }*/
 
-        protected override void OnClosed(EventArgs e)
+        private void ClosedWindow(object sender, EventArgs e)
         {
-            base.OnClosed(e);
-
-            Application.Current.Shutdown();
+            AdminLoginPanel loginPanel = new AdminLoginPanel();
+            loginPanel.Show();
         }
+
+        //protected override void OnClosed(EventArgs e)
+        //{
+        //    base.OnClosed(e);
+
+        //    Application.Current.Shutdown();
+        //}
     }
 
-    }
+}

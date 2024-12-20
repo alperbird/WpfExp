@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfExp.PageExample"
         mc:Ignorable="d"
         Title="CRUDWindowProfieExample" Height="450" Width="800">
-    <Grid Margin="10" Background="Azure">
+    <Grid Background="Azure">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -15,17 +15,12 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Margin="5,94,5,0" Grid.RowSpan="2">
+        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Margin="5,131,5,0" Grid.RowSpan="2">
             <Label Content="Örnek Adı:" Margin="5,0,5,0" Width="75" />
             <TextBox Name="txtExmName" Margin="5,0,5,10" Width="200"/>
 
             <Label Content="Açıklama:" Margin="5,0,5,0" Width="75"/>
             <TextBox Name="txtExmDesc" Margin="5,0,5,10" Width="200"/>
-
-            <Label Content="Profil Seri:" Margin="5,0,5,0" Width="75"/>
-            <ComboBox Name="cmbSerie" Margin="5,0,5,10" Width="200" 
-                DisplayMemberPath="name" 
-                SelectedValuePath="seriesID"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                 <Button Content="Ekle" Width="75" Margin="5" Click="insertBtn"/>

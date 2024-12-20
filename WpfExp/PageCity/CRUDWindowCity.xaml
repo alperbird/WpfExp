@@ -30,7 +30,7 @@
             <!-- Ülke Seçimi -->
             <Label Content="Ülke:" Margin="5,10,5,0" Width="60"/>
             <ComboBox Name="cmbCountry" Margin="5,0,5,10" Width="200"
-                      SelectedValuePath="CountriesID"
+                      SelectedValuePath="Id"
                       DisplayMemberPath="name"/>
 
             <!-- İşlem Butonları -->

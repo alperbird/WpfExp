@@ -1,0 +1,76 @@
+﻿<Window x:Class="WpfExp.ModeratorPage.ModeratorPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExp.ModeratorPage"
+        mc:Ignorable="d"
+        Closed="ClosedWindow"
+        Title="Mod Penceresi" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Üstteki filtreler -->
+            <RowDefinition Height="*"/>
+            <!-- DataGrid alanı -->
+        </Grid.RowDefinitions>
+
+        <!-- Üst Filtreler -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Left">
+            <Label Content="Ülkeler" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <ComboBox x:Name="ulkeler"
+                  Width="150"
+                  IsTextSearchEnabled="True"
+                  SelectionChanged="countries_SelectionChanged"
+                  
+                  Margin="0,0,15,0"/>
+
+            <Label Content="Şehirler" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <ComboBox x:Name="sehirler"
+                  Width="150"
+                  SelectionChanged="sehirler_SelectionChanged"
+                  Margin="0,0,15,0"/>
+
+            <Label Content="Müşteri" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <ComboBox x:Name="musteri" 
+                  DisplayMemberPath="name" 
+                  SelectedValuePath="CustomerID" 
+                  Width="150" 
+                  SelectionChanged="musteri_SelectionChanged" 
+                  Margin="0,0,15,0"/>
+        </StackPanel>
+
+        <!-- DataGrid -->
+        <DataGrid x:Name="dgMakina"
+              Grid.Row="1"
+              AutoGenerateColumns="False"
+              CanUserAddRows="False"
+              HeadersVisibility="Column"
+              IsReadOnly="True"
+              LoadingRowDetails="DataGrid_LoadingRowDetails">
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="Profil Markaları :" FontWeight="Bold" />
+                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}"/>
+
+                        <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0" />
+                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}"/>
+
+                        <TextBlock Text="Profil Örnekleri :" FontWeight="Bold" Margin="0,10,0,0" />
+                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailExamples}" />
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Makine Adı" Binding="{Binding name}" Width="*"/>
+                <DataGridTextColumn Header="Açıklama" Binding="{Binding description}" Width="2*"/>
+                <DataGridTextColumn Header="Müşteri Adı" Binding="{Binding customerName}" Width="100"/>
+                <DataGridTextColumn Header="Seri No" Binding="{Binding serialNum}" Width="100"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Content="Buton Sayfası" HorizontalAlignment="Left" Margin="688,6,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click"/>
+
+    </Grid>
+</Window>

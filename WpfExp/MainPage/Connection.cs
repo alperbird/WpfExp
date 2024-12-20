@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SQLite;
+using System.Data.Sql;
 using System.Data;
 using WpfExp.Models;
+using System.Data.SqlClient;
 
 namespace WpfExp
 {
     public class Connection
     {
 
-        private string connectionString = "Data Source= Turbocut-400-500.db;Version=3;";
-        private SQLiteConnection conn;
+        private string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
+        private SqlConnection conn;
 
         public Connection()
         {
-            conn = new SQLiteConnection(connectionString);
+            conn = new SqlConnection(connectionString);
         }
 
 
@@ -27,11 +28,11 @@ namespace WpfExp
 
             List<string> countries = new List<string>();
 
-            using (var conn = new SQLiteConnection(connectionString))
+            using (var conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 string query = "SELECT name FROM COUNTRIES";
-                using (var command = new SQLiteCommand(query, conn))
+                using (var command = new SqlCommand(query, conn))
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -47,14 +48,14 @@ namespace WpfExp
         {
             List<string> cities = new List<string>();
 
-            using (var conn = new SQLiteConnection(connectionString))
+            using (var conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 string citiesQuery = "SELECT CITIES.name FROM CITIES " +
-                                     "INNER JOIN COUNTRIES ON CITIES.CountryID = COUNTRIES.CountriesID " +
+                                     "INNER JOIN COUNTRIES ON CITIES.countryId = COUNTRIES.Id " +
                                      "WHERE COUNTRIES.name = @name";
 
-                using (var command = new SQLiteCommand(citiesQuery, conn))
+                using (var command = new SqlCommand(citiesQuery, conn))
                 {
                     command.Parameters.AddWithValue("@name", selectedCountry);
 
@@ -74,14 +75,14 @@ namespace WpfExp
         {
             List<Customers> customers = new List<Customers>();
 
-            using (var conn = new SQLiteConnection(connectionString))
+            using (var conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string customerQuery = "SELECT CUSTOMER.CustomerID, CUSTOMER.name FROM CUSTOMER " +
-                    "INNER JOIN CITIES ON CUSTOMER.CityID = CITIES.CitiesID " +
+                string customerQuery = "SELECT CUSTOMER.Id, CUSTOMER.name FROM CUSTOMER " +
+                    "INNER JOIN CITIES ON CUSTOMER.cityId = CITIES.Id " +
                     "WHERE CITIES.name = @name";
 
-                using (var command = new SQLiteCommand(customerQuery, conn))
+                using (var command = new SqlCommand(customerQuery, conn))
                 {
                     command.Parameters.AddWithValue("@name", selectedCities);
 
@@ -91,7 +92,7 @@ namespace WpfExp
                         {
                             customers.Add(new Customers
                             {
-                                CustomerID = Convert.ToInt32(reader["CustomerID"]),
+                                CustomerID = Convert.ToInt32(reader["Id"]),
                                 name = reader["name"].ToString()
                             });
                         }
@@ -104,18 +105,20 @@ namespace WpfExp
         public DataTable GetMachines(int selectedCustomerId)
         {
             DataTable machineTbl = new DataTable();
-            string machineQuery = "SELECT MACHINES.machID, MACHINES.name, MACHINES.description, MACHINES.custID, MACHINES.tag " +
-                                  "FROM MACHINES " +
-                                  "INNER JOIN CUSTOMER ON MACHINES.custID = CUSTOMER.CustomerID " +
-                                  "WHERE MACHINES.custID = @custID";
+            string machineQuery = "SELECT cu.Id, ma.name, ma.description, cu.name AS customerName, snm.serialNum " +
+                          "FROM MACHINES ma " +
+                          "JOIN CUSTOMER cu ON cu.machineId = ma.Id " +  // Müşteri ve makine ilişkisi
+                          "JOIN SERIAL_NUMBERS snm ON cu.serialnumId = snm.Id " + // Seri numarası ile ilişki
+                          "WHERE cu.Id = @Id";  // Müşteri id'ye göre filtreleme
 
-            using (var conn = new SQLiteConnection(connectionString))
+
+            using (var conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                using (var command = new SQLiteCommand(machineQuery, conn))
+                using (var command = new SqlCommand(machineQuery, conn))
                 {
-                    command.Parameters.AddWithValue("@custID", selectedCustomerId); 
-                    using (var adapter = new SQLiteDataAdapter(command))
+                    command.Parameters.AddWithValue("@Id", selectedCustomerId);
+                    using (var adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(machineTbl);
                     }
@@ -127,19 +130,20 @@ namespace WpfExp
         #endregion
 
         #region Details
-        public DataTable DetailBrands(int machineID) // dayı buradan markaları çekeceğiz
+        public DataTable DetailBrands(int custId) // dayı buradan markaları çekeceğiz
         {
             DataTable brandTbl = new DataTable();
-            string brandQuery = "SELECT name, description FROM PROFILES_BRANDS " +
-                "WHERE machineID = @machineID";
+            string brandQuery = "SELECT pb.name, pb.description FROM PROFILE_BRANDS pb " +
+                "JOIN CUSTOMER cu ON cu.pbrandId = pb.Id " +
+                "WHERE cu.Id = @Id";
 
-            using (var conn = new SQLiteConnection(connectionString))
+            using (var conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                using (var command = new SQLiteCommand(brandQuery, conn))
+                using (var command = new SqlCommand(brandQuery, conn))
                 {
-                    command.Parameters.AddWithValue("@machineID",machineID);
-                    using (var adapter = new SQLiteDataAdapter(command))
+                    command.Parameters.AddWithValue("@Id", custId);
+                    using (var adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(brandTbl);
                     }
@@ -148,20 +152,21 @@ namespace WpfExp
             return brandTbl;
         }
 
-        public DataTable DetailSeries(int brandId) //markanın serisini çekeceğiz (search bir işe yaramadı kaldırdım)
+        public DataTable DetailSeries(int custId) //markanın serisini çekeceğiz (search bir işe yaramadı kaldırdım)
         {
             DataTable seriesTbl = new DataTable();
-            string serieQuery = "SELECT name, description FROM PROFILE_SERIES " +
-                "WHERE brandID = @brandID";
-            using(var conn = new SQLiteConnection(connectionString))
+            string serieQuery = "SELECT ps.name, ps.description FROM PROFILE_SERIES ps " +
+                "JOIN CUSTOMER cu ON cu.pserieId = ps.Id " +
+                "WHERE cu.Id = @Id";
+            using (var conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                using ( var command = new SQLiteCommand(serieQuery, conn))
+                using (var command = new SqlCommand(serieQuery, conn))
                 {
-                    command.Parameters.AddWithValue("@brandID", brandId);
-                    
-          
-                    using (var adapter = new SQLiteDataAdapter(command))
+                    command.Parameters.AddWithValue("@Id", custId);
+
+
+                    using (var adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(seriesTbl);
                     }
@@ -173,15 +178,16 @@ namespace WpfExp
         public DataTable DetailExamples(int brandId)//markanın serisinin örneğini çekeceğiz
         {
             DataTable exampleTbl = new DataTable();
-            string exmQuery = "SELECT name, description FROM PROFILE_TBL " +
-                "WHERE seriesID = @seriesID";
-            using( var conn = new SQLiteConnection(connectionString))
+            string exmQuery = "SELECT pe.name, pe.description FROM PROFILE_EXAMPLE pe " +
+                "JOIN CUSTOMER cu ON cu.pexmId = pe.Id " +
+                "WHERE cu.Id = @Id ";
+            using (var conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                using( var command = new SQLiteCommand(exmQuery, conn))
+                using (var command = new SqlCommand(exmQuery, conn))
                 {
-                    command.Parameters.AddWithValue("@seriesID", brandId);
-                    using( var adapter = new SQLiteDataAdapter(command))
+                    command.Parameters.AddWithValue("@Id", brandId);
+                    using (var adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(exampleTbl);
                     }

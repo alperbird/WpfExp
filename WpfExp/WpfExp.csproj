@@ -186,6 +186,96 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminLoginPanel.xaml.cs">
+      <DependentUpon>AdminLoginPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage\FindUserId.cs" />
+    <Compile Include="LogRecords\LogRecords.xaml.cs">
+      <DependentUpon>LogRecords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogRecords\LogUserProcess.cs" />
+    <Compile Include="VisitorPage\1-VisitCountry.xaml.cs">
+      <DependentUpon>1-VisitCountry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\2-VisitCity.xaml.cs">
+      <DependentUpon>2-VisitCity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\3-VisitCustomer.xaml.cs">
+      <DependentUpon>3-VisitCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\4-VisitMachine.xaml.cs">
+      <DependentUpon>4-VisitMachine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\5-VisitBrand.xaml.cs">
+      <DependentUpon>5-VisitBrand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\6-VisitSerie.xaml.cs">
+      <DependentUpon>6-VisitSerie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\7-VisitExm.xaml.cs">
+      <DependentUpon>7-VisitExm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\8-VisitType.xaml.cs">
+      <DependentUpon>8-VisitType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\VisitorButtonPage.xaml.cs">
+      <DependentUpon>VisitorButtonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorPage\VisitorPage.xaml.cs">
+      <DependentUpon>VisitorPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AdminLoginPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginPage\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogRecords\LogRecords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\1-ModCountry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\2-ModCity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\3-ModCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\4-ModMachine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\5-ModBrand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\6-ModSerie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\7-ModExm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\8-ModType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\ModButtonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModeratorPage\ModeratorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageBrand\CRUDWindowProfileBrand.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -210,6 +300,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="LoginPage\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\1-ModCountry.xaml.cs">
+      <DependentUpon>1-ModCountry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\2-ModCity.xaml.cs">
+      <DependentUpon>2-ModCity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\3-ModCustomer.xaml.cs">
+      <DependentUpon>3-ModCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\4-ModMachine.xaml.cs">
+      <DependentUpon>4-ModMachine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\5-ModBrand.xaml.cs">
+      <DependentUpon>5-ModBrand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\6-ModSerie.xaml.cs">
+      <DependentUpon>6-ModSerie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\7-ModExm.xaml.cs">
+      <DependentUpon>7-ModExm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\8-ModType.xaml.cs">
+      <DependentUpon>8-ModType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\ModButtonPage.xaml.cs">
+      <DependentUpon>ModButtonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPage\ModeratorPage.xaml.cs">
+      <DependentUpon>ModeratorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageBrand\CRUDWindowProfileBrand.xaml.cs">
       <DependentUpon>CRUDWindowProfileBrand.xaml</DependentUpon>
     </Compile>
@@ -239,11 +362,55 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageMachineType\CRUDWindowMachineType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageMachine\CRUDWindowMachine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageSeries\CRUDWindowProfileSeries.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\1-VisitCountry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\2-VisitCity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\3-VisitCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\4-VisitMachine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\5-VisitBrand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\6-VisitSerie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\7-VisitExm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\8-VisitType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\VisitorButtonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorPage\VisitorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -258,6 +425,9 @@
     <Compile Include="Models\ProfileSeries.cs" />
     <Compile Include="PageExample\CRUDWindowProfieExample.xaml.cs">
       <DependentUpon>CRUDWindowProfieExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMachineType\CRUDWindowMachineType.xaml.cs">
+      <DependentUpon>CRUDWindowMachineType.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageMachine\CRUDWindowMachine.xaml.cs">
       <DependentUpon>CRUDWindowMachine.xaml</DependentUpon>
@@ -291,7 +461,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\yatıklogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LogRecords\Logs.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

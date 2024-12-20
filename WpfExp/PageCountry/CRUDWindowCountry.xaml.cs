@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SQLite;
+using System.Data.Sql;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfExp.LogRecords;
 
 namespace WpfExp.PageCountry
 {
@@ -22,7 +24,7 @@ namespace WpfExp.PageCountry
     /// </summary>
     public partial class CRUDWindowCountry : Window
     {
-        public string connStr = "Data Source= Turbocut-400-500.db; Version=3;";
+        public string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
         public CRUDWindowCountry()
         {
             InitializeComponent();
@@ -31,13 +33,13 @@ namespace WpfExp.PageCountry
 
         public void TableRead() // tablo okuma  
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string query = "SELECT CountriesID, name AS 'Ülke Adı', description AS 'Açıklama' FROM COUNTRIES";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn)) 
+                string query = "SELECT Id, name AS 'Ülke Adı', description AS 'Açıklama' FROM COUNTRIES";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    SQLiteDataAdapter adapt = new SQLiteDataAdapter(cmd);
+                    SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adapt.Fill(dt);
 
@@ -64,47 +66,84 @@ namespace WpfExp.PageCountry
 
         private void insertBtn(object sender, RoutedEventArgs e)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            int currentUserId = LoginPage.FindUserId.CurrentUserId;
+
+
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
                 string insertQuery = "INSERT INTO COUNTRIES (name, description)" +
                     "VALUES(@name, @description)";
-                SQLiteCommand cmd = new SQLiteCommand(insertQuery, conn);
+                SqlCommand cmd = new SqlCommand(insertQuery, conn);
                 cmd.Parameters.AddWithValue("@name", txtCountryName.Text);
                 cmd.Parameters.AddWithValue("@description", txtCountryDesc.Text);
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Kayıt işlemi başarılı bir şekilde gerçekleştirildi.");
-                Clean();
+                LogUserProcess.AddLog(currentUserId, $"Ülke Kaydı Eklendi: {txtCountryName.Text}");
 
+                Clean();
                 TableRead();
             }
+
         }
 
         private void updateBtn(object sender, RoutedEventArgs e)
         {
+            int currentUserId = LoginPage.FindUserId.CurrentUserId;
+
             if (dgCountries.SelectedItem is DataRowView row)
             {
-                using (SQLiteConnection conn = new SQLiteConnection(connStr))
+                string oldName = "";
+                string oldDesc = "";
+
+                // Eski veriyi almak için veritabanından sorgulama yapıyoruz
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    string selectQuery = "SELECT name, description FROM COUNTRIES WHERE Id = @Id";
+                    SqlCommand selectCmd = new SqlCommand(selectQuery, conn);
+                    selectCmd.Parameters.AddWithValue("@Id", row["Id"]);
+
+                    using (SqlDataReader reader = selectCmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            oldName = reader["name"].ToString();
+                            oldDesc = reader["description"].ToString();
+                        }
+                    }
+                }
+
+                string newName = txtCountryName.Text;
+                string newDesc = txtCountryDesc.Text;
+
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     conn.Open();
                     string updateQuery = "UPDATE COUNTRIES SET " +
-                        "name = @name, " +
-                        "description = @description " +
-                        "WHERE CountriesID = @CountriesID";
-                    SQLiteCommand cmd = new SQLiteCommand(updateQuery, conn);
+                                         "name = @name, " +
+                                         "description = @description " +
+                                         "WHERE Id = @Id";
+                    SqlCommand cmd = new SqlCommand(updateQuery, conn);
                     cmd.Parameters.AddWithValue("@name", txtCountryName.Text);
                     cmd.Parameters.AddWithValue("@description", txtCountryDesc.Text);
-                    cmd.Parameters.AddWithValue("@CountriesID", row["CountriesID"]);
+                    cmd.Parameters.AddWithValue("@Id", row["Id"]);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Güncelleme işlemi başarılı bir şekilde gerçekleştirildi.");
                     Clean();
-
                     TableRead();
                 }
+
+                string logMessage = $"Seçili Ülke Güncellendi. " +
+                                 $"Ülke adı: {oldName} -> {newName}, " +
+                                 $"Açıklama: {oldDesc} -> {newDesc}, ";
+
+                LogUserProcess.AddLog(currentUserId, logMessage);
             }
         }
+
 
         private void deleteBtn(object sender, RoutedEventArgs e)
         {
@@ -113,22 +152,50 @@ namespace WpfExp.PageCountry
             {
                 if (dgCountries.SelectedItem is DataRowView row)
                 {
-                    using (SQLiteConnection conn = new SQLiteConnection(connStr))
+                    int currentUserId = LoginPage.FindUserId.CurrentUserId;
+
+                    string deletedName = "";
+                    string deletedDesc = "";
+
+                    using (SqlConnection conn = new SqlConnection(connStr))
                     {
                         conn.Open();
-                        string deleteQuery = "DELETE FROM COUNTRIES " +
-                            "WHERE CountriesID = @CountriesID";
-                        SQLiteCommand cmd = new SQLiteCommand(deleteQuery, conn);
-                        cmd.Parameters.AddWithValue("@CountriesID", row["CountriesID"]);
+                        string selectQuery = "SELECT name, description FROM COUNTRIES WHERE Id = @Id";
+                        SqlCommand selectCmd = new SqlCommand(selectQuery, conn);
+                        selectCmd.Parameters.AddWithValue("@Id", row["Id"]);
+
+                        using (SqlDataReader reader = selectCmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                deletedName = reader["name"].ToString();
+                                deletedDesc = reader["description"].ToString();
+                            }
+                        }
+                    }
+
+                    using (SqlConnection conn = new SqlConnection(connStr))
+                    {
+                        conn.Open();
+                        string deleteQuery = "DELETE FROM COUNTRIES WHERE Id = @Id";
+                        SqlCommand cmd = new SqlCommand(deleteQuery, conn);
+                        cmd.Parameters.AddWithValue("@Id", row["Id"]);
                         cmd.ExecuteNonQuery();
                     }
+
+
                     MessageBox.Show("Seçilen ülke silindi.");
+                    string logMessage = $"Kayıt Silindi. " +
+                                        $"Ad: {deletedName}, " +
+                                        $"Açıklama: {deletedDesc}";
+                    LogUserProcess.AddLog(currentUserId, logMessage);
+
                     Clean();
                     TableRead();
                 }
             }
-
         }
+
 
         private void Clean()
         {

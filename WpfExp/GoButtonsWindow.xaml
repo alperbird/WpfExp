@@ -26,7 +26,8 @@
         <Button Content="Makina Buton" Grid.Row="1" Grid.Column="1" Click="machineCRUD" Background="DarkSlateBlue"/>
         <Button Content="Profil Seri Buton" Grid.Row="1" Grid.Column="2" Click="pseriesCRUD" Background="DarkSlateBlue"/>
 
-        <Button Content="Profil Örn Buton" Grid.Row="2" Grid.Column="1" Click="pexmCRUD" Background="DarkSlateBlue"/>
+        <Button Content="Profil Örn Buton" Grid.Row="2" Grid.Column="0" Click="pexmCRUD" Background="DarkSlateBlue"/>
+        <Button Content="Makine İşlem Buton" Grid.Row="2" Grid.Column="1" Click="machineTypeCRUD" Background="DarkSlateBlue"/>
     </Grid>
 </Window>
 

@@ -11,7 +11,7 @@ namespace WpfExp.Models
         public int machID { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public string tag { get; set; }
-        public int CustomerID { get; set; }
+        public string CustomerName { get; set; }
+        public string serialNum { get; set; }
     }
 }

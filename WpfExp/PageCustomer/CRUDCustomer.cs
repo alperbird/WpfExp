@@ -11,7 +11,7 @@ namespace WpfExp.PageCustomer
 {
     public class CRUDCustomer
     {
-        private string connectionStr = "Data Source= Turbocut-400-500.db;Version=3;";
+        private string connectionStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
         private SQLiteConnection connection;
 
         public CRUDCustomer()
