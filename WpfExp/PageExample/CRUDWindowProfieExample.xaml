@@ -15,7 +15,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Margin="5,131,5,0" Grid.RowSpan="2">
+        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Margin="5,33,5,0" Grid.RowSpan="2">
             <Label Content="Örnek Adı:" Margin="5,0,5,0" Width="75" />
             <TextBox Name="txtExmName" Margin="5,0,5,10" Width="200"/>
 

@@ -174,3 +174,7 @@ Markalar: Adopen, Egepen -> Firatpen, Testpen
 Profil Serileri: 888 Serisi, Legend Art Sistemi -> Redonit 85, 123 serisi
 Profil Örnekleri:  -> 
 Seri Numaraları: 111222333 -> 111222333
+2024-12-23 14:51:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-23 14:56:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-23 15:09:51 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-23 15:10:25 | UserID: 2 | Action: Müşteri Kaydı Eklendi: harun ekliyor
