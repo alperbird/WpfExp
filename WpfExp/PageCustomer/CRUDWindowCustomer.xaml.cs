@@ -146,7 +146,8 @@ namespace WpfExp
                 { "SELECT Id, name FROM COUNTRIES", cmbCountry },
                 { "SELECT Id, name FROM CITIES", cmbCity },
                 { "SELECT Id, name FROM MACHINES", lstMachine },
-                { "SELECT Id, name FROM PROFILE_BRANDS", lstpBrand }
+                { "SELECT Id, name FROM PROFILE_BRANDS", lstpBrand },
+                {"SELECT Id, name FROM PROFILE_EXAMPLE",lstpexm }
                 // lstpSeries başlangıçta burada sorgu ile doldurulmaz
             };
 
@@ -165,6 +166,9 @@ namespace WpfExp
             lstpSeries.ItemsSource = null;
             lstpSeries.DisplayMemberPath = "name";
             lstpSeries.SelectedValuePath = "Id";
+
+            lstpexm.DisplayMemberPath= "name";
+            lstpexm.SelectedValuePath = "Id";
         }
 
 
@@ -219,7 +223,7 @@ namespace WpfExp
                     InsertCustomerMachines(customerId, conn);
                     InsertCustomerBrands(customerId);
                     InsertCustomerProfileSeries(customerId);
-                    InsertCustomerProfileExamples(customerId, conn);
+                    InsertCustomerProfileExamples(customerId);
                     InsertCustomerSerialNumbers(customerId);
 
                     MessageBox.Show("Kayıt işlemi başarılı bir şekilde gerçekleştirildi.", "Başarılı", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -335,20 +339,25 @@ namespace WpfExp
             }
         }
 
-        private void InsertCustomerProfileExamples(int customerId, SqlConnection conn)
+        private void InsertCustomerProfileExamples(int customerId)
         {
-            foreach (var selectedProfileExample in lstpexm.SelectedItems)
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
-                int exampleId = Convert.ToInt32(((DataRowView)selectedProfileExample)["Id"]);
+                conn.Open();
 
-                string insertQuery = @"
-            INSERT INTO CUSTOMER_PROFILE_EXAMPLES (customerId, profileExampleId) 
-            VALUES (@customerId, @profileExampleId);";
+                foreach (var selectedProfileExample in lstpexm.SelectedItems)
+                {
+                    var profileExampleRow = (DataRowView)selectedProfileExample;
+                    int profileExampleId = Convert.ToInt32(profileExampleRow["Id"]);
 
-                SqlCommand cmd = new SqlCommand(insertQuery, conn);
-                cmd.Parameters.AddWithValue("@customerId", customerId);
-                cmd.Parameters.AddWithValue("@profileExampleId", exampleId);
-                cmd.ExecuteNonQuery();
+                    string query = @"
+                INSERT INTO CUSTOMER_PROFILE_EXAMPLES (customerId, profileExampleId) 
+                VALUES (@customerId, @profileExampleId)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@customerId", customerId);
+                    cmd.Parameters.AddWithValue("@profileExampleId", profileExampleId);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 
@@ -497,7 +506,7 @@ namespace WpfExp
                     UpdateCustomerMachines(customerId, conn);
                     UpdateCustomerBrands(customerId);
                     UpdateCustomerProfileSeries(customerId);
-                    UpdateCustomerProfileExamples(customerId, conn);
+                    UpdateCustomerProfileExamples(customerId);
                     UpdateCustomerSerialNumbers(customerId);
 
                     MessageBox.Show("Güncelleme işlemi başarılı bir şekilde gerçekleştirildi.");
@@ -609,27 +618,32 @@ namespace WpfExp
             }
         }
 
-        private void UpdateCustomerProfileExamples(int customerId, SqlConnection conn)
+        private void UpdateCustomerProfileExamples(int customerId)
         {
-
-            string deleteQuery = "DELETE FROM CUSTOMER_PROFILE_EXAMPLES WHERE CustomerId = @customerId";
-            SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn);
-            deleteCmd.Parameters.AddWithValue("@customerId", customerId);
-            deleteCmd.ExecuteNonQuery();
-
-
-            foreach (var selectedProfileExample in lstpexm.SelectedItems)
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
-                int exampleId = Convert.ToInt32(((DataRowView)selectedProfileExample)["Id"]);
+                conn.Open();
 
-                string insertQuery = @"
-            INSERT INTO CUSTOMER_PROFILE_EXAMPLES (CustomerId, ProfileExampleId) 
-            VALUES (@customerId, @profileExampleId);";
+                // Önce mevcut kayıtları sil
+                string deleteQuery = "DELETE FROM CUSTOMER_PROFILE_EXAMPLES WHERE customerId = @customerId";
+                SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn);
+                deleteCmd.Parameters.AddWithValue("@customerId", customerId);
+                deleteCmd.ExecuteNonQuery();
 
-                SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
-                insertCmd.Parameters.AddWithValue("@customerId", customerId);
-                insertCmd.Parameters.AddWithValue("@profileExampleId", exampleId);
-                insertCmd.ExecuteNonQuery();
+                // Yeni kayıtları ekle
+                foreach (var selectedProfileExample in lstpexm.SelectedItems)
+                {
+                    var profileExampleRow = (DataRowView)selectedProfileExample;
+                    int profileExampleId = Convert.ToInt32(profileExampleRow["Id"]);
+
+                    string insertQuery = @"
+                INSERT INTO CUSTOMER_PROFILE_EXAMPLES (customerId, profileExampleId) 
+                VALUES (@customerId, @profileExampleId)";
+                    SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
+                    insertCmd.Parameters.AddWithValue("@customerId", customerId);
+                    insertCmd.Parameters.AddWithValue("@profileExampleId", profileExampleId);
+                    insertCmd.ExecuteNonQuery();
+                }
             }
         }
 
@@ -762,7 +776,6 @@ namespace WpfExp
             cmd.ExecuteNonQuery();
         }
 
-
         private void DeleteCustomerSerialNumbers(int customerId, SqlConnection conn)
         {
             string deleteQuery = "DELETE FROM SERIAL_NUMBERS WHERE CustomerId = @customerId";
@@ -773,8 +786,8 @@ namespace WpfExp
 
         private void DeleteCustomerProfileExamples(int customerId, SqlConnection conn)
         {
-            string deleteQuery = "DELETE FROM CUSTOMER_PROFILE_EXAMPLES WHERE CustomerId = @customerId";
-            SqlCommand cmd = new SqlCommand(deleteQuery, conn);
+            string query = "DELETE FROM CUSTOMER_PROFILE_EXAMPLES WHERE customerId = @customerId";
+            SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@customerId", customerId);
             cmd.ExecuteNonQuery();
         }

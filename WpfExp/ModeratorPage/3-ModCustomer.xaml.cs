@@ -125,6 +125,38 @@ namespace WpfExp.ModeratorPage
             }
         }
 
+        private void ComboBoxFull() //combobox doldurma
+        {
+            var queriesAndControls = new Dictionary<string, dynamic>
+            {
+                { "SELECT Id, name FROM COUNTRIES", cmbCountry },
+                { "SELECT Id, name FROM CITIES", cmbCity },
+                { "SELECT Id, name FROM MACHINES", lstMachine },
+                { "SELECT Id, name FROM PROFILE_BRANDS", lstpBrand },
+                {"SELECT Id, name FROM PROFILE_EXAMPLE",lstpexm }
+                // lstpSeries başlangıçta burada sorgu ile doldurulmaz
+            };
+
+            foreach (var queryAndControl in queriesAndControls)
+            {
+                FillControl(queryAndControl.Key, queryAndControl.Value);
+            }
+
+            // Şehir ComboBox'u başlangıçta boş
+            cmbCity.ItemsSource = null;
+            cmbCity.DisplayMemberPath = "name";
+            cmbCity.SelectedValuePath = "Id";
+            cmbCity.SelectedIndex = -1;
+
+            // lstpSeries başlangıçta boş olmalı
+            lstpSeries.ItemsSource = null;
+            lstpSeries.DisplayMemberPath = "name";
+            lstpSeries.SelectedValuePath = "Id";
+
+            lstpexm.DisplayMemberPath = "name";
+            lstpexm.SelectedValuePath = "Id";
+        }
+
         private void FillControl(string query, dynamic control)
         {
             try
@@ -145,34 +177,6 @@ namespace WpfExp.ModeratorPage
             {
                 MessageBox.Show($"Doldurmada HATA! {ex.Message}", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private void ComboBoxFull() //combobox doldurma
-        {
-            var queriesAndControls = new Dictionary<string, dynamic>
-            {
-                { "SELECT Id, name FROM COUNTRIES", cmbCountry },
-                { "SELECT Id, name FROM CITIES", cmbCity },
-                { "SELECT Id, name FROM MACHINES", lstMachine },
-                { "SELECT Id, name FROM PROFILE_BRANDS", lstpBrand }
-                // lstpSeries başlangıçta burada sorgu ile doldurulmaz
-            };
-
-            foreach (var queryAndControl in queriesAndControls)
-            {
-                FillControl(queryAndControl.Key, queryAndControl.Value);
-            }
-
-            // Şehir ComboBox'u başlangıçta boş
-            cmbCity.ItemsSource = null;
-            cmbCity.DisplayMemberPath = "name";
-            cmbCity.SelectedValuePath = "Id";
-            cmbCity.SelectedIndex = -1;
-
-            // lstpSeries başlangıçta boş olmalı
-            lstpSeries.ItemsSource = null;
-            lstpSeries.DisplayMemberPath = "name";
-            lstpSeries.SelectedValuePath = "Id";
         }
 
         #region CUSTOMER INSERT

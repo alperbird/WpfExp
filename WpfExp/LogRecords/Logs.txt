@@ -178,3 +178,7 @@ Seri Numaraları: 111222333 -> 111222333
 2024-12-23 14:56:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
 2024-12-23 15:09:51 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
 2024-12-23 15:10:25 | UserID: 2 | Action: Müşteri Kaydı Eklendi: harun ekliyor
+2024-12-23 16:04:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-23 16:17:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-23 16:18:17 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-23 16:20:48 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
