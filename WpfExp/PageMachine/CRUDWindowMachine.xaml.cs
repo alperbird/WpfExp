@@ -167,8 +167,8 @@ namespace WpfExp.PageMachine
                 }
 
                 string action = $"Seçilen Makina Güncellendi: " +
-                                $"Makine Adı: {oldName} -> {newName}, " +
-                                $"Açıklama: {oldDesc} -> {newDesc}, " +
+                                $"Makine Adı: {oldName} -> {newName},\n " +
+                                $"Açıklama: {oldDesc} -> {newDesc},\n " +
                                 $"Makine Tipi: {oldTypeId} -> {newTypeId}";
                 LogUserProcess.AddLog(currentUserId, action);
 
@@ -218,8 +218,8 @@ namespace WpfExp.PageMachine
                         MessageBox.Show("Seçilen makine silindi.");
 
                         string logMessage = $"Kayıt Silindi: " +
-                                        $"Şehir Adı: {deletedName}, " +
-                                        $"Açıklama: {deletedDesc}, " +
+                                        $"Şehir Adı: {deletedName},\n " +
+                                        $"Açıklama: {deletedDesc},\n " +
                                         $"Ülke: {deletedTypeId}";
                         LogUserProcess.AddLog(currentUserId, logMessage);
                         Clean();

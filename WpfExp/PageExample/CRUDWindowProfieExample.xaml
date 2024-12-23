@@ -22,6 +22,14 @@
             <Label Content="Açıklama:" Margin="5,0,5,0" Width="75"/>
             <TextBox Name="txtExmDesc" Margin="5,0,5,10" Width="200"/>
 
+            <Label Content="Dosya Yükleme:" Margin="5,0,5,20" Width="96"/>
+
+            <StackPanel Orientation="Vertical">
+                <Button Content="Dosya Ekle" Width="100" Margin="5" />
+                <ListBox Name="lstFiles" Height="100" Width="200" Margin="5" />
+                <Button Content="Seçili Dosyayı Sil" Width="150" Margin="5" />
+            </StackPanel>
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                 <Button Content="Ekle" Width="75" Margin="5" Click="insertBtn"/>
                 <Button Content="Güncelle" Width="75" Margin="5" Click="updateBtn"/>

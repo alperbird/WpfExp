@@ -135,7 +135,7 @@ namespace WpfExp.PageBrand
                     TableRead();
                 }
                 string logMessage = $"Seçili Marka Güncellendi: " +
-                                    $"Marka Adı: {oldName} -> {newName}, " +
+                                    $"Marka Adı: {oldName} -> {newName},\n " +
                                     $"Açıklama: {oldDesc} -> {newDesc}";
                 LogUserProcess.AddLog(currentUserId, logMessage);
             }
@@ -182,7 +182,7 @@ namespace WpfExp.PageBrand
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Seçilen marka silindi.");
                         string logMessage = $"Kayıt Silindi. " +
-                                            $"Ad: {deletedName}, " +
+                                            $"Ad: {deletedName},\n " +
                                             $"Açıklama: {deletedDesc}";
                         LogUserProcess.AddLog(currentUserId, logMessage);
 

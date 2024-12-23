@@ -148,8 +148,8 @@ namespace WpfExp.PageCity
 
 
                 string action = $"Seçilen şehir güncellendi. "+
-                                 $"Şehir adı: {oldName} -> {newName}, " +
-                                 $"Açıklama: {oldDesc} -> {newDesc}, " +
+                                 $"Şehir adı: {oldName} -> {newName},\n " +
+                                 $"Açıklama: {oldDesc} -> {newDesc},\n " +
                                  $"Ülke ID: {oldCountryId} -> {newCountryId}";
 
                LogUserProcess.AddLog(currentUserId, action); // Log ekle
@@ -199,8 +199,8 @@ namespace WpfExp.PageCity
                     }
                     MessageBox.Show("Kayıt silindi!");
                     string logMessage = $"Kayıt Silindi: " +
-                                        $"Şehir Adı: {deletedName}, " +
-                                        $"Açıklama: {deletedDesc}, " +
+                                        $"Şehir Adı: {deletedName},\n " +
+                                        $"Açıklama: {deletedDesc},\n " +
                                         $"Ülke: {deletedCountryId}";
 
                     Clean();

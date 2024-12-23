@@ -70,8 +70,8 @@ namespace WpfExp.PageExample
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string insertQuery = "INSERT INTO PROFILE_EXAMPLE (name, description) " +
-                    "VALUES(@name, @description)";
+                string insertQuery = "INSERT INTO PROFILE_EXAMPLE (name, description, filetype) " +
+                    "VALUES(@name, @description, @filetype)";
 
                 SqlCommand cmd = new SqlCommand(insertQuery, conn);
 
@@ -133,7 +133,7 @@ namespace WpfExp.PageExample
                     TableRead();
                 }
                 string logMessage = $"Seçilen Örnek Güncellendi: " +
-                                    $"Örnek Adı: {oldName} -> {newName}, " +
+                                    $"Örnek Adı: {oldName} -> {newName},\n " +
                                     $"Açıklama: {oldDesc} -> {newDesc}";
                 LogUserProcess.AddLog(currentUserId, logMessage);
             }
@@ -178,7 +178,7 @@ namespace WpfExp.PageExample
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Seçilen örnek silindi.");
                         string logMessage = $"Kayıt Silindi: " +
-                                        $"Şehir Adı: {deletedName}, " +
+                                        $"Şehir Adı: {deletedName},\n " +
                                         $"Açıklama: {deletedDesc}";
                         LogUserProcess.AddLog(currentUserId, logMessage);
                         Clean();

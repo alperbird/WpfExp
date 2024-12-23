@@ -137,7 +137,7 @@ namespace WpfExp.PageCountry
                 }
 
                 string logMessage = $"Seçili Ülke Güncellendi. " +
-                                 $"Ülke adı: {oldName} -> {newName}, " +
+                                 $"Ülke adı: {oldName} -> {newName},\n " +
                                  $"Açıklama: {oldDesc} -> {newDesc}, ";
 
                 LogUserProcess.AddLog(currentUserId, logMessage);
@@ -186,7 +186,7 @@ namespace WpfExp.PageCountry
 
                     MessageBox.Show("Seçilen ülke silindi.");
                     string logMessage = $"Kayıt Silindi. " +
-                                        $"Ad: {deletedName}, " +
+                                        $"Ad: {deletedName},\n " +
                                         $"Açıklama: {deletedDesc}";
                     LogUserProcess.AddLog(currentUserId, logMessage);
 

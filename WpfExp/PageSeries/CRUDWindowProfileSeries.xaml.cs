@@ -165,8 +165,8 @@ namespace WpfExp.PageSeries
                     TableRead();
                 }
                 string action = $"Seçilen Marka Serisi Güncellendi: " +
-                                $"Makine Adı: {oldName} -> {newName}, " +
-                                $"Açıklama: {oldDesc} -> {newDesc}, " +
+                                $"Makine Adı: {oldName} -> {newName},\n " +
+                                $"Açıklama: {oldDesc} -> {newDesc},\n " +
                                 $"Makine Tipi: {oldbrandId} -> {newBrandId}";
                 LogUserProcess.AddLog(currentUserId, action);
             }
@@ -212,8 +212,8 @@ namespace WpfExp.PageSeries
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Seçilen profil serisi silindi.");
                         string logMessage = $"Kayıt Silindi: " +
-                                        $"Marka Serisi Adı: {deletedName}, " +
-                                        $"Açıklama: {deletedDesc}, " +
+                                        $"Marka Serisi Adı: {deletedName},\n " +
+                                        $"Açıklama: {deletedDesc},\n " +
                                         $"Ülke: {deletedBrandId}";
                         LogUserProcess.AddLog(currentUserId, logMessage);
 
