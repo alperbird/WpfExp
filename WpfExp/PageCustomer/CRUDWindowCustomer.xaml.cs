@@ -31,7 +31,7 @@ namespace WpfExp
     public partial class CRUDWindowCustomer : Window
     {
         private DataRowView row; // güncelleme için seçiyoruz
-        private string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
+        private string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
         public CRUDWindowCustomer()
         {
             InitializeComponent();
@@ -288,31 +288,45 @@ namespace WpfExp
                 {
                     var seriesRow = (DataRowView)selectedSeries;
                     int seriesId = Convert.ToInt32(seriesRow["Id"]);
+                    int brandId = GetBrandIdBySeries(seriesId, conn); // Series'e bağlı brandId'yi bul
 
-                    // Daha önce eklenmiş mi kontrol et
-                    string checkQuery = @"
-                SELECT COUNT(1)
-                FROM CUSTOMER_PROFILE_SERIES
-                WHERE customerId = @customerId AND seriesId = @seriesId";
+                    // CUSTOMER_PROFILE_SERIES tablosuna ekle
+                    string insertCustomerSeriesQuery = @"
+                IF NOT EXISTS (
+                    SELECT 1 FROM CUSTOMER_PROFILE_SERIES 
+                    WHERE customerId = @customerId AND seriesId = @seriesId
+                )
+                INSERT INTO CUSTOMER_PROFILE_SERIES (customerId, seriesId)
+                VALUES (@customerId, @seriesId)";
+                    SqlCommand insertCustomerSeriesCmd = new SqlCommand(insertCustomerSeriesQuery, conn);
+                    insertCustomerSeriesCmd.Parameters.AddWithValue("@customerId", customerId);
+                    insertCustomerSeriesCmd.Parameters.AddWithValue("@seriesId", seriesId);
+                    insertCustomerSeriesCmd.ExecuteNonQuery();
 
-                    SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
-                    checkCmd.Parameters.AddWithValue("@customerId", customerId);
-                    checkCmd.Parameters.AddWithValue("@seriesId", seriesId);
-
-                    int exists = Convert.ToInt32(checkCmd.ExecuteScalar());
-
-                    if (exists == 0) // Eğer yoksa ekle
-                    {
-                        string insertQuery = @"
-                    INSERT INTO CUSTOMER_PROFILE_SERIES (customerId, seriesId)
-                    VALUES (@customerId, @seriesId)";
-                        SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
-                        insertCmd.Parameters.AddWithValue("@customerId", customerId);
-                        insertCmd.Parameters.AddWithValue("@seriesId", seriesId);
-                        insertCmd.ExecuteNonQuery();
-                    }
+                    // BRAND_SERIES tablosuna ekle
+                    string insertBrandSeriesQuery = @"
+                IF NOT EXISTS (
+                    SELECT 1 FROM BRAND_SERIES 
+                    WHERE customerId = @customerId AND brandId = @brandId AND seriesId = @seriesId
+                )
+                INSERT INTO BRAND_SERIES (customerId, brandId, seriesId)
+                VALUES (@customerId, @brandId, @seriesId)";
+                    SqlCommand insertBrandSeriesCmd = new SqlCommand(insertBrandSeriesQuery, conn);
+                    insertBrandSeriesCmd.Parameters.AddWithValue("@customerId", customerId);
+                    insertBrandSeriesCmd.Parameters.AddWithValue("@brandId", brandId);
+                    insertBrandSeriesCmd.Parameters.AddWithValue("@seriesId", seriesId);
+                    insertBrandSeriesCmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        // BRAND_SERIES için brandId bulma metodu
+        private int GetBrandIdBySeries(int seriesId, SqlConnection conn)
+        {
+            string query = "SELECT brandId FROM PROFILE_SERIES WHERE Id = @seriesId";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@seriesId", seriesId);
+            return Convert.ToInt32(cmd.ExecuteScalar());
         }
 
         private void InsertCustomerSerialNumbers(int customerId)
@@ -595,6 +609,12 @@ namespace WpfExp
                 deleteCmd.Parameters.AddWithValue("@customerId", customerId);
                 deleteCmd.ExecuteNonQuery();
 
+                // Brand_Series tablosunu temizle
+                string deleteBSQuery = "DELETE FROM BRAND_SERIES WHERE customerId = @customerId";
+                SqlCommand deleteBSCmd = new SqlCommand(deleteBSQuery, conn);
+                deleteBSCmd.Parameters.AddWithValue("@customerId", customerId);
+                deleteBSCmd.ExecuteNonQuery();
+
                 // Yeni serileri ekle
                 InsertCustomerProfileSeries(customerId);
             }
@@ -762,10 +782,21 @@ namespace WpfExp
 
         private void DeleteCustomerProfileSeries(int customerId, SqlConnection conn)
         {
-            string deleteQuery = "DELETE FROM CUSTOMER_PROFILE_SERIES WHERE CustomerId = @customerId";
-            SqlCommand cmd = new SqlCommand(deleteQuery, conn);
-            cmd.Parameters.AddWithValue("@customerId", customerId);
-            cmd.ExecuteNonQuery();
+            // Customer_Profile_Series tablosundan sil
+            string deleteCPSQuery = @"
+                DELETE FROM CUSTOMER_PROFILE_SERIES 
+                WHERE customerId = @customerId";
+            SqlCommand deleteCPSCmd = new SqlCommand(deleteCPSQuery, conn);
+            deleteCPSCmd.Parameters.AddWithValue("@customerId", customerId);
+            deleteCPSCmd.ExecuteNonQuery();
+
+            // Brand_Series tablosundan sil
+            string deleteBSQuery = @"
+                DELETE FROM BRAND_SERIES 
+                WHERE customerId = @customerId";
+            SqlCommand deleteBSCmd = new SqlCommand(deleteBSQuery, conn);
+            deleteBSCmd.Parameters.AddWithValue("@customerId", customerId);
+            deleteBSCmd.ExecuteNonQuery();
         }
 
         private void DeleteBrandSeries(int customerId, SqlConnection conn) // profile_brands ve profile_series alt tablosunun içindeki verileri siler

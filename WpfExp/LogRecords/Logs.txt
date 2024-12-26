@@ -182,3 +182,1093 @@ Seri Numaraları: 111222333 -> 111222333
 2024-12-23 16:17:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
 2024-12-23 16:18:17 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
 2024-12-23 16:20:48 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 08:20:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 08:21:42 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 09:36:17 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 09:36:55 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 09:38:05 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 09:42:38 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 10:02:15 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 10:22:08 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 10:23:10 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 10:23:49 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 10:33:15 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 11:24:02 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 11:24:22 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 14:09:51 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 14:28:00 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-24 14:28:45 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 14:39:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 14:41:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 14:44:26 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 14:46:01 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 14:46:16 | UserID: 1 | Action: Örnek eklendi: zip yükleme
+2024-12-24 14:48:09 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 14:48:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 14:49:55 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 14:54:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:03:01 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:03:16 | UserID: 1 | Action: Örnek eklendi: yine bir deneme
+2024-12-24 15:03:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:06:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:11:39 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:12:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:12:28 | UserID: 1 | Action: Örnek eklendi: zip yükleme
+2024-12-24 15:13:29 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:14:03 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:14:19 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:16:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:16:17 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: zip yükleme,
+ Açıklama: deneme,
+Dosya: 571.zip
+2024-12-24 15:18:30 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:18:41 | UserID: 1 | Action: Seçilen Örnek Güncellendi: Örnek Adı: zip yükleme -> zip yükleme, Açıklama: deneme -> deneme
+2024-12-24 15:23:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:23:24 | UserID: 1 | Action: Seçilen Örnek Güncellendi: Örnek Adı: zip yükleme -> zip yükleme,
+ Açıklama: deneme -> deneme,
+Dosya: System.Collections.ObjectModel.ObservableCollection`1[System.String] -> C:\Users\root\Desktop\CNC_CSV - Kopya\netcoreapp3.0\PROGRAM\5504.zip
+2024-12-24 15:23:37 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: zip yükleme,
+ Açıklama: deneme,
+Dosya: C:\Users\root\Desktop\CNC_CSV - Kopya\netcoreapp3.0\PROGRAM\5504.zip
+2024-12-24 15:24:54 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:25:09 | UserID: 1 | Action: Örnek eklendi: başka zip
+2024-12-24 15:25:23 | UserID: 1 | Action: Seçilen Örnek Güncellendi: Örnek Adı: baska zip -> baska zip,
+ Açıklama: deneme -> deneme,
+Dosya: 18310 kanat.zip -> 18320 OKAYIT.zip
+2024-12-24 15:30:07 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:30:30 | UserID: 1 | Action: Örnek eklendi: kanat
+2024-12-24 15:30:54 | UserID: 1 | Action: Seçilen Örnek Güncellendi: Örnek Adı: yine bir deneme ->  deneme,
+ Açıklama: yine bir zip -> yine bir zip,
+Dosya: deneme.zip -> deneme.zip
+2024-12-24 15:31:05 | UserID: 1 | Action: Seçilen Örnek Güncellendi: Örnek Adı: baska zip -> OKayıt,
+ Açıklama: deneme -> deneme,
+Dosya: 18320 OKAYIT.zip -> 18320 OKAYIT.zip
+2024-12-24 15:31:27 | UserID: 1 | Action: Seçilen Örnek Güncellendi: Örnek Adı:  deneme -> deneme zipi,
+ Açıklama: yine bir zip -> yine bir zip,
+Dosya: deneme.zip -> deneme.zip
+2024-12-24 15:32:14 | UserID: 1 | Action: Müşteri Kaydı Eklendi: bir tane müşteri
+2024-12-24 15:37:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:49:32 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:50:27 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:52:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:52:58 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 15:56:51 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:03:51 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:14:25 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:16:16 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:17:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:20:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:20:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:21:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:34:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:37:02 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 16:56:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:03:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:03:34 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: erglherqpiguhergq -> erglherqpiguhergq
+Açıklama: müsteri -> müsteri
+Ülke: 3 -> 3
+Şehir: 3 -> 3
+Makineler:  -> CNC Köse Temizleme 119
+Markalar:  -> Adopen
+Profil Serileri:  -> Atlantik 760
+Profil Örnekleri:  -> kanat
+Seri Numaraları:  -> 120356
+2024-12-24 17:04:16 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: AA -> AA
+Açıklama: müsteri -> müsteri
+Ülke: 1 -> 1
+Şehir: 1 -> 1
+Makineler:  -> Turbocut 400
+Markalar:  -> Firatpen
+Profil Serileri: Yeni Garnet 70 -> Yeni Garnet 70
+Profil Örnekleri:  -> 
+Seri Numaraları: 1005, 1000 -> 1005, 1000
+2024-12-24 17:04:36 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: wefqwegergweq -> wefqwegergweq
+Açıklama: müsteri -> müsteri
+Ülke: 3 -> 3
+Şehir: 3 -> 3
+Makineler:  -> Turbocut 400
+Markalar:  -> Firatpen
+Profil Serileri:  -> Selenit 75
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 
+2024-12-24 17:04:42 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: B -> B
+Açıklama: müsteri -> müsteri
+Ülke: 2 -> 2
+Şehir: 2 -> 2
+Makineler:  -> Turbocut 400
+Markalar:  -> Firatpen
+Profil Serileri:  -> Selenit 75
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 
+2024-12-24 17:04:48 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: wefqegewgqw -> wefqegewgqw
+Açıklama: müsteri -> müsteri
+Ülke: 3 -> 3
+Şehir: 3 -> 3
+Makineler:  -> Turbocut 400
+Markalar:  -> Firatpen
+Profil Serileri:  -> Selenit 75
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 
+2024-12-24 17:04:53 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: fwefweqf -> fwefweqf
+Açıklama: wewegwegqw -> wewegwegqw
+Ülke: 2 -> 2
+Şehir: 2 -> 2
+Makineler:  -> Turbocut 400
+Markalar:  -> Firatpen
+Profil Serileri:  -> Selenit 75
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 
+2024-12-24 17:04:59 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: BB -> BB
+Açıklama: tets -> tets
+Ülke: 2 -> 2
+Şehir: 2 -> 2
+Makineler:  -> Turbocut 400
+Markalar:  -> Firatpen
+Profil Serileri:  -> Selenit 75
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 
+2024-12-24 17:05:04 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: CA -> CA
+Açıklama: test -> test
+Ülke: 3 -> 3
+Şehir: 10 -> 10
+Makineler: Turbocut 500 -> Turbocut 500
+Markalar: Adopen -> Adopen
+Profil Serileri:  -> 888 Serisi
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 
+2024-12-24 17:05:15 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: Bdd -> Bdd
+Açıklama: test -> test
+Ülke: 6 -> 6
+Şehir: 1007 -> 1007
+Makineler: Turbocut 400 -> Turbocut 400
+Markalar: Adopen, Egepen -> Adopen, Egepen
+Profil Serileri:  -> 888 Serisi, Legend Sistemi
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 
+2024-12-24 17:05:20 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: ccc -> ccc
+Açıklama: geliyor gidiyor -> geliyor gidiyor
+Ülke: 3 -> 3
+Şehir: 3 -> 3
+Makineler: Turbocut 500 -> Turbocut 500
+Markalar: Egepen -> Egepen
+Profil Serileri:  -> Legend Sistemi
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 
+2024-12-24 17:14:35 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:16:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:17:20 | UserID: 1 | Action: Müşteri Kaydı Eklendi: açılıştaki tablo denemesi
+2024-12-24 17:18:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:37:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:38:07 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:43:08 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:43:26 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:44:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:44:45 | UserID: 1 | Action: Müşteri Kaydı Eklendi: yeni veri
+2024-12-24 17:45:05 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: yeni veri -> yeni veri
+Açıklama: pseries deniyoruz -> pseries deniyoruz
+Ülke: 4 -> 4
+Şehir: 4 -> 4
+Makineler: Turbocut 500 -> Turbocut 500
+Markalar: Testpen -> Testpen
+Profil Serileri:  -> 789 serisi
+Profil Örnekleri: OKayit -> OKayit
+Seri Numaraları: 30316 -> 30316
+2024-12-24 17:49:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:52:59 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-24 17:53:23 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: veri  -> veri 
+Açıklama: ekleme -> ekleme
+Ülke: 4 -> 4
+Şehir: 4 -> 4
+Makineler: Turbocut 500 -> Turbocut 500
+Markalar: Testpen -> Testpen
+Profil Serileri:  -> 789 serisi
+Profil Örnekleri:  -> 
+Seri Numaraları:  -> 38451
+2024-12-25 11:56:12 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-25 11:59:18 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-25 12:04:43 | UserID: 3 | Action: Giriş işlemi yapıldı. Kullanıcı: ibrahim, Rolü: visitor
+2024-12-25 12:05:20 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-25 12:05:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 12:08:05 | UserID: 3 | Action: Giriş işlemi yapıldı. Kullanıcı: ibrahim, Rolü: visitor
+2024-12-25 13:03:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 13:07:23 | UserID: 1 | Action: Müşteri Kaydı Eklendi: brandid deneme
+2024-12-25 13:19:31 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-25 13:23:13 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-25 13:24:57 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 13:32:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 13:33:42 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 13:35:12 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-25 13:35:58 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 13:36:15 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-25 13:36:32 | UserID: 3 | Action: Giriş işlemi yapıldı. Kullanıcı: ibrahim, Rolü: visitor
+2024-12-25 13:54:58 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 14:02:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 14:04:23 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 14:06:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 14:33:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 14:33:53 | UserID: 1 | Action: Seçilen Örnek Güncellendi: 
+Örnek Adı: deneme zipi -> deneme zipi, 
+Açıklama: yine bir zip -> yine bir zip, 
+Dosyalar Güncellendi.
+2024-12-25 14:36:32 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 14:41:54 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: deneme zipi,
+ Açıklama: yine bir zip,
+Dosya: PK    �xtY��x�� �T 
+   deneme.dxf�ےGr�{?f���W��:�]����	�B7O2�� 3�-I�Y�����~��}��U�uh8�-q�ѕ��O�}6����6���_����>�l���=�\\m^�����]\^\}��9���..ǣ�2~�������%]}�c�y���WO/_^mn/�n�Ӕ^�=����������/7WO�i����{���˷߿����W�����Wr�@�~���"���3j<q���Η����_L�o��[zx�����_4�N�����b9��ǫ�x>nZ������x�^/���l�����붟�z�x=�L���z���~V����j��f��z=������u<�c/O�7�&���zY�z������Y��7i��5}�y1�����/���S�������^�@�7�w�76��u����ﳷ���ܶ�<.v���r�����R��oҫ>�b�>���7�k�����&�5;YZ]nnMm��ݓ�ݼ������˗7/m��0��|��������g��q����f�_����������G��=����y����2~��E�F��R�M��7_�!u�p������Nd�;��͋޿ߗo���fh�8C_�?\����������vxq�K�|���0��V�'7h�^g�_uu�l�ۗw�=}
+����x�:3�v����3]Oa���r6/�\_\�����뛡��9@XϿ܍�__
+~w1����xwE��d������󻗏:G���������;��W�~h�^����"�p�2\
+���0-�������P3���{�j��/ngp���_M�P�|�����0��͞������ᣳ5������%�L�ns���b����X�<���:��z��xn�'W�櫸f��_m���R�r� \}�K��=I������ӋO�B.WHj��b:]/g�Ug+b�_r�����7�7K�:�|�x��'��r�B�me�a����ݐ�/ni�*�q������/z��s� 3����λ�W��*_}�y�ECG�ۿmn6_^4s�z����=��Ë����W\��6���峋ϯ7�.v�5�<��]��oz���/o��������}�Og��b:�M����hZ���/z�s�n?x{���t4/PN�s��G����@�����b�^���^�#����Pxd��T6:�|��^<��{W��jP���
+"����/��w����yww�]sl�׋��w��w��۳�p�/���w6)��W��O����/'�_��/;X�/{���Uz��/�l��嫧���<�u��qa'���>\{<���W����͗�7_��g����ۣ���O^�߿���7���S���鳓\�z��O.#<���~�����SH��$��=�(n���� YܞH�����q{2iܞL���w�W�����U�r��R��J!d���W�ƻ�<��1�����ݷ��}����^���ڦ�r��=C��J��p��|~�̟�}~�ı��..���~�(b��I���^��iꪃ[���dz��7��g�a[6o�/�߽�܃+�.b���.�'~Wa��W����B�Ѥ�~��Du0��fPӶi@�@6���˯�y�������*6��D������d�1m�}T�ݼ�������jgX����S���dT�x�[Z�h�V�!��b��^/A�L/�{��l�N_sh���o�^dQh�;���c������_<ݼ�}���I,t��c>�^�g��G��z�h������٣�����j������g��lW��/gӋ�d�y4��,�/gW�.f��M���f>Oǥ='���w��w_�F��񒕺�xu��m�x�Aas����@������wo�=��d�~Y������FR�_����
+*�mo�/�ܵxC��2|���=-�9+����?7����޽�� G�蠕q	^�'��=d�yq�O�p��Q9L͟5�qG����o��[>��e�g�����W׍�������
+�NK���@VQ_~����i{��ϗ��z1�,�����5�M�y����֛�f����D�2~���+P��^�$��"�ɘ�|�\�p�i���x2y<]�D���"���4������x���]ӧ7��>����5���������.��}.8���O����WϞ{��`�����`�W�Ç��鋝/K�`7I�i�Q�J� d������'��%�7��3�띯����BF��N����Y�k�bs��&�����ڵ[cѻ����ҿ��qy���yz���7_]]'�m.���׫w�~x��o���w�|���o~����#��������|����o~������,Z3�d�m~�[���/G=�c���U|��a#�6@
+��*�8��7���ۻ���1c���	}�jԳRF���o߿{��1���ӭ�OOz?b��E���Ͽ���#Va2;i��о���7ǽyw���i��?���o�{�>����u|�u��>j��4�޼�0�hpɛ�����\��GQ���k���ĕ�(X4����ŷ�7?��>��m^o��d��vq �����%<����\����ŏ?ܾ}��?���C�ϗ?~����FxxN]�x�d�0��>���������i����Ҹ����Oo>�E~��<�z��5w`ܦ����?fg�O�~hs9�ql�L_�{��fl=�{�AJ��j�Mߐ��~x���_wD�z�.��<?�� �����4��#�k,c7_$��u�6}����o~����i����܆ϟ<�y�B��6����?~�o\�������>�����7y�]������О��ӯ7*��ʮ�/��y�Q������z�b-O�0�-`���^>y��۟~|�Ç��V^G���w?����GX��%)Gr�}闱\|���Ѽzy��{p�^�������߳vl}����ݻ4�M�����/I�W� �=�L������
+�ӗ�(��
+���o����4��_��������f��65
+8��üc��z���bg9������.m�՛o8��j�"���WQ���a��Y�*�&�
+���S�9������V�F i$��;�������]��e�5������E�U��^���G��;e����:ߦ9�/�����A��Q��6�$��x<��|���R������l:�.��|���M��7�q�������_���6,�Me4��m�M��[�CxZ.�j=��I��I�����x������IA�ge�:��ߪC�����q���4��i��ϖiS�IV�yl���-�7�!�]��+e��=j+�q�B��|[~s3��n_����g�u}�X 0�y:c\׎�o8�E;@����8Y��]���Yy�"�����9Lz���3�����/.�|��e�s94��͑���������ǟ�4�Q�����Ϗ<�7�~x��o?��=�O��x��It:���-�#1�v�����g\5q��-�6�����_~����������>���������}�?�v-�����o���g�_�������i�-3�(|�3j��h�x��������x�����t$���7&?__7O����l��AxQ�:�����֛&�n����S��-*F�4�E���]�*�\��M�$G=Ӛ>Y����������,3�� ��_~�:�/!�W��γ+���$}��>�>�]�g��H������X�g�_$_�,�&�SN����m�;��o���������wo��k]����q��C��y�}������~��������Cgxy覘^N?�ǟ�8_|{������V�w�����%:��l��\�>���l�o��C��{A���\����[ZPG�Q�o�@���?|���F��S�/�M����������k�?��@�]
+������w�uʹ�_2����w�����X����|��'���]4���[�ѹ�f��5>�.���c7:�-��M��3�zq{�=�w}t�B!���<�5�_�����⧟z�Mڂ�Itƺ9��^���e؞�tz�w6�����w����~~����9��*�|�y�������7/�\m�|/o\^:�N�_<�L���[ ��wO/�6���лϵ�Y:�3����6xK����y��l�5�ܿ����f�G��D#h\����Loǧ�w�lpV��������W?�����˳�Փ֬�C�A:��:�n�ֲ'�o�t�p�a0����(5^��K�P��C<�9&�2��У���H��dԼ�������%`<�~v���Td�![>r�mM�
+MM��N�j��h-D"�%
+O��4�M�R���n���ι��h��{:)ߤk֤�ß��
+y��U��*lů�m�6��t���&Lb�IIj�Yᕣ~r����J��.%�F?�(r�Đ_��H�Gs8�J=��r�_n��#	!��v��������z��m�T'[Dщ+�uq虇��2��7?�}�����G�8���{�j��Û�
+��
+R��sR�j1^���t������������4��yr� rm��f��j��vю�?�0�˃�:������yq�9_L��bv�9O���_e��g{Yf�䌳�88�'�`�Ӄ��*��<�lM��f{9�lLU������٦�:8��٧:=4�Q���3N��=�1��a����M����f+Fs`��O0����^��n�8�C��ɹ������x���=0�ea��3�䫃�ҧ����\�sL���qufc:^͎��r|�����/6g/T��O��]m9g��3ɄǝF��0��{t��I\�g�\o�3�a���:)S�o�����3���x>:fgge�ӳMw:��TIpᙧ{h��2���z�{ltyn�c���S-����l�fwh��˽��1D<-;;9�t
+��?�iq���zh��2����xr��'�������TW盪�
+���3�y���֋2���zp[w<��0�CS}R�zq���Ȗ}SMƠ3��G2(�
+1>��麟�O3�C�-�8b>;]K�쟮��������65��ѧ�I�(�#�n�w�Ϭ�#~r�U�����/��2���W�~^�./.yD�œQ�'���dt�|�����0g�\f�_fM�Y�~F�f�?s7��������E�͢�f�t�h��h�/��u����i�jڷ_5�WM�U�>������iѴ�h�_4O^4�/���_~���M�˦�eY�fr7y������3w�i��4�l�n6�06M�MjY�"S�������~��O������i�����>S���}�?7���=���gj�3�oA����dj�������M�?s7����35T����gn�����>S���}��<����gj�3����gn����M��35���gj�3'�k��&S������ej�3w����<�L
+~����ٟ���s��	�������Q���gn�����>S���}��z35����
+�sUy�������s�9�����dj�3#S���}��z�����s�~��1������125���gj�3����gn���r�L
+~����l!w�����M���Q������g�&S���}�?7���=�~.���i�|;��6Ɩ����>S���}�?s�L
+�!fj�3���P!�^��������O35������gn�����>SC�Ù���35����}�3���7'������35���gj�s�a�yA����̚E🹛�������kvf�YK�|����������ڧ��>��ǽ�Y�8�S;�n��ж��!�o?�Cl��S:jk���=�_���"���xx�]J8�}X�������o�NSS|K߁�4��q��cv�8�u�?��tw���������E����~qww�^�m�CnI�e�;N���6?�����=�a���Ӈq����M1=���9�>�|*ܦ�����������������������������n޶��=l�Gn��#7}�O�a�9]K����A׾;����Nk߫��������xC��i�ww���;P�ú�r����N��e�_�c�9P�.I�z�΅ ��=��i�;ǡ;����8��m��e8m�x��~>dݟS۟��6�?{A�L�㰛���dv2v�F�����q��1Z_�����W�G����ѓ����l��n6���z���=(��Pl�T��s�@L���?������6U�]8��+O:O����������+�o�<����w��>�gK�{萻���}�u�)
+q�8̮�1�����v=f�]��oۃ���`����tF��[�a ��4�mݿm����q��qWNiߝ�i���Bjߡ�m����rw���ݶ�R���NdX'�;��觺��O�;��ٝ���޷�}C>�q����H���3�>����i<���hq/��}$��~Nm?L����]y�	�\?�b<;)6w�m>��$���P�ǚ�A��d��z��x��x�\,�6��գ����ѓ���z����W������/��y�����$�H}p�,Ʒ�X����t'7c�����S�/�\[�/���M0j�:�|�Çw��#�ZCۓ�z�CoR���J!���r��3�saM�A�O���z�{�f7m�nO���R1�Nʾ���m=4w��|Ԉ��՜Sޜo!F��}K���1�/�D���t�'������A_an��}y����m��\�Рk��������)��t�Ķ[���kt�F���N,G������|�����b5[OG��M��G;ML�K��x6O��t9��
+�v��w:���&����؈�F��|:O�(����z:�����d��
+�MO��r�\��b�6�o��l<Y�g+�و���ǣ9_pyMg�U��U<���x5Y2�:�ɂ��5T0[���mO��r<�/��Z�R�ණ���F��d>���b�`���l5�(j>[O��z�%5��a}�t=�F��db9ƶ�u5ֵ�1{3��X��d�*��m�$��ɂ%�����}3�4�H�,p�
+}�&�5Pˊ_Կ�P{*����#���DJ�ܷ�V��ۼuZ����r
+���q��>
+�MO�<>M׋���TB�OF3v�-e.��Me<ۮ��|�\�5>d<f}Fc�}<�-��1$=/R��f�g��r�����,��7
+��LJ��<���5'b���hm6���5����5��)+P,Fc(����.5��@���S�n{��לFD���X�s�x4��y�]���-��!(ȟ��"�4�p0 �a�1�nsΠs�K�ЬV|h|4�~�H���¯�	��X�}�NS�������3�s�\�V��2�6w4��K�Ŏf���钥�����T��tĂ�M�Ƒ��%g�8slъ�sh�t�x5cJ�	�O&�lҒ-�,�d	�X׎FuH����h��\re����g���hʹ/�<�Nw~�O�޼���Z��R�0�,S�����֞��섻4�.��{w��<�����f�9p���M[h��힦�k�[�]��t�:֟��JKq����u��d氪	n�	��0��cvw=wD0�T��i1Yp.����.�\��|9[piM���d�+:�.:�������-��DY��+��3��W.��J�dN�#���G����'��85�{�{6N1pd�3�q�l �J`UcVq6J\��Փ�}[���ۮf���9�-o������[�{"]�f��o�yѡ
+�'��a��5�.�qh�<3�\��C$�E�j�*l2�egT�w$a�P�\�33^�<F&C{�WJ��!���'Lq���.��(�!,�~=���|ͮ��K�����9	u0��r���1*�b��]q��D&uP7������ȕ_�$��X�h�=R^�%ȥ楃�3Z%ix\��BOޱ��a���b���~� �A���)�OÎG���t�9��4e�Ӣq�ԟe˙`N�|���m��jC2`���rv�C��m��{�
+3ܞ�}i�m��&���4ُ�b��`��ll 
+-�����{���N���f��	�N쫰�h���b���.J�t����
+UC�HH��L�v��xw��)rᬶ@@E�DȜ��#hZ�l��a��4�7���w��5�
+��͌Ǒ�F�O�i�C�\�[m����f34O�v@�A�����4��g���{_�� �
+g�T`;�/S=��U�����g��+��q��ּ�^��㞩=�ͣ����
+�-G�> ��!�u�hm�:�s�C碷���k�v={���>��D�@%b�&0�鲕���(��%��h�|��p��7��;��-�D�T�`>[r� ��:HK�
+�+2C/k:Z��c�Ȓ�>�����������,��#�,�ƀ���(F@��yܣr].��	{���X-bށ9/��1BB�M���ŝ����|{��ڥf@�#Ȳ>�@Y ��qF�vg�U$FdZ*�OX����˱21G�}��KG�u�aОY:p�1��jDx�tLHu|FR=��,���
+�(#����҅��
+�����e�ˮ���|�Pa�u��W�@��6� =9.k���i#rG�"h����Q���Ƅ��CeD��P�,���L�y
+� �C��ˠ���9st��6�8�����镘�D�8A:A�*1-���\�0���o���"��P �ʁ�s������i�	��BBdg�E<^�V xºƇ�e<�@�-q���FZ������+��>X&����|5�m��H��AU"U����<M8�hc,�d����ͺ�~Ħ�2��NO��ioG��(�Ӟ�y\0���L5b(��
+���f � ���g��;?_�W-�R�GcE�H�b�,�q��3ߋ�p*Q���9��v�lN�d�l�gl����l&�v3R:�i�P�^���{1����.����h߫�G�>��鎔�4�I����bh-u#���8�������8yh��s�����*rˣ.}�B����[�B��5�(G�և���� F��
+�9ׄ\�4�G �����i8�|¤�3���:��:k��
+1��N��/�����çPp��Sܟ�����}��'���ک8Am�(-�JD�%0ޟex�&�F�:ƟW(��$���"�q��sX.��3�T^�1��|��)��*��>�i�]�}��r\&�/�-O[��cu�X�aWBX#%A�Ve��P4�9,li�[�#w6&�Ě���FEEU����q��j�h+����puc�C�I�k�_TGklߍAy�T���4Ʌ�M�	 ���`��a��?�5�&���C�̿�����E��a�m�CIg��z�����.ӥ#��M��'�Ir#h�V�Ia�"��Ho�p�èL��p]lI�(�3U���`���V�EC�>��H�X��0^�C4�fk_�ge幔�.���W��/
+"8�`�R��Y&�-'F���O���k�A��̅8+�_]P� pӳ�k��ճQk4�aN�:'Ӆ�K@W��l[��p1GM��-'t�Aa��� <�\�y�+&X� {�گ��.�9'/
+��	r	�я���,§�'^�U�p���0_��O7��!�V��V�Li�-Q�:��`�ֈ��������	9���eW8�@�e0"��4�L�dES@�-X��h���j��d��=�{U�F��Y`x4���T���?�Q��ɨ��L�Y�L���xl(z�cD�`NF��y���u����'�vP�3\��ű�
+z?�S����g5��;���g�� BeB��І2��؁e��A^#)ș}� !�Q�=�f�� 	!	��Uح�J	����t�Z��9^:f�_��RCR��-x��Q(��4�t�Zڶ�����O�
+���M�wlx�$N�Qk���A�BI��d̆�6D���v��(\�1k��/)�0���,���r9C�1�'N�kK���� �*������,pv�PCw�s�:�$K�ۊ<*tE7\K4�S'�ܦ�W�o�i]\���b@�t��[,v�$�2���d�~�5ݙX�-��f�P�3�F�xH�Jٿ%;UMI���ނ�@�
+x�]��IH)O7�x}7�ʸ�pP8�u� r�/�V�2�/*]<�r�����g:P!����L���
+�#
+��� �(�
+ޜ��7����� ��`�q9�,6n.H����&��C
+�ݰw��pm�	�̡7�����IA��VR�̒�
+�Q�e���N&`�t%��?Đ���F�gϚK�]I���G�0| ������z����͆����
+9b��	U�6x7�;��0X"��a� �`~�,}]<~�>~H
+�:(X\�� �6��D�/.=T �����T���r�r4����e�������l9�B���F�/�'̗�!q	b�._��5�U�v}^�_!&�����ȓ��O.����W��6��;��U)VgVX��L��B�p{HǊ�Sp�X�eI��lQh�7�c%Pn�d+M�$�ǈ�T ��W��U�E��P��+Bo���ԅ����1/v��1L������m_ەA(	k\aD~=��H����a�5�3:�ϰ$G��CW���`�o�}��A���$�헄�=��.Wv}�	G�ֽ������O����[�j�镅�*�A\�=lᕎL[l7˃-�A�����gC�=<s�a��?������*ߥ��	~̧�;����/�wGdr�8L7\��5�bPaK�	���ivx���>W�� !\�:�O��+ˣH�+��"�t�`�a�bu\��l�(�U�Y��60�iGܝt�]�l4�����-Qܭ.X�-Z��8���@�Nf]Oж�UWh�ꩧA�m蜻�ɬ��:݁1AB"0�U���P�L艙�H�C��rQ�D/��$s. �@hɷݛsW�0f3�e��/dX��� gdY���<MT��]�  
+9�$7
+м���
+&p:WM���=�@��1t�e	�M%��,Ԏ� u���ij�7�K�����h�^�x����!4�|����f�X�����ꡠ�rg���Ș��ے�R fi�KCAcr@��&�\
+�nvh�G
+d�)s 9�����q#�-��"��S�t�P���i<��$�ͤ�d�LdT�"Wp -A�y�C�41�BL�e���I�a+�	��0�F� ��i�o�: �ʵsM�U��0�t/���h*�NhH-���P�!�/��	]i:>1R@�����-B� eSQ�%w�a$I���)�� �����Fp��K,���c�������8�O�Cc��U4�������J�I�'�<BG,��lǶ���Q�<~������W�SKf�Bi�)��7�>�lg���l���20g�l5�F�Z��Ƶ$��ޞ��+��R�s���(�!;�ٲ���1N� ���g��"�Qe��	E�C4
+nE�%��%N�C��r݋����
+�jz~�`c���Mo�uv�,`B��T?5q��ݦl�:��Qqm�_DcA ���O��Av�ĥ �G#*!P��B_�}���n�9^2�x�d�5A#����B���c���hN����[z�����JkW��9¸A�˪�5�%	&UT^ձ�e���B ��m����1-��:�]vl7�gh���쯌�qϏ���@�d��j<�٭�}��q^���x�W/��vm A��g�v��*m�ɗG��{}ۯ!F�6ًXo;t�JNU}�j2H&��tu��kv?<{�:z_?��}-��n(��7��,���3`�VF�}=?����x��Zi��CC;>�� Æ��5�����3���̢�]��CQUU��z['��nLJN�0��H��=y��8��@�,!4
+LR¨b�X'�'s�Qe�XӕO	* e7�
+�@x���U�l�M�8\#�F�_V�ZN}��=0]ώh�O�Z�Ԉ3�Dϟ;�,Lɶ���@L[Qj#��B�Z�Y��)o��M�n��{���OS��i3�BT̯Rg��-��q4�V3��@���y��Ы'�3��C��(L1<Љb���
+]��/�yGF��K���  ��V��e�4�盲V��A�c=����2��h�d 5!VR�T`����U�1�Dwf�e�}���.θ�)�lo8�����B�-�e��^",���B���C� �
+�e
+����#Z�~d�N����&�}9|l'BE�����豕��>ޱ���y�>�D<�g�<joD��*W�Q�(�,�	�ns �(r��Q�g�Y@\z5M�4�B�����C/�QD� ��-u/FZR�o��1ЭN���h�9
+�b�����y��I�l3��x>��T�(6�����"�@<O�4#8�	"���/a�	�gr�����b�N�'C 
+6�I����3?���_*�^�XWh\�>Nq�ےԬ?�D�:7t#�GL�#�-dh`�̣��Ǻ��>ٷV��a�2 �4/�ހٿ����^@+�
+���Ʃ����j�6�p��+���&�@� �K@o�H1q܂3��6����9����Lä0��%���9U%2Pp!C`a����)�
+��0����~�m������I#��1��ћ3�K�bL�'�Lot
+�9j�O��T@��&�k'�a����rW�Ġ{�-VoݺL���������N��y�؄4Ppy�^톳�[t-���Jn�=e�۠e4�qCjS��s!aٰc��m{Zi\db,-f�B���)<��
+�`�҇5r-�g.��-a��2�n��#*&P��V3c',@�E��tE5�!>�8���C�Uc��>�x�;�\���suW,�I
+Y��ʏ	=��A���tВ~���:h'F�htzP}rxhg�A�b{6{��bxؖ�sDv��V�V����R{�$�A*N��;b��gzE�◸Gm��ɻ�c�h����3W�Cv�#�`�r�nW��;Eu���Qu�Y��V�Hk$��^��V�����hս����#u��ܽ����̊[�;@�0�<#:�|.�G�5Kc!�v��G�4�<o�B�Cf#hY�b�?��e�}�Y��{.�)�=�^�~]�ʽ���(Q�~�	}�0�#�D<�HT��7i{v�j�Wg\P�ٷ���Yȿ�y�ؗmų
+A��[�♁�>ų�r�♃���U}>(�%�˖��#L�j�+������prg�G�*�7����M��t�PP�9h���~���h�Gi�'*��^�^9�x�0�^�3��ϡx����I���ǳ��Y#���1Z��D�2n�ճP�*C�@G�\��������Ze��Ze�(8I�\��V�{�JX��V9��*Q����!���3�D00�.�����᜕����l:h �����N�21�69�z��!���\���|��:eΐ�/��Sb���YPT^�͉�2*ecm�Q)Y���UP�'�	KO�Z��ە��m��v�pP�>���`9�]0�{TA�XƵ��
+����	��"}�`���U7P��˒6��Êw���5A>�sý����� ?�C�o�!�x�!���7���O�����=�to��6�d��#17.:Gʉ�;~���RMN�؅fR�D0���Б���JG�d��H���#S~hS�A��
+�Oј� i>j��bT�RBOIY5� �"�J�)i�t�8��9Pv�~~P�$��66���F�"(�͹�c�u_��������&J�)���HDYLfC��+�|��6�2fV���zoɤ�W�O�KMz �"&���kMG���0Q�P�j6	��=��G�}`�C�0�$��P1��U�AP�1,S�Ht4����i�s5��rS
+֙}��s=3�������ԥp�HS�1C8u��p��B"o��џ�T�8?ƍ@o���!� �h�Ԉp
+e��̸� <�\��(x� m�'�\��z�:��s��� H�P0
+�h��dT�A��Ru8���E�6�ݭ�V��,tj��!"Z
+3�٧b��H��"U'�S��	�4!J���iA(�&(�/�,����Sz <���XTE����W.��ز>������*(MO�RYd;�M�9W R�n�	CSR� �crљg�8!�$�t��w��������<��)�zY��l�N��L;\�n��Re����1�+璉���ų�
+4�1�왩V]�e�/�<���-���
+�i-���0��&lW��� ��f"IS����Xl��DƊp#�m��	p���V��[�(�J!�Y&8�q�` �ψ2V�-�
+`���qKT�҉�C�/f��D�+8I�$��R.&��8R���a|W	h��cW!����U_��U<e�ru3�pr�:���plhMVst�����CЍ���F���?�M��G;F��O
+4��z�����b���x\J��!��[l��E82T�88�š�oů�jB����i�����������eu*��*��˒��r�p�l�P�l~9[��j��1VPx�j�q�Ƹ	� �Do�(j�=���:DT��ĀM�� ]Si����*��׋y�9hj��������=E���;��!��O�ۖ�,=i�2�J�6��;R<i=����x��8���q ���'��˩쭪c�b-#���%#Z��N+M��8A�Q�	�J)���2������,�*�B�m�6#2� ��d��<�4`���Қ���
+m��X%	�V�.��0�zB>�=��!�%l����qpg�����\5G1$�E��J�Ű���56�&���MLŷ��@)��"Y�R�F��91,�<YC�T�f�VM����i(m���
+gERerC4Y��,\�wQ�l+̑��Ӈ�������YeI�&�SH�!>��˓F΢�,7�"�!Hm3�B�\��ހ��L��������9�?P&��ə��1w�I���dR>�ɑ��k�3dR����̤�ʤ<J�<=_"����D�����G������X����%�uo�.z�5(��~p�
+xF_�S��-L�bb:���(&�ֱ�4Y��������F�f��&��vCpicV�Q�	}:��ˆI�b2ٌ0S�? ����Mܽ伐���Tf�c[k	
+�H6S�l������s.�r�^�o�I2�	�0��&�N��P��eYTMke�P���I
+��
+F�1�g
+3�dk�uW�< (\2ă�-N��\��'����}l.�X���\�5w���r�<+�sH������[��33��[tr9�84����$s�\ہlΡ�Z��9e�w��̹QOH�lݜł5D��{���벇\ΰɜ����4�/z�M5�޾&�d����k��m,�Ӈr9���h�%�b��J+�4��:>ȶM���$�BН���fqU�Q?f�Im睧�[n���fc�m��ѷ tȞ���,x�~�!���
+����`(	�_wJ�gb:�C�aP�����rǱP����ZeL0��lj�z��x���9r?�v� �kF+	�.���^n^C"���~H߭֊;O������z}�����W��r���?��������_��˝�
+��F�/��h���ݷ��������߿y����S+�!�jt�LC�!�I'L'ޑ�/�;Ň���E["�ca�,�?t5><���DU��ZE�б>�F��M8q)k\)�;��!�VWo���>���0��<8���;��t��z7i2¶-L,e����@>"0P�����J$*w�{B0�X����T�k����sא[�k�4䈄Yb{��!j!"b���t����v�1hX�jc��s�0 Q�YI餍�@�>�>��c�r� �妈�Z��p�6�x�z�s{�8PL�Ɉ�S@B�nƤ��9����O
+A��>�����-��䌤�t��LP/_�l���!�r��*5���^k�i�
+t�_(����Ȧ�H��HBYәX�X��W#��kc�;�����
+��YC:" X!c��ׇl,�(���3V�A��F� ��B��&B���-�Rm�A�A
+_B���AC��ٙ\_���*w ��}+x�p���m����H����#����:�J=!��y������c�y��9���X���̆Zb���
+���\�a+,q�O�/�I,���$&���P���4N
+��x�;X+g���Lռ��뎁#T�xa}�h���nx��+k=(�φ��1I�{�L!�@T��"gQ`��ƽ� �m�����?1 �3ƤX�8��l/a-z�̛Ӆ6/�1	AG�
+噠_����R$��p#��qMd�X-�ml$ҥ!c�+Tve9|{hݰd&��ل�Ԣl�Ւ
+�)sE@JzQu	�B 6�e.�C�9{V�|B�c؁>2`.Fzճ�q��_���8z9zJ��r�O5e�g~�����a�x�LQ�].I���YBx\�_�)*DL��>a��Z��j��.'�fz�����e��i��:�Mb*e^��������SA'菻rݠ�w����Ŷ`Xb�Q��[f����ߠ�)擵.H(1��*T�g��H.�P��P�uO��}U��rTBYx<&��}��l�N�=~1=��}h;X̰�-�݅R�K���ٝGDG�a��'p�F[���AȜ- Z��m5	Ȃs	!�*E3�MA��T8�"�ƴBؒt~�8a-�nB�B�]^܄%g���r�S5�Xv�ǫ�T���$Ÿ���/��T�C~W��C<^�<xۥRq�K��0k���, ����apz�
+ʌE
+;cQrN��N�t�
+]��	���.)+" ��+«��H��W�;!ΊRV�.�&�6�ZEǢXp���$\n^�� �B�(( ��Ѥ
+R��[%+�g��s z�T�sR�%����%�4�����i#�����a��E��YX1t%�V4�9~����a�=�wŀ+��dV�H�8J���js����k����]95��A�1s;��7rXk̲U��}I: �\nH+��=W�tf�����$�j�[��-GFz��+��U��r*'�o����R@7
+��1��n����B�R�t�4M?X��m:�2�	&�����>�qN���8{�$�d-�{
+s�&4D59�W�Kg^V�5��
+��9f1Cf�;�� 2�Q����b���>x���]ۖ!UlDKH1`EˢUN"Rb��Y6_7���)�=��,I@���E�R�3��)�[V�P6�U��Y�I�	I�1T���� k�i)Q�.
+���:��`@:��*�7�(D.O؈�tbrc�G�0j�A/(�KQ)�痎����a7G<v����G׳�Jt:������7��M>H���V�X(�X��a~~hkZ�*�:M>�e�2���^94gr)�#nl�����Yw�6ЛQ��W�";rh��t;ˀZ# ��Z*���Y{�+�V��λkR�Ӈ[�:����*��5��d� ���8��r�T^�3����uy]��2���V� 1U�Ք"�|E"��E���5��Ki}&l�x��2��R�L�h�D���큤.e`�� !Ѿqwn��AS�o�Y{�sRa#B�E��GKXr����%��hh<�����`oU�udͭ�,��e�*�RT���R�𫊃�bw�rx��<2C���;4#rx���|0��(�,�)4���8)UY1p��5�uʌ��O�*-�/�+yä�p��<�P�y ��hV�ì���*��+Oyɘ
+S���	r0���Kh�<oz�U�-�
+�ھJT��g�1��'��c�)�D8Pȍ3�� �����)�7x5�2qGC9��d��[C�]�$)ab`H�M
+-5"
+����B�����bp'��)9!��#�F\�J<͞&�_�R�&�3�2E`r�����+]B�!4Ǖf��U��գ�>y�
+:��k����
+V��YBC˽��ftx�G�$x��h���K@%��[�k[�
+|�����Vbh��"��R��o���ER�ҸHc/��{#X5U�R?�ڗ�o��25��d� gX����(BW)~P�*ũ+
+ }p�\کia@�*sB�k�?�0�)'���o&��78�p�a�t��49&� ��Ԯ�����H��B���[��FG3��Z�[�lJ+<O*k;q��WS%����	�\��Ef�ˑ>���³�z���D+����.ɾ�mW��1
+3e�
+2a��o���q�?d��kJggoAsl���W;�G�`ƙ�����(�Z�� kľ�-g\��rb�-n]�Of�i`�\��]��F�E��,�`a�j7M�ɏ@eES�r��K����i���ٚuA�z��=#l�"q�)=Y[(���
+[UQ�MbQT�N�B%V�9�CPR�i�鉇M뇚P�� �;�[K��b��4�`s��СyXл5ʺ��y��ժ"#�K��"��X��.]�Zޚݡ�Pm��w�e�#ؚ�R���T�=Z�t6Ůa�����N�:�
+�OY��:sF��Ccj�qRk�]K�IM_�4��1㙠s�.)�X���-��
+��"S2x�c�����@��f�$��߮�cgP����δ	�A��@+x�5�摬R�VN��!�ɓ�W
+�B�����2q�)(&,��2�X1]�BW�)��a��_�뵙b�2Cz!D�����XX¼ڮ���4+����L��[F��i�kn��JDE`�MIҦ+K����"L��w�>���,��%TċmG���R�r�z�sH렌�J2�.&�p�^l������ͱ+8�<Bn]*�4-�&��9��z0����8)�s�q<bm�B�r$pg�8(V��;�
+9M�U�jX�5�&HT�Qb���5CWR�P�ʇ<w�ԡ�ZU���,�M�N���B�`#�]�[ 1Ԝ �Ca���D����� qd��MW3D�$K ]�70�ʺ��0�9�B����t�s�\�$j���u		&�,�xQIPj�������gx�"wOSh���8�5	����]EZ�	"�i�:��-B�cz�>Aˋ�� 	�z�5]���׫��4V��B�=z��{N[M��bX�dR� 8b=�<�PU��M9�����N��>�:����Ø,,�Ϭ�1-�d	Lk�j�)Q�D�2���%�$����6�Z����w����v�HK�	ES��PZ�)�T��)M��m��IO1�Ir3�
+� .��HX{��>�F,�MO�4t	А���Α$�ksCzJ��M)��'�y�'�F��B���p�S�T� �X�X��6�Bfʉ�;$�`�'X�Y�A�r�_ӓ���M)�]�\�cj�4y��8�i
+��#kg�\k#��q�"�+��vb�H.V���xҎi����p(�%$�ֶ�N)�P5�E�S���n���k"�h\�5Oj~2$�%��}�"� 7/=���������fH&%��4�*VFgO����(4@O��ɢ�#O)�&3���=����iR �a�r��ܓډ��M���1��)t�E�э_��ړ�yɥ;HY�c��Q(D#�&h���V �c��V8X)�@��`�1�|A�B`u��z☦xH�]!���,��@	
+"�Ms6�K�^��HԔ,��G����/[p`����L;��'�L$�l =1�;�~㚹�g��\�<�L����)Ys���	IE�
+E����I̦z2�ׄ9�K`3��B�7 ��EQ3�8����F�'?׺{L/z�I�"��Y�؜�����`s��؞�� *n1�=��Θ�J�7L���S�dn ������LvR1�V� ��C	4X�@2&����09��:@��# L�3"L��S�&�ǵ��f�# ��";J���B�o��"b$r��D�H��K4J�t��CH��@�Ko1ql�
+�B��jL���i�R
+����@8�c�V (�gՊ�B����y�5y�Dc	�`��E��1�ٲ�V�=E���]��6q���XrcpgcOL%���ˤ�b�BFS2�T,/�@X��,���s��m
+�Ip͚z9�L_�#�(�5]��[�[��5S�Ȇqc�`9����3;3�]�7�.�0�.�,�G7U���E��)O�ڭC_��j��W ���Ln��BG���D�P5vJd�"�l!�Yp� ��E�Ic���
+��x1d����\=���7W�
+�pu���shY�J�@�*���f�L�
+��U�A�5��焛��GP3-��T{�znm&�W�]��c��Zzݢgf(.�-�7�!����!�r\�E�E���������;���+��d/�<��"VL�ƟGfc�q������2�^�m!� O1X4������L8���`n��9����ˈ$�>{����8]�b�S��t���Yv:J>=� ��:2~�I�0خ�e3y��d��)Y�6�]�-s��報eqxhg�_"hAhё�H8(�
+OD,-{k�~Au�39*w��h���DPYw!��H��2��P_�q��$4�.;� B	��$�G�ґUTW,�TI=F�!A�9eo����|��zrƟ���	����0!���ӂRm���N*R��A�`���d4���u������S��f/�CM����Y�.�	hMF�g��zC�g}�P�uQт��? �d�U.U7ru�Ԡe��}^�X�q%�
+r�SW���PKEpaе�9���-�Ӥ4�-,��ٙڂ����EJM\���6��0c/Wn�jT`Ee�\[�'��bUQ�&+�.����P��Ϲ�ߥ�
+�'g��Yӗ��&�����I�M�|PBn],�HzFg���e/$
+��rb�u# ���mK�͢�����y�X �W娄�L:�ʬ�mȬ����GO��qQc.g���W���!������"�LD��0��9vK�S�k�^���}�+]�X&cҳ��`�h㒮�_�J�K'�<��A>�����<�g� q��h���%�����V���W�DW,.�âBh��@�A���V{D���׳.��{J�$k��f���p(�0�j���1�sw@5�� ��BfY:l`^��r�w��@�3���i�Yˠ�-KiJ��6C�x��ڽ�43�O쳊t��%�S<]�
+�+
+�5[�R��~����X?e쓎����W�ސ��N�u5��F��A���PY0K_[)hh��"e�Xf�+�UP^gf9�9<�%˨6򘅞�Xz�Q��x�$FeRÉ���ʠN�Bc�}1,s,�(sT��~E=��N2!!	3!j��X���`����
+����p�P Y_!��X]
+�9�`j�W�(�U�=ɼ��y�LBY�+�V׈(ޑ!���)�آJqc�
+։ٲZ��$;G)���++���J��da����A�A��Pa��aBi���E�z^��fI��}���
+�G>��'F�������J����&��y��V+6���1����{���aģ��}���S��Q���V,]C��R	�Di���Yf��0ڗ���K?f��bwCਮ���_�l���g��F18]"�[f�G��^�]���ǣcL��M
+����g�W6�U5�������B	f_��6��}V�.�z���;��dkO&�i��X�'�Oۄ
+u��z�aLTv�
+��^���s���"f�)�{�|�l�������]ssDV8e��'!5L��3�ޗ�-�`�g���jP�%A�2��%p�Dj.3ݖ`(�BR��:���&o��\�@,HK1�O��)�L����K�u,�+wӓ���3�����Ii���o��o���G����9�\��<�qKt�	��NQ�b.,�˥��9a^st�'Dzt�˫�jK���
+��_���N/h$u=F�b�	���(���" 
+��f�Ah��f������~Fd�fThJ� � ��uZ0�����O���g�%�~r�@��Q_F<$
+,�C@1��
+!K+���iS@�r�)(
+��)��<��a�<2.�9�Z���xK�9W^�c�S��Z�v�E��Ym�Y|���,�7��ૡ�Ā��`a9S�6^����gT-p�t�����{��o�y�a�kEh�~�(�:��*���S�-�}�q���)b�fC|�l�A�:,�1b����
+���٬��<4㙮LV�앳(��u�#Dh�n�b����*{Ҽ�7*�F�I�;�&�!���t�A�
+�iduRW�.������J����c^< z�1KV�͓��Ϣ��Ak��\�'K�
+;�<jџ<�
+�ɣ�Cɣ
+B��<�:
+o%�
+����Q!�G'yԬ?y��]�ɣ̾8�<
+�d yTI��<
+����l��E,���%2�視��,e�coj��	�/��d ��0�Y��=�d��sl�H�G$��$v��ͷ;Ew+�S�7�;� ��h����4�*z=�� �և�t;u�x�()=t��:t���Iߕ��N,�����o�u��u*�\7�S��כ�iܛة"�ۉ�X�p�C^%ꭼN�2�u2W�P^��
+���)V퉁S����ʐ�&'f8�M�2������<b�^��z9P�D�)mV�NFA"2���E���c��J��qm!l���:��T��������eY&�9[���E�'&�h��t�433��sFk~��Dؗb~��?YsJ�'DtP���&��+�#�w���[+R.ӿ�ף3�{��ڛa���Ԃ��`�N��ٓ�p�n0n��@�\�'X�[Y�B~�N���u7b��[�/
+X��vҀ��4[i�j`�V�<֞4`%��V��aӀ�b?!#Sv���	�vs�m`+'XP2;9��硜`s�$���R�/X�z;�D�p��c�a�"�
+�
+�SX$�;DA�ZhH��Qbo�
+��T\�w�4�i�Ad��%q��?�P�M�H��S>f�*t�� +��k�"��&�� 0���4����T�����$r��Qu8�望Ȕa�?�k6�e�xA����9&����g�zw�yt�QCp��t��'��ƽʑ7�-v�=�P$!���P?�neM��HΘg�dγV2�me��p�'Z���V�����I���ўDk%e�v��"\n'Z��}�.ǽ�.s���\�������`8�uq���<��w���!|�zqxh�+r�C�8��Y7|��H�;����jZ�L=s�*�j�� �x}�ҋ�%S���l;�oQk-Phf�wO&CM�8!�%QeM�����W� �Я\G����e0Y��#U��'�]�z *ƌ�X,��M�H
+_2��H�sJlsց9Zu�2)������w�Blk��f�]��dʹ��`�	,6��R���ښ�q#ղ[Ћ��ܣ��
+Kp�a*_��T��Ke]��D�u��u�Hx������'�W'�Hŝ)���Dh�ҕtRp���¡�����CS�����Jc��WBKi&I�(�uK�9�/K�o���c���c�DК�h�,�HŤ��mz�Ɲ��e��`�jiղ|s��{5U-`�AU�5��ĥϚ�f�pf�gR#]2���zBW�j�l�0�	��o�j���Mb �Ư�qm�N���M�P	����	j+:K� �l�IO�o��W�$��~_$D8�����$�������eEr�+���xI���t�
+�B��:��@��\6��Kh�䞀`2���ӻ���=鸇�$OL!��1��ғ³&0���{n��@�(�&4(*g9i�JS������K�~�39ׅyZ�Ox�<�;��Z�D<���v��g�*�
+p��	�`X��c�C�*��dp
+иZc=�b�.���m镅�<�|U)к'���
+5,i���ZY����`e�ԑ�BNA�T�p3�C�#3����u&g0m츆årv�������4ז�
+�D5��s�>���7���I&�9�ɺƤ�{|�xr����AMbF�t+re�UR��.!�_o��@���R�6�W����}70����͖�-X>��������uϥUݍg����F\<h#�����	��G�o�[.�ևX�����{uD�z���a
+�߭���2���_&�.ON�$�����.�_�*�����O�[��EXR�h��%�����d)�W�q
+U��ޜЭUȞ߳�͘7�^�U�Ɛ���=_$����
+��dc� ��Psy�J_�bܺ���*�0��k�WL��W�P��BO��ȗ��j�i�
+�C��0N
+}�R��~^�䌼�P�`< ̖�	A�JH����N�K����U)s�<"Y^�T�F�SʚWK�ϼ������5I鉻X`�Y��r+?�ٗV����E0Q�5����O�����9�;Q��v��0u�!��+H[fG3J�NA�P�*���m���sr�����U���A
+�K*5 k(ϛ�ܨh��/!�E�н,q���F�)3d^	\�t� �Ecg�&6�9��tԭ ܯN�2�.��X�.��&�%�[�Ϭ8�� q�w���˘�	@Q�P�9ow���m��b�2���P���>G�
+f�IG�$⬬��'�d>I#MJO�"�s�Oց�����������*�h<�9U�)ZPb\M���x��:�M7�bP�Y$�窉�|M����s6kع#+�
+��Wf��0@���J*55^������Lufmpk�����m��z�+�c����)@k5�Ge��#nҼ;i�lhX?í�3�U�-kOy�0��$�޿7��u�@��>��ޛ�-��.�u�Uz�4 �1� LM�ƚ��#v�G�����>m�#Ѝ'7�[
+��l���;��������!d�ؿ�VK��`�P��r��
+~x��Z�~�ˏ�'��vk|�V傎�eݼ �a�˙0�^-S5�cٵf�|�%�z����_3Y�Ae�d�rp�|�++ �l_����q�������LZ+>�tfyC�2l;�9�\7p?'����a�������3C/�LHM�onv�B�N�����(�$�N��v�p%�M���[TN��
+s��SR:2�Iˌ(�ѷ�D0(��
+v���á���@9)P~��bi�큥�#�eflJ+�%6��qJ̥�Ct`d��k�c���V~CKaŠ�μFA:&p�.ˋJ5 �\�U�az�|*z�*�}��w��Չ&ߚ�;+f_2%&�^�^sD�K�h�J	F�̝�{FM�9� /�'��61d=�9U��Rrĺ�x$�����Q�B+���f��U%V`�[���uҌ����u�oi�C���4�}��jjetSgg�f��1�ei����g�벛õ��ׄbb`渦 )$�Ckg�=
+�pGF�<�A��2���;B�Zեet� ��b%�@+e���܍�L�������jOfVo.�=�Z����P:�Ƙ�Δ�Ɨ{uq#�ٟW:1��̕m�R*hS��蝵4�����Ӡ^�
+��o��QF��6�U�/l�#W�$C~�[����i0��GX])M��e�0� ���&�T��&1�E��������}�6��W�M���27M��eȫ9�ds�j�:*�	5ˤlƄXI-1teIy�l�.���kRU�-�V��=+����sJ��'s[Z�)��+��J2}���^��xU��⊨�~����X�.����
+l[vmPZ��gY��6�te�Y�$��s�2��e��,�7x��4I��L$\{J�lɧx�2m�M�zgfK��Ik��Z�	��D��<r�j4�	���o�U�P�+����dU�J'!�sf��
+�Ɏ�?�{X�* �ZVQ�82x���վdk�3�eϵ/��5��4!��|�I��׸a���J�ͣvf�iӤ)'Ԉ�N���oNZ�U�A��,���A�b}�CLt�Np��~���O�I�����$�5u���<L�9��,�a��!��$��I��332E�2�m�)+�MR�_ʐʰ+�����5�j�U+�ՎL'�
+�p�s���g
+)Iwc�qD�g�ċ���Q�Nu��׾�v��bR�m�}M���
+@]I��Q&̞qO#|��sXx����z�p~8ᇼ��%[;�q���Q�'�AW��\n��m�F�r���ܯ@`֫@w)��H�Ds.坬kGn����ǈŇ]��92D� d*��d`�Ȇ2�R��R��v�T�{5*�D��o��=�C��5*ү��F�-��*�R)S�W����Lֳ}RHD&X�E��
+-�_;���g�i*�� N��n˄�l_������\	劷�ބܦ\����wrbև)�ro���=Y�z�[2'�KaYP��"��r�9��(�y����� {���dTD\H+��a9�U
+SWPOxzZƩ�<v��_��>�Aw��k%*�b�}
+O��5��T��!X`8���<R����΂�> ZB�R��JYH�Z$��]r+�V�M�)@��٬Ly���5�	��Q!U4���w��Z-4�i�
+dZj9����F��*�PKQ0R������u�E$fً��l��+y�R���Ӻ�]f^���'��
+�ƈ�d54�r`0�\�rʆ�]���W�7�K�a�?骨~�&l�F3��`�N
+�o���Ue�m��4(�(e��
+�s=	+�^8	C��#��6'�ހ����"搸چ�NG�V�>]\mZ�W�p[��w����������Ww�x�|H_����H�:ā,m=a���U�IYi�`���`fDK-	gd�a@���ҏ�#�o��&��x�1�tL��F=�r�֤���)&W��Z�̒�Q�<� �E)�D�y�sV&� `U�p���Je^BsǞ��u��%v2��P7D�P�>��0V@����[W�XD"��Y���[����2Mʥ�q�Br(�v�J�54Q���k����N�Qg.,YA���0w�)��lSȅ�i;��{� qg����̠�y?�r�Ԟ:�_�:�oƛ�)��� ��˂`�-�K�e��2��P����ckgz�����|�u�*��>�\�z��{1�u��_��C�`��]vu(s�>+	]��1U=��F&1�ZEV��j��$^�MuO�'�\��wU�Q@F17#��PA�C!�7%.�j�.�e]P*}�h�D���C��7b�-}7,��,$k�4h�(��i���.hf���8N�DO����ڂVV�(,ZU�I���fM�Lv��aҝ��k	�w'ӂ(�9]��`�d�\���$3|=Jt���3�7����&�=�������8������ky0J�ud�F��{]|�uu]3*_X�v5�"�eov(h��Aϻ��_k��u�,���>_Ʒ�d�"ܻ�7e^q�YS��x�u.k���˚�.,t��3`����S�BP�f�\�ڊ���THٜi	��)�D��_f.'��5�k�I^�
+{s;�˩�~V�˹B�W��Ҙ�EL�� �4�`49f���O��y� 	i0CeIIR
+-q�M^�Vd��I�zx!���+��EJilz>S��4)�NE���K.�Ea�^�ɩ,h�Qe�Ls�|�
+P�/��6��z��a42$sr��=K޵ƞ2V҅g����c���6G�/������c�E0}�|g��aݰ�o�^�)�[�Ҕo>�Gb�H���<��&
+� �9DY�j51,��⤔��d]֪f� �Ν�RՉ�~�E�f�s(�:Y���62c+yNu5��^�]�C��*e�z5ۆ��X�M�C��봝r�JO��@]��#"�ƚJks�d*vt��y %�0S���B�����^�J�j���ؠJ�T4�ħVG��;&N�0B��1>�n�&2(��L܌�u�؅�M]���'�	�Sd��c0{#"'�U=���
+�җ�SKC�V��!-�Uo:S�[Rؼ�:j�a��r��-o.m�&�R!)�W2p��a5՟sO-�T^`��[g�GM�����L�fe�5�|G�;(��.�3��|�x
+�i�|DHl x�Uꀑ-ɮ�C�`���.��H�/Bay�"i�AԬҩ*�e	��$�zDp�0����Q5�X��_゠~�Q5�y��TcM ����/Y
+�mG���O�dZh-���
+�)	�NPa��0e�;��2�lzʩ�jz�E�۴�&���I;s��(L;��N{4���'�P;-�.���(�zUw'
+k�����|���=�㵮��G�_�Z�Z��v �t����/�	��	ά��W=ˀ��y�/õ
+��9�RX�������h>pf�/
+��L�)��"�a�eٌ�B��^�\���� �_��]ib�_L�X�
+A����t�~3��LO3�Ű�a���r��O�ö�3��^��8g�j�r+�p���c�z1�����c|bKd��r�_K6}y$�C��\��$vo%d�C�	��3¥�;S:�����W&
+_A)��}�d��<:�K�㛏�9Ī˪,�h�U3Sì�F�����z5��U�ü���?���?�����ۿ�����ȴƟ�iݽ�y~����5>���0��Tj>�B3�
+Us[m�P=�C )-��N\. a�(����L��P4���q��Uh���;���F½���j6j�Д��*@ԝ{��N��R�+��o�ZD#J��2�TًR�<UC�:(�G�"J�Ut֋R���(�t ���T9aE/NUD�>��|��6vu��Q,y�b�Xhu54��bYۻx|tP,Uzn�-<k}"�������g����E���ڲ\���h�Џ�D�����W2a,b�8�e�6�6g!(��x[j����}5�5ݰ��||l2Y�F�4�e��֠�N�2�t0�1E"�y�ÿ��kK|5>��-�J�xA�"���o�{����?~������s�(7������cgP���pͧ�t����Y]A��C��������TH�
+�g�t��6�k1�y/���]Lw5����0����t�۹!�ɩ�.V�!�ՙ ݴ�w5�h*b�H	�̦n,�̺#�ҝ�ҝ ��~D�$`�Ft�gGt��4��|��a4������8p(S����i�����@ic�?>y�o��.�S\�4=�i�x��8m�F+���e��۱�F�};3����x�}{G}=Ց�$
+�v�.!9;��=��G�&��Fpt��=�@q��g�O�B���؍��R��(�|z�8B��N�Cg$�~��zT����<���UF�Y��#�إ�"d�S4�nt�^'G�
+DǍ���:��{X���2F�E��Ã��=��~���[�B���e����q�e,�J�EE;�-��-���mK�$�2<���,�+0���q�N=�jm�]W듦;�wD�<롩�.��U!zɜ�f#5,7K<�, �6���X��
+�������B��k�{����ޛVE��[A��,�����9�A�piU�����	��B��:|Fڮ�2_����6fԴ ����p�	�Vw_n���y���+��4��{�t�*� ً�к�-Į]���0�E?�,�h�E���%�hүX�5�G�YCW�z�Ew{nDs����N���d�ލ�-�7��ŪL7pײ�[3�&�[�1؄�9b��l�����e�ѕ8��#�i�p�`uDV�X��4F
+T"�i0
+�� ��܋���ړn��ex��q��$���������1�v���Ǥ9X��q�g�;����i!���C��Jߛ����oV,
+�<�I֓�(YE�x��M:� Z����� ����h��h�I��K5�,}R�b��^-try�7fx+hX>aE����B�@*��\qX�M*��R�W�h�����7L��&@�s�[>��
+]��tB�*�t�i��$*�'��*f�9����"�>&�
+
+��%}�	˕�����	�9Y}t�Ϝ�G�ܬt���R�E�w�~�ɲpZĹ�*䆜�u���q,��bM)�\q4����#����,̹�����j8l%�|�����֬�]Ce�OD��HP�ؘV2������bGN����J�\w��m���q%��
+WoV���¯',�^*�g"H�����p����e�>ݤ�k��t�0�$<�;���
+��������q8k)�&Qg;�\.�E�Q�w�|�[���M����
+)/Y�-ǣ5�g�df��j2��ف��%I{fc���Y��[3S�o�i1�Y�7����L3��b����v`��z���E�����8ÒV7S;ʹ)�L�Rk��cPW�w��@���^�i��̚h��f�˜ez:�Z��ǖǘ��uIU>(��p�_l�p�����0]|h���p�WI�k	 L�i�,6
+b�g!�%���iRG� �
+*��s���>��޸������Q��X=K9�0)՞��b��i�P���
+�>��K�Qb�\e�G�',�oq����z��,�E����4Qk��nm��Xk)�r���"&X
+{�,������"��Ya]<I����U����z��ͼkZtkO�v��(�B� px�Mq�3Iav��6��Y�ڶ@��3Sԋ~�Z�/n��<�L�7w���Z�����\.ƓU�>��Q����k5�B�|�F��{��3}��k�w�p�S��]�ǧߴ�#9��-Y�vb�J��܀m��v�v����;�w����~��!϶w�s5�<xG���p.N��;�J��;z1tG�S綆���o�\�w��������Q|��]$�c/�>?�#/��/p]�O��#��u�/.���^�Y�w�}x�KԽ�3��w�L*����Nz�~�Џ�(�����ǻ'�єg։-�yU��ئ�l
+��!E����2+��U����[bՃތ�^.�p�%��+Q$��8ǇQ?@X�
+��i?@Xs�l��~|���� A��LP^h�y�X��E��,�X6!W�<��&�c�>ݢ������!H���LNm�VZJV�,���
+}ŮXj����ٿzp�M����_�Do!}�~�/Va�H�Q�P��ꋞ���`�]���]\�An���(C�)�a~p�����o��Q�eQI%�ʽ�Ь�p�R/��#�]-n��ŝ��lۨ:2�N���f:ɨ�u?>ļ��	�\~*�8�[äQθ>K������Ɩ����Zs��>Ck-�eh�,��l�5��L�g�EN  wv�c�M�τ��O�	���A&��q|�1wU�BmsGC��`����7=�t��v�xu�"%��P��X����j��#�����(\6�]}�u�gc�ݪ�"�H�"��p���H�4Y���d�iJ��mt�PǴ�_��x�WZj�7q��p�]w�m����]��H�p
+�<�5�_����bU�b)̖�)9�(�F
+� *\Ӡ�Pfm�A�*��y#��,�Y���c�vm���<��Vq��@��J6��cX�ͥ�.	�o:ZY3$U����yf����ST���N4�)��lH}�`W�E_T�F��� 4���V��
+�ѽ�Zq٬�`
+��:v`�?����9_X�`������ �&�#p��|,���Ǡ-��Ԋ\�(s\@P+d���M�GE�@9)1Xl��h�����V�Y
+���W1�=�R���e�Iن�猟�1+=Yk��+ʛ��U.-�r��<��k{�Y�O
+�կ���x<F4z �R�E0aK�>�x��@#>?�|1�)�匉>��fm�dX�
+�f#��-�d5,��JA��
+��e=�	0S(��F�x�S%`��iy~�6r�/��u|
+�+�����Yک�UKD9�������"Z>��'�&�AM�Z\��U!��:���"�k^�trY餄�� Y)���I�D�\� ����҈D6�������b�V�m:z���U5�t:k��n��$�5�|K���W��$N�-�����9{2 ��ճ6[%!k@m��.���,/�7T�g��H�Τ���ckލ�Z���)�H����fnm��������l�&TҊ;֕�f`'zue ����f�K���h���+��������h �3����P�؈�'�RS`��� �����_�7�Z�e�=�{��[,�f�Ԟ��&j�NG-}��7K�
+��O����!:�%�:����Зh�[#������q���<��0�fw���r� I&�5+KZIvۋ�j�ܮmY2$�w��f��|��=����H&�bI�ͺ��*23^O��眈����hw:ےp'��m!��	�:C��u��p�D�
+~,u]�f޼Jm(��h�u&��0�
+۱"��$<Bixֱ�a2w؍zY��^c���]Vp|s��3YV^Dp���m�;|�����|f�y.�h��#��+lX��̬�8�����fX^ah���W� 7^a���t�U3k����Z<��\��d�ٻ�ǭ8Z�i@��-���������qc��]�a���.��
+��%O�m��ni���h˧@�E�� ��1�m`��Ȟ�6�}�8�F��@�I�ٍ`��w�BUS�!��9Ț1�� Ã/c�1daNQGF��p"�:���c'*����h�Q�?{FjN��'� �~�3�+ٟ���I�iQ�^"�>��R	A�ޕF\��C�3�t>�JWs��sGt�=C2��=�A�1�֥��d��l��KM\���e#����Q��ȥf��JPLu�R�k���hG�����]��u5�\�CJ���E4�Q;'W�d}�gV����4"@XD�Yt( ������fs	9Gh�{(��O�3����T4����P&K��  V:��2�{(+�����.�1�0S�DE9NN��K.�Aw��q=�:"��Z�}/tid�"����p
+J�����0�7�e�:��P����XRz��;zȐ��c�Hf��t��r����ь�50�{l�u���U�����`��L@o)
+�:�R�
+G{18�{��^��"a�0����u�xw��"/D�	���Y�VxS;l&A�#��̑}�+fh+b�#)Q���#UԐ�Ɛu!T[�T@�I[u����'����]���p�2�
+M�e�}��T/<���	��d���Q<8��޴K��.��iOo������1`05�?�RL����K�"�HaT+���E�:r�[�}Q:�J�h� Εw�3�P
+Ff��/P��Y+Ӓ�BD���*�	�\1��N�Y
+>ZA���5)K��#�o�rck�&6Ͳg�9H���DП3�1k:� �����gb��j�J���+&�ٯ�����ڔ�y# E�{��e�9z+Z�Q9c�?�C&��3��PV�7ߺ�����g/y[�ǔ��~���H�Bk�zI"�wt����;�������8��,�Ya����+Gz؜5��2h���M�?Y8�w-��1�&�
+����<y���w�X���q��1��s!U��|�x�88|L4�%GcA�=X��ZܿP��a�a���
+��^	/��jo��T�rY�>�2%_b�Z�~��u�0+��$�&OĪ7pxF�P�Ӄ�{P�i��[n����c�N�GB����^�-뱒����t#�2�N�T�n��<�����ҙ�}K;ԛYT��&VzI��n��dn��0��wrZ��o88w����Q���d��Ĭ�����1�*@�!�^:U�
+�c�Wh�� ��&��&po�A4��=�ѮJ�!T�9������oNm<V%��S���S�������=��!OSd���o}����)
+\kxu��J�@��;JZV	��	Xm2���
+�T��r;�F!�8�� �gP[p����l�x ���H|��Ȉ�.|C� v��M7zҚ|��t0� �e=F�
+����Zd��4�;�6��[�ˋ��d��
+���3�)T�o)
+T*����#��#�\��e�8�e����Vvp�Bt�(���m���88��V��N䍓��^bX�O ���_�c���u3B����@�߿���&M�r��B�N��l���&��\�-S_��:��;!߹OS	�0��Y����`���V�!O_�qL4W�θ��NC�z^��������e��xX�A<��荷�3t�|y�Ì���̈vMy0`0�X*��	�0����	�,�V���&�o�x���nm�Kf���
+�p"V%���O|�a�����d���x��M�ϲ���=5���Nʤ�������Q`;���g҂���rAX�����
+J�{	����$�zb"Z
+/�t��ƌP�Fn��C�n
+���d�*g�S���0
+�eBR�ۢ�
+
+�q]*����	�3 w"
+��
+y#������r-r!<�k��r1<��BI+�-G�l+d��voc>��=Yh\{�a�v���z%*[RL��$�F�$�c�P���&rb\ 4��&;��N�dZ'ȣuSsU��/��[�}m�Cq%cө��;@�P�
+(�,�� W�������:C�Ǳ�|O�zf5U�~5�ܩ=�)�d�$�lC#�����񩉴鑉��$��>(�'�dn�7�&�!d�1n��r[�vI�����#)��5 �p댨o���6����mBF�]
+�,f3i��Lڹ��.���T��TZ��@.N���1�c�)�Ձ8>,��:%����ť��^��2/�F�Zm��tl&-�E�����?�a��g�sv��zY�����P���3?Z��3�>+zW٠2y���A�����-��"��3mZa�F!
+�sF*�W�DE���D���$��H���Sbg �28����gg �@!��p*�
+yY�A`��{ǘy�X)��u��o����b����Ш/`
+t`������^<c�����F�`�9��1�@F��dLu��1�fi��uq�(g)�
+ P���V��/E*�KG<X.*��aB y�d;]���{m.�Uw�fm^AfQ �^D���d��)r���pX�
+�Y��N��H��P��[$�L����P���)�&���������dX-�y��W�7F��B�kb���M�ȶ�<3�P�Ţ���&��X�$�E4��j,����'d��I�:R`��}�
+[��[P.mۉ�#�̶���K�Zp�0��O�V:d��c��αV��P�:&��~�}(m2݈g���� ��C)"#�[����Zh�,�5�@��0a���֗��<��,����jS?!������7*e��QB��~�c �vhA|[���i���P*VN7��$�U�hSmRHt=5��R���c�,3�p�Adh$N����;Z�@��Aj�ED�:d2k��OviQl�;Ԃ���:�UL�bPA�lBb�:��L��P��#<��4*�x�6�P&�� �s~��Spe<�+�\�,��K�ax��h�)KŚ(�02�m��1��=��J.�K]n̪ż���@�=P�v��~����dC��pL��C�T?*
+^�
+�D,:֧f��Zn،9�]7�v!#8ZF&�
+�s{����d�� ����Q�^<���aFoW�!XA�K��B��
+e�`f����6zb����]�pZ�0HvB�<_���@�?�{��6�(���`������\��H��63.��))@8�,Y�R�-��
+�dɾE��#�O��#�x����erK��>*���UF�Ɯ}&�
+l�Д]���SN"M?uj��pa����)�\��:�b��F:@���0 �<`�[���� t+���oR&�H=ƌ��5>�0��+�٧&T���a\�9�53�|gNˑ�C�^O����U%�Aa�#�_�J�L����)�z5n��a���
+8Xb�|#2"���%O��7�a~�0�S�1���l7���au��J��	s�G�5'��zn'Iz�Nӵ�y���;I�v&���I��sg�����$1G�ɢ6�yq'	1E���+��$�Ƞ>1��h��ԝ$$�������N����IRNJX�I�_��>a�^z�NP��E��I_�I����Ԛ�O�I���3!��bi'I2��:a'�q�>�[�I�2��=[�H~��}$@9�f�d �u]��\��\����D.��$�P�ny@X]��:l��/�#!~(�@�ؤ�&��#Q����hS���#!���;u�Q�K�H�+��L��2a���P����|��S�������ENDZI��!��ti�Jެy梯�I�<s /W6��3��Z'�{G}�3͇[��4wɱ��泉��L���x�ͽM�&��o�'�'{�h^�/��]Fq�N��v
+7�}��D ,3���N"DLv�-���Y6�-��]n3� �g����)��Q[�oq�U��Jt�}�9X
+Z"����D�)�b��3P�"T�w��c��}�Q��}D�	�}������H�]޹m$�ε�FR�l#�g����]$��x�"pQ�v�|p��D2�+22*�=`�Q�����G�wq��6����r@w�2�o"9��ػ�d El�h��M$e/}����h��7�$�d�7����kq�%Ey1��l�T��L����g
+��,��,+�i�Ӷ�<]�/1n�/��G2ϓ�}�����FȭG���J7�Q��b�H@Br |�!�>5PVW7i�:'%����	C&����n&mIhKo��5G����Ϛ)�wؔ�z�<��y���]����K"y�L4%/ݲN�\�S��U��m�Q>�����?qr���.�daO�W��hM�ʑ�H�@�M�w�p���7�e{4��^�4��Ft�̿�׿;�&��&����A�ss㠬��/G7��CrA�kuH�1����륽��Q����K�\F����BWP��;��c�(<�2�����a�u����4w�;��u��0���`�����k���h]�tb��?�.p�l�U���E��&���.�ɣ���6 �A��d�	��
+��/Ie�y��FS����Δ6�F)��`%�e݆J�qct�6C��jbi�e$��190K�I*/���]\�QC�c0�W���ҿ4r�;Zs���/9#�vg3t�~)..��$�����@�db��0��I��94� ���A�h��MPlQ�>M?�pR���Id]�1"6�ؒ�ӽ+9t�E����WL5���za�6̗�R%�����V��o��F��F�/L���,�����0�ɔ�ѓ$Q�{��~P���1��0��HL��B�(�a8 J,�=����L耷c�T�8�Ɗ��&� �s�Q�:�z�]�\�ٱ=%5�6[��K�[]�:W����A�S��'�~��;vG�y|��E�D��^٭\v�h��ɇ�Vر�V}|ioT��E�F�I���4��E��Q�k�);������Hv�J�1$�����En�f=Z�ql�d�h��֙���rЇ���9�z�I�=��n� �b���^��_�g^@h��,ԥv8R7�2b� ����
+�>�~n�g_P��F_��H�qX����R��+z�b䎥:b(K� (��ap'XH��*k�M��c.D�$�/�G���h�q����?��n���Ӯ��=U°�
+�z�v�i�5vV��x�;ѣf��^�G���)�t����Xf��yXfYeiXf}c:�Y�Ȝ̺X��2[eV�eֿMƗY����F sk4=��0X��a��I���_Np�w�AtB���^��Mbt��B[$A�,7��q!��p��ݝL��|�������r?u��A���N+F�|�R8���� �t���UL�y}6`N�%�Ie_���g��
+�����8��X����~�#�>��e�0����@_�ԞJ�}�6���>��y �?��YX���|�C�M�Ay@\�>9�;�f�L��M 7�a�m�=@g{��Ftv6Cg�(�t��	��2�#�]Zǁ�6R&�]ZĄ�v��~�S') ���i��EaG�{�
+?���l��$L��	���p�Jl��ݡ<s�g�m�b�e0 C2L��`�a��p)AZ�]�e����c���/���+A^��Y�`�r.�*��S���SP����%���{`=��]�4����̳��������Q�ץ�?f�|�Ds9	������ݳ���ֶN���,�nD�:�(|�^g]�ĉ��]FmI@O�7�A)�C9u�W])N"_�=���8k7�2��y�;���m��0ئ�$	m
+,���b ���"�����^b��,u��O=x�?'AFW	�6Q���2+��2�3R�X�v7�}�<1�	X�	��7@�8�:Bl��D=fXg���F�7�4�8&WХ:i�+�E<R�����,�B(���*�Ï��qH8S�6]nI���D=c��6�x�x�C�2�jG�pxZSG�I��{.�N��cn��?vLǧ��Ð
+�K؀3��c�� �
+�C8�þ:)�1�dt�o�/h*�����t�*)�.�Vh� ��y���dF��uL�h~c�e�>��L�W�Ws��Ws���7�}�
+2��˹�0���/˛��p��>T
+�����pnT����	i�f:܏�Wt��Q]WJ�_��H���ry�ʌ�ё�9�C�+�F�57ؗE����Yq��҇�YV�P����@�᲼Lu�<��-�]2����s٢�>��ח���8��q��Jf��;\���d�T����`����|�xb�Bg��ڛ_ӡ~�ø�7XVx�ʁ�e����.u��E��@�:v�IPy3��P�E�c���{�.��f1fr�N:����(wK����jO����؛70d�x2��!�=�Fq�W
+Ү��`����N}dPL0b���KW���QQ����U���:����`�C��^b����ӡo����jue���l��﬑W�M>:C�g���@�Wl�=r���Y�D��{��:��Ҥ���
+�b�d* �D�+ˌk�âx�Z�I�a$t�� �J�?�eQ�ِ+LI at= ƻ�(�. b��̘m�
+1�w�Y%��m˃�݀���W2�=�tM� �)T.�։���.'xo�`���z��Sr���tE���7���_s��T\�vH�sYB�.�X��b�؉�
+*-A��m<��i]�y�M���I	Ͻ��ν�	:m�'-9
+���}�I;�,�a�0Ĳ�K�gG�;��c>x��wwbaÆ�q��ݓ�6ŵ��ui�{Ba\;lۙG���F����#Ԍ���n9��C��f�z��8
+���;!�h��7R�޵�#(L$e��?�;��<Η�Mg`�=�s��2gG"f���X�l�1�y<E�}uOga<-$9��� u��
+Ake��W?�VN(SZ���) k�VhK�r��0��o���0�����c>���r�uj"d.L�\�?�w̹#p-��=����Q4�EY��H�a��i$�4�7���0����F$��h�W� 
+M�l��hU�΋��S������,HG3
+���h��C�t6GHS'��t:CM&�`�ڿ�nLR���g�م���w�m�P%�(�C�W���F�A�a"y�w���f~b@�����Xi�0ӡ3MI�4O>V惎��&�����q`�����LX������8��Kt�9��r�����Ú��Q���ln_�����������
+�d���JP( ����s�X8~c��A���(1?�YC�c�'eȜ-�Z�)�e��d��%P(?G��R6@��������-�0t4U�b`o�ۜ��Ai��.������q:�m��C��h)�J,v�{��:��U.GR'���%K�3|X]��q�J����i�R{ B�]�*&7�mhЩ&�B���+C����U�Ly̮$s�����m_VZ�e��N����Й73K������1\�PԸ*sB1ܬgr��:C��!��2���)JJ9b~A��vɀ���uF��<����A:\C�6�i ���M�T* yP*n� 	�2N�쉲L"��^�A#��$Z�m?�Dlp�2U�M#���=���(F��=i�bv�TL%�a�x�A�#�
+tL�漮�?��YH<� ��ڏ�  ���` ��ov�(���m�r�')��Eb�
+G�ȸQte
+�"f.i~��!���HB�~U�Q4� �^��g��ޒy�"�(�b��Β�G�u/��r�wp�܉0ra)��PT"�̡�?�:uD�'-b�/T��X��B�I�>%�
+3��E�K���*�1�P��C�m`�"���IQ���3|ݕ�=F*)�H�CЀG�+Pb�K\R� �
+�>���CM���H��P�1.�(���MQm*��AN2�6��T�
+N�"��E���;�;$XgW�M��a�j�P�����:���?�W.!���Yeg�/��3,�da��ʬ�=���wY��������kՊ�#����H�&/]y鄭ъ�=�b��@۲��N숿�^w��|�'������B�9ê�̭_d�����NA�I���Ȁ=��/	c���Y�0�<"8�(;�N�	��+$��Z'�3�p<Y��8��AȘGs�,#�J���lO�<���m��r�.0�JY������\�*��"���A������A6�3a���BG�!�0)A� �D��۰�έ/8�mC��=�Bv{x��S�3� &&_w��H��SNc�p$7۫6v�fZڣ�)�C|3�C�<�O/]� ��Æ�aG�	o�#�7��L�FJ����A#�Nil�@�(C At�(��,s����3ڿ��.!�e&]��**��uy�{��z�6�!��;@W� t�Q�B�G��ppDm�
+�&�RM��V� 
+P:P.�u]Hߢ��iu���	nR7��P��Vx6��R_-+�/<���|�m:���=?K�	�����F�b8j�*,OP6Q�Uk�4}7�vF�Er��#����<R)��ҠJ6yOUJ(<s7��;�(��4Չr�T�H�q�C��n��,j�x0��Ƀu�M�:؊8��� ���¸�!����%��N3�� ��!�l��Q�x:�4<{5�.�sD'�N[#��.û��1Ћg�^z�!�4��<��!=��0�s����N����wy�|s�	�V��7~M���L�i�{Son)N��r�z�:�o�$�l6�4z��p�,H�3����ۘ���,C��p�b� ���p���!g�]r~3<F-�l����u�w �!{w�u�`O�vC�v�@3|�][e�T{����ڝ�v(ՎI��nC�a�=��,�0�>9�>�U�3��H�ᄩ1)i��]NR�|�HIPg$%;�KJZ��/�Ԇ)����e'�v� �*y��dU�y���yJ�rgxJo�Ҕ�>�r*�c²��+���� ]��d���,�K�&A OX'Q��V�I<��dK��~<���Rl�(��k���*0̸7R��q�L�S38$:5�^r�Q����Ԃ�	� 3�����SN>�{���M����I`s獩����+d�ǒ�&��;�6]m�r��;�m�Qƪ���do�fV���I��H��u/.D�A�e&��)PZ�3�te��4�cnQ�@��Q֔�mf.�L�r,q_	=�_>�VS�Г�Х���ݵ-�E���a��X�A�:�
+���ˑ#M ��'�;���g������
+� �����R�tf�g��{ԭd���;�D�?�/��Nh����E��H���s�����x+��ch3ˌ�tY��CJl�#��e^�O/�K��2k29ʥ���G��P^�	1�����o�V����c���0MfW�o|��S�$@�4�a�X/x���\8J�������-�TN7>7ȞJtK�X:���U֭!�7���^�e<,xO{���Y\d���C07籎�i
+��"�H����H�.H�JB�X�N��|9�g�C���XP���V9�x�B�1}�H�-���]^�w�:�W�aA���1Fru����tS����bt�~
+X�ף���'�H�+=��DwT��"4��p5�E�R*�z�	 ��#�(�%_�8��������չ�2�SM�b��]�DGͯ��3�����|�3�d��&���ghv3��N�_���1��מ��S�!4�C�$�%��%��%]�("�d���B��,oI�oܕ$R�EǶj��@���C��6NҊ
+4�(�HKI�m�������CA��+��C�B�zE�
+h��(+�%OIgC��ak��H�U�g����ʮ!�4n��3],:U���p��gH/�6&V�1�&���z:��Y�sx 	g8a���uۼ�{a��Y�O���e�����he1�^HZ���UQS׳f�`0�(̩#%��bx�:��n�H[�{��"��-	 V�"fy;U7�0o���g�AO�U�O�D���c�J� =5��䛆z�;]#h�1���ڒ�P�e��&/tSLTM������	/+&�'���k��=�|_N��Ý0��ْ���a�<V=e�f�i<�Oc��N1�
+8���xF��p���_ݮ�v�
+Ȫ���.�����h�3�NT�0�Uv�%!�*���^��;�� "��g�M�Ǖ%����I5����)q��.����o*����`k�-�j̤�"�NyБM�ۢ�� �����o�/p�Վ)�Y����NS��_J���Li�V(Ԫx�14fUR5��)���oRjR}E@���
+|\^���Y(|��MS��՗��b�蘋ʛ+�а�5��&ՊԈ�W֘=�r����0*���l�6��<3�%�&ʹ2���]�tx,q+`8U��ME�,�6:(�jq����(��lt�
+j�0b��;�f6�ӄ��n��oRZ�M�����Ż \�f�5^3���0�p�%!Vn�YW"��w&n!���&�� �{��of��.M"F�仪 _̱�[����Q҆Cݤ˯=�� ]�Q�GF��h�d.Z��l�y�
+v-b��cZ��ldo�E {�wa�x��UG�
+7�� ��!��*�g �UfF?o� ��>ae�c3oe*Bg����O�:-�� 7?6.j[�C
+�Mc� �AW�*�q$�ܑ�.g�(>��3`&���i�)r�_�V�X:��?mh0���m�8����"��)����&:���GA�=�q��Q��X�Q���o!�0l� K��ځt��:��dL���@;����7�9zhG�t���B��W2���1n1t����TW��~���^��<U<�S�3<U`�+�ɻ7�'��%�P�|5�
+OH��6F���
+l�+��,?�� T����~��L�A>���Y�R�k'}Q�����.sv!$�﯄��!,],��c�Pp����Cf󻮢�mMFd�-�"���W��`$4�n>���tq%
+"Ԋ�;�H���+XJ�� �P�p}pJs�!An�j&�@l�d�����}x
+��͸	�R<�p�v��	��.��uVi�n�WjT� ��Y�ъQ��^9�ʌTf������*��5���� �1���B ��d�zl3�1��d����]{L.�	��sA���iڠ+��j���0�y��W�T;|�`���f��J*�Y��~Y�kT,�^�x�s,�<(�L]�?�;���)Y &Z�\�r�3��ԑ8�ƠZ��SV��#�2�v:�+���5�I�<`�a�2*�B�ַ��Cz�����Zw�^���@)��F�Ȳ�O�DH��2��
++�O��릆�5�_�B2	&�3�fŧw\��>�i����q�x�x&���H����I+� ��'%�{�;x���Ú�3̆M[��Z�@k<h
+jVql|OL��KW��:f��m��nt��LB��y�Y�:�\|���(�EDtρ�/ޛ�����8�\��WfraJ��H��	�0��}ټ����7��m1}���~��蠤����옇����^�Ư��)�><�������W7޵^F�N{ݏv(�����fe��Y��}ј
+}J��ƒ)
+��D�o�c����tHG�4@V�����`-�N܁q�F����g۴�s�>���gH�lnbG��Q�'�0�z؆{����3
+��=
+��7wC����d2������ԃ;��q}�PE�6�-�Ag�t���Ք���> �B�q��"��'��f'���=�����^w\��}��p��{��0�G�3�&�m�~С!C��_�w�M��M�Q���('m[���ν֩�́^f�6�y���U���ګ���/V��:6�x��Rֲg}�p��{�� �5�4��|d�`�6��� 0!w�m�=}�p���/��f�����ټ��T����v�w����M�Ƽ����� ����G�)�N�N�n��nW����_9�zDe�~�]�p���S=�Z�{X�c��Kx#�y%����C�.2�8��]���:�����[F�bF=MԄ{���~�-�����]�[��W�����֦��N�=�js����ks�m��.ju.j����K�<��J��}v*��Ny:$�c��=vj��: Dw�+I�p�<(����t���tq��:D�7������[
+�
+{�
+��A6����.�֯}�Þ�����V��}��B)��N0<�[�Y�g��`0L0(б�����%t���qW�C����y0>�$��c
+3��a]�����76�u�`D��l�^-7닏<�������o,�΅����>�ȃ��a{�=�#�oh��6_N�A�����&��z�c�>g�A�7�G	��u'����f�K�<����g����yP�B��﫿�6�~��W�c���ȃ��vy��GԕP�{���<�c������OyPWB=<���MFԱP�rd��ȃZ��}y��$�և:u.�'�<���NݟW�	"j}�S��c~�ȃ:��*����9#�X����q~)�u0����<?M�A���O�<����D�V#�[ �:���y���mo}����'�����_<|�}>{ڶ�x;W��o׋'��
+L{��ʢ򊥢��aR�f�W��#t͸N�u��?^�W�=Vq�eP;�5S3�D��b��j\R�|�׼��Ŋk��==��xnf���*/��a��z'��QAŸ �x2���L�&���J�	�Ҏ��Z"�W�����$�|�WQ乮�fʇ��	~�9�C�P�Hw�_\#������T�"�twf^����*���I�ۺs���J�xdy]B�TS�k��E�l���,�e�@�
+zP��z��2��<KĢ��p�\ەN�)uG
+��+(���R�5A0�FR�M}���ub��|re6�3��É�Y�2ƙ�{���e��Z!�^�fjC�η,u<��x�?�����U�ym�wϧ��'W��������a���^7_	�aTRA���b"�����uy�k��ɞ�TG���3%��t���1*������)g��P�_�ʌJw0
+���?��SE�5sϏ
+���:�|i
+����|q��E|��
+��!����<���v�?�gR��ɤ�,u�A��UW�Ύ��R<;^2��Z`aVY\e���
+�Wf���y|�"�P�$T|:������N~|Ԛ�Gs���D������Ĳ}Ǒ�����ǗaŌV���E�"�`��ǁ����?Y8W�&�&Ň���ǭI��?�y�k�.�0��<�	v�J�"-<?�Ga�s��j��h()��9��{܉�|ŉHw��fd�B�r\t��|�Tv�_�ཆ1%�����G4So{�؃�I�+�:��a�����<@�Aqhv������+G�}ʁ�V;z<>J� �L�+)>L�B�ڱ�1�<�����1Fs.wHQ��m�qzP��13L���p�������a,�E�J5�'�X�n��"��x��,�����+�t�r �;S꾎���=����`A��'qʌ�����B9 ʌ:��+�+�+�"��5	��{��/�d=V8�9~t�n�6�D&�L��y�		6Į3ȏ,w��xu���a��o���x�Mt�.\D��:�ԃӬ",/,Py���	�[ƬpN6���f�$��S�Gb��U}>���Zg�S�Lnw���0"�0Ʊ=��U�Ù�fǞ��
+*�"�v�w���L5��u�R�� ��&���	�{\$�b؝�g{��� �K&�vT��<�-�a�<�N 跔W�p�M��x����U�8u	�G����L͉[yq���7�����b5��3*����r��"*�:;ZG{���{�ߝ*�5�$:S<�"�G=�婅���tL�s!�5����A�M�TY&hNwى)&�cIH��-%Y�;o�<�]�Q�rh�����RP���t��0�MW0�d�+��_�1*i	�HJ��������sbr����Z=s��Dn}��<n}N����㼪���G�M���h���B���ϙ(D�K$M�́�B�6� �5�b+��/(	���
+*D�Ğ>��i*��(� ��e`9�!�3�u�h�\�ߜh֟J4g$j�EdY�wP���J�(	K��|��Z��
+���4���9(�u�
+HX�:Q�K#���9	�mXf H���ED6g��Qg�gF���x{����2���Q2��5�ߜd6�A#ђd
+�Cɘr���&���x˺h��h���t%@4F'��Q9�A����}ź�D�p-�Q�[um:y�	�?�Fu2�E�u�k��2a��\BR�E3�4Ӿ�o��X|~W�/(r
+���#Hy�����֘(	A��5�8tqdXh����Z�|H-��ղ�Dz|nf�Y�		���1��T!�*�s�xN4��X��9j��Ӈ���c�\���I��<��p%%K�R�L�F��a�:�]$� #�ŋ��+�	��8�w�K�-���0��_EI͐�z+{���<"n���
+	����RW�!�vRWv��95���i�F9�v8��a�I�R6����G�t�ٞ�{6g�S��-\NhR��S>1�Go�4)�%�sR��D������˹�8 r�	??
+'P�L�]�l�kR�~�F2���������wg�޹�O����nK����t���X{����ѩ��쎫}JG����!aq��g1���tx~��F9QPf����G����������fg+��f�.a$;Q�/?i���~���d�i-6#%���%F�$��C�^��y/�2���G��$bk��q���Oz;�^����	�yp�d!��?��޳.�L��q���=��\����%��uz�7npH�PQ��N�5�Z/PV�)�$<GI�#+a��̂�w�.d42�)
+�J��{q�����	�LfS���`���23��'�tB�=1�.�t;�IQU�e1r�`�$�9�]W��X?�e�@*�^��P�9
+:��U��K��p������\S��3�5�Y�3Ǐ�~��	T��I���V,�tSި�6s�(�!˿,�P�-ȋ�d������I�j"Nq�Q�
+ڝ�^A��G�Cs=�-h,)�,
+���̢H>��0k�u��H6�L,�{�T����Dg�����ڏR׭��9��d�:ݱ�4� D����=?�_ݾ�@��9ŦX@n��9
+����)��C6�gF4�OG��S��"5��Δ埍
+�ˁς�v�L���9�=#T��b��z�B"r
+H�R?+@�!E"�X�E�6ɶ� b"]�)#H.�Rm�jHҒŒ���R-!��d�aR�:�V�ZS�RP ��%�Vd�G���=jia�Vc�����i�^�>y���l���ʟ��V��ۏ�@xf7Slqԥ�Y��G[�O�0�l��������R���m���ͳ�i��7	����0zlgwD葛�f=�X�F�x�6_���d������쏔˞���on_}�}���=Cd/�����K̐�>}��Y���'�<�'�o�/^>|�}Bq�XCsn����GO�u_+��
+�}��ۇ�_����Q�^=�gO�y�}��x�|���7q��u�}��y��:��Q�l�g~�q2*�kٝ������GO^<o_�x��O�������뾈����y�>z�ܵ>Z�����;0�Z^4�G�V�k����}�����}�u�oV/���'_?}�}�i^4�#���d������{s�˄y,w5��|�ܼz����>�l�?^�rVsB;~#�;O�gd���2�ϻeO��l���D'�*2]���V���t�Q�곕�GZ��V�;�g�9W��ȕ�=Q.^=���������_w2���T�Y�"�A9[��I:b�Z��q�2��P���S�;�2�1�g*��#Ht��y�t��$:��Le�yk���y�t�!9i=���s��uq�2{�O��������l2�q2�9E�i~��E���3:�v��֭��l+b�+�d���nKR�F7�۳�z�J�+��2���V��4���(4fk��-�
+֨|=[�2��V������F59�Z��Q��FQ�g�Ѥ����������|u���Q���j4�:���Γ�Ψ��lV��������5�P׹��M�w�q;[�6��>9������v�݅b�5l�l�L�B�m������W��x����/�������y���כ�o޻�敋NE
+�v��3DH�F�Ә;N�����7��^���TU�wrv�mz�fI&G!=k���'Ϟw�YO�#�|�gW�Ũa���S��A�8�w� ��`?���}���}����+��7��k��uU��>z�����~��T:�8�?���߽�y�J2;�����?�r��o{Vk�OZk����'�����߮�ƶ��ܰc������wZ����<�,���s�-A7ߺ�~7mA5ۀ�~\,�P�_6�G=��O��{�������ۏ?nn~���
+�湙a"���uNl��>�Wg,j�~ԯ�X���(�?�sm?��G���}���~����GY�Q�>r$j�>�)qs~���W�a�Qo�
+Ka?�-�9��~�����W�Q�n̡���~�����BRC-31@�^�u\�
+����h@��/��o~x�S���)������{9Z�����o����S�~�������o����%{��P��Vo/H�۟��z�i_��Ɣ��z�h{��^S��G ���_Q�7���"�3���������������~�EX���/�?߾~=�_$��V��܏��&M��_o�k�����vs�����a��������7N�fُ�'�~p�;v3O|x��z݇Jbuy�����~t��1|�������S��Wφ��`�@\�9'�e���k�kI��}��u���=�@�
+ٯ�:�g�w.Zfγ�y�������M���E�3�ow�lfs��J:���L*�{��损p�������O�}`��??����>@h|0®�W��m��Z����O^<�~ﾛ����L@��~}d������o~���%�1
+}�bg�o��/N����2�(`0_��[�j�>9���Y6"�wO��|���U�}�U���{l��/�uO��U(˳�Bi�q���}Z�8S�!U������BC��W��54L���&�=: X�(�=��Wh?�W�9�d���C*wR�␊�P��
+E�+�������W���bq'.��z�sڛ�f+�;��~��Bs��|�{��p'.-|���WhoȚ��^�W�]��B��>_�^�m�I��b��.�J�2~�H��7�<�s_���e�b{�_qwN�2��� ��?
+�a-�f�d���:��2{��1[<�5���d�����{s���y'��ㅚWs3.�I�ӿ�-�jNjN]ͫ�>-����՜.Ԝ��סћ�{��l���ռ9n�k��׬����v�G���hz���������)a��œ��9�k6P�/Ɍ��ߋ�]-����dl���Ț녚KW�T��l���T�I��Ws�jJ��ߋ5/�0~�5O�d�<���G��i�:Lپ]�I�R˼�t��+ٚ��}���8�:L�����NmW}d�:LV��98o�fˆ����tNV�����|O��#���w�����?�}i�c�T�Ѿ<���0~�v��n�A+m�Z�^Stqt���{l���S�ؾ)�8R{=��B����7���ٟ)�Y�;y��ݩA~������u�p��5�Ӿ$�+��?��"�����w�<��f��4����m����|������dY=��ٟZ�a2����B�w��LS��4�Oǚfa�w�Ύ����4@�Z��O����)�yX{3(v��u����E�V�OȦh�4�����k���O��n����fs^��=4����k�I�M�׳y���ۛ�|���a2��hw��e�?V7�o���6������2�2/�r5��iL^�>͵��|�ݥ�����8��jJ���q{L��h�J�ܸQ��y~���k���m^}{����͎����������_]��y�������������Ve�v䰧��2��~/�MxK�Ƨ�ix�����ͻ��o>~�}�w�df�_��_�_~��~@JÃ�������������ܾ2������������
+�o��>�����7o���T�R���.���_n߾~��<�燏7?=x��VJ���WƄ0��O1������Fv��B�ou�10�o�����~�]��7ּ���]��0�h�i�vCm��
+s��?�z�m���7|Ƶ�f}ֹ�&!T��J�9^�GO�d�"�&�m����y�ف��±��Wt��hs�Ob?���~�Y>yw���M�������K����t�m��	�wϹ	���=�~3�e�uo� ��[7�
+���R��?�F�7Ip	�5I�%�]B��9S��]BEh	�k{�Q�NR��},����޼|}��=D�|����&{�_�XGE��/���/_���-Ky%���&�i�>TB�`[LQ�u1�u�%��t�\�+I�"�W�0�_��U���)��noL>i�TWe|��<+����ԙm�����u�#���YU�We\DUdn�>����gU�^T�����֊{ܟ���de�	=F�ÿ|pm�q��/~�y�ƌ>Y�o�<x�S�y`q����}s�h����v�����n�N¤�u8�7n?<�p����\���?��6�u��b�>.+�b���X}}Mso��j��mD�	��h�+
+��-��D��v��Z�gna�=���QTJ��u��ك��}�ow+�.�ި�*�u�a�ݭ�Q[�(�P����v�Fm9�l��^����
+���7�3�(*V�S��T%Z�k>��B�s�ܝ�7Sv����'��~tCR�����Mk�c?�5���x�}N$	��F�8�-
+��8ʋZ�
+V=�1e����{c�G��
+؉v�S �y|Rj�δ��8�E&�=�1�hFD���ԙ��l�G{��3FX&�;;�-g�c��l y��9�@��aU��X��~9⿮���GQ��P�����-ɠv�]d�"��2�K�Ь�͟t[0���!_�Ξ�#��xӘ�*;��5�����r��_Gn���;������fWD��W�O������u��'�X�� �M\����{U��*�v���!�Iz�>���ۓ���ľZ3���_��4G%�9�Ns:�25���l�9�Ns���vu��9�Ns�C��Ss���T�4'�/Q�ve9:�A�}5��mPqH���Z]�#d鰥��Ԡt�A�A
+*�k��6(;�A�}-���5���UZf5���&%Ά%s6,ܜ�^����d�5gu/ͩ\s�㚳����נ{B@�ߢ�&	����%�4K�$q{X2�tGa��9�I�CC
+�Mb�uR6�!Y%��������������tta�P�Gb@���sP�Oi���P�ʇ�>YK7y�)�?*��з���'d������#:��?T\�67ԑ�����d1�Liy	QX�"�:��ቤ���Ӫ�_bR�{!���.�����\:�Ͽ��F�&9��Y^g������&}{��v����,/ew,ɿFtkФ�u�o�4���Wf7p��(�|RҐFg>,�b;#%�:�7�M�}��4�Ws��l���T[���&=�gC{����Ұ��=�g�x���U��}�#��t�������H��'�c�H2��X�?V����Gנ�at=�sݻ��Dv/�{��љ�������#�s埔���_������(�A�e>U�
+�H"ﱼ�55C �|ib"s_���R������:��-�K&��,KsʉM�������k��rp���vP���GM��H��흚�:>��Ǎq@��jZ�!�������4tw�Z�-ٮ�d`�E�����Gu$�p�s���_�Z��0����9��V��������|x����>��px;g&=��8!���׿޼^�����_��oo�0'��k���Zv��
+v�����>;y�����d�۶���-��ɳ��߻��ɋ��M���Y�;���@s��	�r��xq)/���R�H��V^l�ݰ�ŧ�l�r{N[9:~0�ŧ6��'�,���+�mq�W�:}.��ܘ_���Ӽ0��eF�:���Ih����e�{�5�C��x���-/����^�����_��l�i-��a��iTƅ��}���	+�eP�_]8ًWy�*�^����|�r|�������ZL}~𗣁[�2�XF3�et�c�S��>�9�#���bU[|Bv��b��V�'���y�Q�>ߎY�y'i�Y��q@�N�j�P�����sɋ��{v��=���1=��FW]�ˋ��//,�Cw�E�4�����]n��Z�7�:�yt����qD��b?�&��u\h�ߞ�ԩ�3y��]���L~�$�6>��������~��h����o�^ε0�Np��G�$]��]���V~6{���^���/�M�e��x�g�������X��ʸ��{K�٦�`)�Υa���&��\��b�2�䡻����5��9M�o_���cU��{,�3w�G�c��}��o�����N��X��ǅ��\�2n�zH��U"�d���e��ox�H<��qdG�4Ɨ�#'�ˁ�c�����s��G�oCG�/���<��=��//���
+�#kyq-�q˸=�m]O~�y��b'Υ���7�\�/���T�E�vab/i>�Ws���i-��\����q|cWuZ��G�����M���ZƟ�̻K�28^����T_�����o�V��͉}�����HRރ���e�F���a�K9܄RVu���#R�b9/��7o9��[��y���7��$�Q�p#�Y��y#�e%�^���ݼ����Mg�g4?<x�Ã?����o1�Om1�����q��y���&38ȗ���*�4�}%��ό�j2�q��Տ#[��f+�s��X{0?�����֐/ѽ,>�{y�����^���������ŏ���1:��&A\������q�۶���H��3	.y?���W��,eqNK����7?���I�������|���w+۶�r�O?*��b+��{.�I~��I���H��W�Ʊ�����aƂ���b�{~#N���l&9y�.�ʥ�8���Pn�_<|�y���ͳ�Tf{�ʼ��J��
+�}������������{�ؤթ&�G���$����*g��&4�ڄ�Wׯo?��zs�v�4��ڊ�/�Ǜ��fO��s� 1{��	_�||�J�gO��݄|{�-H�T]����-���׺���f����*�⽧�e�jRs�I����Uk����6�@i��Y�Eu�cQR�x�ߖ�������ܷ�ηq��o��o��u�6��=Y�_��W=|����Y�u���'>-ꮫiQy]m�~��������i���T��6
+1ߖ�W��ͻW�h���t����.>~~��Ǐ�~���ۏ>|���ˇC
+,���p樆��"q?޼��.�'h���G�8��_�Wq��%sRdQ^u����E�DuR�q����
+��\�j��ˌ �l#p�o�v����?G=�*��LQ�����m�IS�^"��o,��7n�۶�M�����o�Q�Ew�I��o�����B���$��7#\�7�������W��U�}�k���͵�v�S׻�\�j��@��c���u�����ח�y$�v�&ݰ=0%t?����0�3�m��JS���To~3�c~����m���>s�K���+�v���*ȼAM�,��Yr�J�*��޵����ҫ;�^F�7w.����t{�
+�8���~v�
+��V/�_������/�5w��O��<���8̙:��cψm�RG���l���\u��ulϠ=��fe��5��Y唝I�Vp�4[�=w�|���gP|���Π�f�f{�7���΅ϋ��ם��"-ϣ�fe>>��-�b�����S�5�8E�ݜ�?��5����
+���'�A:�&w�n��ر�����y��k�r
+4�m䚯�|������7�cF>]6#1�����<l2�þo�+�s��������������d��3���Y5�ۧO>~��l��Iq����p���_����BdWYUƼ�eYү�⪊�4+�ri��&F8C
+D�S����n�N�yֹ�ݯ�w�_�&�?0�*ei[��y�����)n��bu�.S��O�����S���&�6�-���ފ�"5ǛR;
+_��解��UuU2�u^V��ϒ�܇���]Zg��c�8��K��è���rn`�on�F&��~�,UgTk[����b�����o�Y���o+��U�-)�*/�I/�qr��R���M<�V�uJJ
+S��h�P�7/��>���'���Z�URfL(��"R����U��9W0C�h�^G+d��,������ ���#�� �I�m0*�d2��8�*�$������K���P�hz�����x�k�;��X_�M��v�}`��c�T|
+41������A�P��:��T13�;��1���c7�;��Ƅ�&2���"D��o~s�%��o�[��|洦
+6�o�p٠�y�8g�7'6`~��\)�s�}6�a>Z�j����
+wD.xa�sm��i�c~��<R/�D�igM����	������B*Lաs_	�7qx���DBi��& 4�&�w��W�d���k_��=ya����C����To�����ۿ�`����W^�ea#�Ve����0�7Ewə�_<&�|lp��\�2��'��}!���^��`1�"ɿܾ��͛Cڡ�7��3 �XFu�ռQׅ!��E����fÛ<U\%la��qYCy���MK>����ɥʊ2�ɲ$Ҹ�n Х�(���8�6	��~����2S�4+_�Ԍ�����3ͮ��f/rG1M�*<|��;������P�fU������� <R����|U������;K��@�꘎�w7Ng *�V�[l�`�	��y�(	 �[Pр�<t7ಡ�m �
+Ϲ%'U�c+�/A�7���TjT�I����>le��/��y�q���	�2O�Iu��s��E.��P�M�H���s��y��[�z�ziF��Y���n��M�������r��g��OF������V�i���4���$��Q|`&�Ϊ�S1N�b9�_���o��y�n7fh�X�:R=������?���{��sZ��{2���K�Lb
+O��w����gO�y�ya����ؠ`���79��P��.$�;�6��d���y��}�5?�6�u�z�]���j�.箷�iu����鋇�hg��Q���v�
+������x�@�q�R�2���>jM�G_�����7Q���/�Ύ�6l�ze�N����h]�|Ѭ�fK��u��nn���c�����'6�ތ���C�����w�o^�{�z�`�~���_~�����7/�����kW׋��v��<��ޤ���/��ȴ4�.�R�����l���מ��IM�n�~���>*���{9���՞��CI�����7�C)�g�g3i柯߾~s�|����o�|���'&�b���L�e�'�wH��{����%�H�:�;�=wǊf�A�=���=7��������|���N�����7����*	����4�HL��^�``�>�W�4�;�כTÐڏ��i� �Ѧ��v��G��������h�������M�%�KUaa�vI&/��掻�;����:)�4�j��kH�h�w�|>I�����<�Gû��h?Y�#/l>����1D��V4���Q��{��4`v��<��}����i�p��&|m>��:/��6m⯲�m�Z���W�6�T���sm�J�[e+�e֡��*��^���*ݴmJ�GI|W?���o�-�b[d�b�l��`]�6�PJ\�9��E����7�:]�[�[��'�mѦ�N(i�$*��m�^�[�oM}E����t���(�m�P(����'i[T|�6�6�Rde�m�v���[�&���ЖT�e͓�J���a�PÄ1vu5�>l���v�h�uC���O�"I�!��K���<�Jc��4��C[n�vGmE��5��y[Ǜ���jMW�Q�6�j��:�������M]5�xU�$�4�-o!.��W�պ�Ӳ��l�nW4Y��U�$�b۶u�T���ʷ�:�Wy��l�
+Ә�ddm�0�5���,�lS�?��M����Z��~W����X��5^>�i�8�I�u�4��L���T�Zo�r�+עl6eٴ�UM�U��Y�����j�U�eh#F���횪���FY���n�m�iS�E��7_V�!m��5$�[@<���wB_mj
+*�uJ�	56[��f�5PT� �rM��62���"�u
+�J�Q���VC���V�,���Wq]n�v��۸]�5A�*��M�;IA�Z�{�|�[�Q��'���L-�_m�uA��Q!�fu�7�vK d��&O6m��i��E͈�m�� ����vU�D;��^jA��z]�e�(��m�$͒q%����iY��mV��6o�
+2m��b�L8��
+��5HHM���٢��'A��:�\��U�F�8k�햡�Uƭ�64/)��
+ş�s�)Z���l�*f节�i6�"��Q�l�t��E��fC�-�$ m���+Ҵ̕�/^�Ҵ�rZ���n�ɋ�~'���K���$���lC�����l��a%��&YoYY��:����lT�
+�\"�kd"CY���IۚDݼZ3~��M4�m��즤�h`��ڢ�0UVv���X�|���<i��1Vg��ʶ��F��ܶQ�&_GKU���z�B���;
+i�-Z�.�MƓ��tÁ�g8��e���t�2���3f�C�f�h�4�!���M��qCۛ�k�m$��oVUSn�{�I�m�e%�i�l�m�Y�VVy�*�Ah��f�8��*�@�������7c��󆮭e��B:ꂒ��*�u��\�k��,a�*����E��	�
+MX7E�g)c���~>`D�t�T-#�$!zuڬs`&٥Q�֛6b4�J����G��`͂ސ#��ժ�כ�b���|Evj�
+K2�Kl1��N�J�=kWe�����T�h�� ��� re�JQ�9���U���զA�"{I֢�,�֫M
+�!�a�|TmJ��m��S�!U	m^"��6Ya��[�SҴ�JW|DYZ�-a�-���>g�UoY�E@{�Q�ٲ�6���9m�4�bMQ�&�
+YNU>B��Q�1��,���Q�x�%��D��n�f�h���m3�Mՠgר�Rr�.	Y��ȉc����i��Rp�P���5��*�m�-�x�5I�1i��&5�ް��e�&,�`�B��hۤl��(k���v�X��,�NhcL`�ٮ�{ϬmP ��"�'d.G���	�4º�*�l5��v��4�(�m`�2l.����UX�m�����+�1�;rQ����m� ����׬@�(V �+���ר�,�Q�ZS[�a	1%9
+��`�k�s��K�方M[tX1��|0�:m��ƽ�("Sh1��0?t_^�I���6C$A�i�cGs��&���N2U�X%(��:���y&6�Y�%��w�xW�!��f�2���qjA��M�Ye�,��qݴU\"�ۂ�$�{�O�hڠ�
+��ŪS3��aBE17�VZ6Y��&S��:�0� +�cD
+,��
+G�u� �fiUk�%�h���uV+\��0����F�Th�d��ŦՒ�~�]�lA`\Ԙi�
+�l׹@z�j�Q֠����n����T�x��l�� nrT�M��̋)^�S1�y�`�IF�-����y��V$z`��<W�D����H%�X���#QAa��Q�J��A`HV%¸��C	by���z��2pOR`�YXݦ�P>�!EK0�LI��`�pQm��@h�-�z[U�T�Z��0z�y��e �&�V
+:K��� X�5�D���+K�(�k˘��B�{�A�)Yv��%k�l�t���㹗��� ��z�C�YDDHm����G �M�l�0��&M85� �ܴҎ���m Be����U���	E���GZ�!Z�mڊVl����
+2m�Mڠ��x�H�"��?�bI�c�{V[�ʤ7�5
+��N�aĨ�[(0�Lн5��� [Q߀:f��७2l=��=h�̀�<ڀ��*�aX��ƛڮ@z
+x��B�3�X&���HA���7�A��Z9RآI֫"�0��5`y��'�jK��|�˃������Ki��ME9�h�MV'`~S�L���To��!`/�1�1w�`MS��8��XŀV]$1�_h�L9�]����A7yU��H;��F�dn��b��x�-�oEp��-��B��#��c,X
+�>9\;h4�I@V�u�j�e�Ƒ{�ŏNk�tK�,a�_	Q���2kK,�7��2�"�� ̯�̀�]3>�-��YK(ґ�>�b��,f�?�^�E��%��e�p�Qk;����l<of}�4A>`T���(��.� �k�*�c���A�&���fV�(��"�&[$���n�c���+}�*+vCC�3Kc�jX�ř�M�ࠠ�n9�f@�|�2�+�MJ	���
+���oJ6X�O�Ɛa�i�&�bY�h��i�MF���l�KP���$P2�#ND�D���F�O)��P����Q�78��6HPU�9���4���|x:�nS�?<�mS�á�K@9݂57��i�@�QHJ>VZ�+��Y���P/�5��au2~�
+dG-�+�(���`8q-X��π�3��P%��Z�A���M��˖L)f���&�K�����ǂ ����n�
+K�l6+�+Vk��氎�=S���~�X�b�����&7u��2E�8�eG'q$�p�
+�2Ü��/FGT
+Ǣ��zl)�$ΒG~��m� %�*�+�b��i��!���i�[���P)������Ym�@8�ц��qJ`�֫|�∃1�	[���Za�c�d�Z�u�@P"��=�F�o-b�i*��P���k���vAN�O�j�ƾ��RJY�u�*�/����� �;��ZY�d�n¡b�b"kƻ.qSQ����JB����p}hPJ���xf�_i2pI��|�x	0m89��
+��٨�J\�4P-,��"	h$�����c�1�FxJk����I��
+a��CC��.Rs�c)��D�9��
+��k���\T(OhH*��b�3y+3�_���6P�
+��J�������V��c�C��~T`�϶���A�k�C���7x���~Ɵ_:�\�{��⒡���YmPF%9x�t@1�|E	GfcRX.`�X�. ��E��1�a��Å-Z��)q�{�j��t�Q�
+�Ql�슱�d�3�
+���B�T�T��d4��eA�[���#�j_�*�F�Ik�*7f���"ֳx.��\3��?X=�����O�=�Ӆ��Ң��� �- �~pP�+ܯd��*��FV�mf�5�����g�*�L8�vm�(º�+Wu��dl^�4�҇G�Qd�Z�v��epx�����QS8�	�>��i��&ÚȈ0$t�lhtp'�ӆ(��`=A���y�",+�i��z�M{��aY��	�[�?�B�Jq/h>�����Y��5|%sT�r��N`�qX�EX`�#��ZC_�/=qE�%ZkE���n[�_�*��V��I/�
+� ?2M
+�5M��Q��ۂ6h;�;S�h|  �R����&��ǅc������pb��\Y�s$]��ø4�<~P-�V�;�6�WE��e��qy��5��䂚dy��
+{����(8><ɤ�"�]]ج䂊�"����ZU`y� �t�y|"�e�h�[̶�����M:�?��B���IRb�Ќx��7���a>��BpI��*gv�ra��W�"�8���v� e}� �� ���	&�f��ӊ�@�,���
+�\��:+ѐ=ln�
+�4�!0+�8���>`<�O�%��ſ���ѲH@�+4���!��F~�E
+��i%�֢�a�`;<�����,BI@� _��DУ:
+,���0�S�UY#`H��P�P�f(�
+q�h
+��0���R��DlЈ�
+�q��5���J7� �����
+�� �Z�
+z�_�,��WhL(�ĿA|1H؀m���s�T�)3'�C��h�!���U 3��E�Lc&��ۢRw�b/&:ي�~��;�ށ���]�T�P*$e��y���F�v���R���`��*(z"�k������6�9;�� ̏syo��´��6�|� �c�	P�c�|�;
+r�E.5Y[(�N�!	=oH��f4C��@-�bN,Ћ%Z�ZV����
+�
+��b&Q٠%�@ =�xZB����
+X�ż��8h��P��aE�CP�Z}�
+V
+�U�q�x�6!��o�k��
+2 G2��@(mYO��/��oA��@�l �"f�P2�b�'��-j�Eo'�H�D��@`X��O�D��Y%�ve;B�cguuoK'1�X^~�K��"�0M'���Q�ȍ�s𛱍  (GK(Rx����	 ��: ��`L(�pIL�Tc5���<��
+�" n�� �2�U{,�<e!�`�p��4��k��1��e��%t��!��Ȗ|I >��tf^K2(�B����QV�� �� ��,���4�����/�4	Ȃ�.a�`�Q�
+!�.�:�q�DC8S?��\A������iE8#3�
+F�t���≧�$� ���1��ߘ�L��0V�	x���#�� 
+�H:C�g����<`�p�����,N�`�1���=�
+*�@f ܐ��z� kǉ���}?�%��-:%�%�J��^1�
+�Ԑ�����<3]�Ku-�C?Ȕ���WM�b�7�����7���R'�"�33��G)���+ƅh��O^[���CxKöd	��>l��}t��y8����]hwo{����]9݇~p�{B� ���N8
+��~�A�O��<)���� E����=f�cJ�!=q�����&��T���=��>*=A�A݌24����Y���a�pӻ��1�'���һ�;y��Hݯ�̌���J�O��F+V=�vIﾤw_һ�N�V25���Sӻ����1�]@e�"�������n2&IO!&JTkM��49��Y���D)k����7
+�]�k�����3!�H�c�kX�P��&�0�h~(y�ol�}����L)� 	���''5��-x
+�"�D^1nBA+RW)�t'E�I-��n2�0q��D�	˖)^),JGc�ŏ��8p߄�c|X)�'qa���	��!;
+_='�FBEmVVOE��r�<q�I��
+C�����99�4��X�Ϫ�)�!�gһ	�)�h�� �!�	�
+#.uI�><��T'�a�����|��$Z(��)H�ś �MNi�/"�IT ���\��(v�uAq�E*��Q�FD�����	�����5Ր��H��Jy{CN�Ȭ!v�q���O���#R6p@T⡄�������m�m�������"�s�@�*�P�nr�m�&[N6�([����M�35iF���X�	}�����\��>9 <:D��� Z��֚&`	^ɞd{
+�<�x��)��fO6��74aR�P�>+�+e\�X'VcShT.�HD��
+�M�  #A;�y)0�V�MbP�TY/]�t(�A.>��V�7����:�7�R����&���l:�K荸a�ϑ
+ZL~��ûH!J<ic�b� !@ب0�e�۫��l� [%%(����J�e鑖��f��E�������8!
+����H�N�U&<P�8Q'�q2yġq q�2�v{��Ò�"�����C+
+i��.��bd1H;�$����:�`�8"�@+�o�g�I�Bt�C|��=�H`��p9��c7�pƁ���?�] �v��&&�&Z �d%�
+V؂(q\s#ǫ;9+ʻ�0��Z[
+��f}�(����M^��{π�к��ԑ�ZU o*2+v"`  >�%�VR2rȉ��t��މ$���7�T�ɨ���#���5N��i+I�A�၇D���
+�ڀ6��|�BF�|ȹm�-��\q=�2���@�8'4,�xzM=�v�Τ�=KD
+x�o��v��+v�N��/n����A+�$�
+PVIwx�0qPN��n�!�
+cD8-����E1����=�}��x7�jnTuV�HJ/!}�4����W�/t� 8HמҔfR�,��r5
+�`k�EP_LxP�$��\K��Թ �P����"$������9�	�Z9"�Lz@6��5夰����!�*obs@l j;-���fe�2���~W\��x9��DU�_F����?K�c������#���w�z��~�� d�:
+D=�5�"W�D�F���N���G��1�,�4oh`��Y� ��dCdQ�u��fO�#�jf�}�������yC�d��Hr�M�~8�}��2���ȸ���O���PX��T��h'����{d�\ȸ�!��L7@�ɇ^��wKH�n��>��[3 ��T�R�2��~-�v�@1�-���u�Xox�t9[���b�du��
+.n:��t�e�;&�U���C%qٙ%��]f�v���TW�zLk@��l@�nd�y�6B5P[ԩ�����e��A��3��f��%*���)*��0h�B��^E.��CC�!lWN-��P��ˁ!b�*�2/n�R���d�b���nԐZqk1N�f.SV�6�=��H?˓GZ�\ij�������ԴCC7�N|���2�A��Q�Y���m��zr�[�i��(Dg9��s��$�f�nw�,�;�3
+~���r��	V�y"�z��V��X�{�g?[�ށ^"
+(?���e��V�q!�l�w	�;��vel=�2+9�I�[�
+~�i�gd�?	|��Yk^",�D�sV�Q�Mw��,5���0���$�9�^dC�{�]�E���G�l����jC6����g/�b�쫑��ƚ	�/{�1=�F`Z�8�t$Ӹ��I�jЎ;5"�b۱eH�
+B�']q�Ć���2+���,/k��]ĔD6����8� ����mv�8p�*b8;���B���4�k�FT��?@�QZ�R��h�"�XC��qI�bJ����iSv�X��x6�f��d:&�U�c��
+S��0��}����` ��k�&�PZ��
+�X�[V�n)H�)>���0=,)˜5Wi\�)	_y�ː⻰��ȸ�����g��X���O��
+�`B8�l�=��17�B^r���`
+*aɇ�I��Q
+?�5��xG��f�w��@t���h�K>���zHpy��$�Ü\PL��~��uv.#@�p��hX$3c���Ȩ����Y�J���Hiv
+�G��5Ó��
+�P�5b�5��Ԣ
+��`����B�jp#� �����x�Ul jl�	|_Q �9B�&��K<#V(�b�����+8٢���x�BBv1���F���j'��
+΂��3%Q�,\1��QR�{��4�2�(��}��b@,8��H$){z�DHz���&V1�x�����;T<׸@]���	b���ԫI��چz湶�,�������T'�KY��i��f��O�`�M��j���Y��:Z�_݅��h%26�/�)�Q�W�e-�6�	�����}=V��� 1�*0�`���
+d5�^����tVY���]�l�^�P�����[�L��
+
+w�2S����T�9�թ�&Arr�1�X���4T�
+�'ߚ{�lJ���FfY��C
+W���]s�@)�|�k����IΐYl|�<����6�z�r����.�l$�Z�A�0���=i��p��p���|7�{{/��H1�w3�=0�,�.v��
+॑͒�h��S��]��dݙ�Ě�_�D�*�ɒ��AC�ɬ�Z6��V#M�v�$�1(p����je�2%�~z\O.h��m��Ǥ����ڭb�"�=3��c"��Z5�4L��(�D+��mg,��,�,�XM�P}ѻ�L�%��e��-;ho�6ұ�~���5�Ӿ��A�N?�^����Ɔê��-���3���X<,��!��̩\���~8/�c���Ȯ��~@�����t	7�����e��g���*���f�����{=����̬kpw��t-��*I0�ޔ���.\B'l��U�{���cL�'��7�\D���Wl�~!"�D
+e�fpP4sVh&�B�'J$-��6�K��v��	�=���@S�DCv4b����y�V
+B���=G=�h2����N-{�
+b��,,�of=Yoh��_S�Yw�7kV��$�E6�j&���M�:6 W���ZN�&k0o��:Z��/���=<��<�Q�Il�O�A�vv�lv)�!(����/2?b��N��-�$c?Ђ�unIq�Fn�m�
+92[}�����m�b{�o�Ǣ�O<�9�&�|6�Aٜ�	����6��ƻoK�?�}[�҃���x��su��J���$��^]Ļ+�r�T�%�}�ad^û?��+}������r��3�>��=Ze>��<Vu>9��5�}��W���ی�1�Gg��Α-7���T�xwy�F�۬�������%w_��g�q��2�a~`�a&Ƞ��W�}���lW��ّd-`5��'���qb��͸Ky�;1�@eǸ�`�'�'�z���Ό{R Ҽa�姅��g�=h�^�]\I\ݻ���LH����Q���&)(c?o\
+}D.�]�K��È��C��2��FB[��`}�)�g�q�#�"��V�����i���B�Ȕt���Iׯ��fi�fO���j�h� Iw)Ih�����ʃ~�ʳ��hF@4 y�Zr#����Z6�m%t�,���)]d���}v���Hj"'q4��>9j�ל����0�Q��$���0;�$+�zJN�6�����|�6���y'_���4=��Y�K#�q�P��c+u-څ��i�JY'@7���j?e�$��Y�����2���Z�� !}�i*����]+'����BZ#+�垝��n�
+�d���3���o�)C���M6��7K����d�U��ĺm���)�>�@�l�ÉaYR����4b �Р��!߲��˞�X��ɴ��ِ]�̆Z�63���^v\���D�f�>sYR��>m-(�)��e ��N{��Ĺ'�()��8j$�����$�&��E��[̭+�:�1ڍGM�c
+zs����[h��s]�rk���ć��/$�2�r:���i���i�}PZQ��C�q��4�W�B/.
+ʺ�i䃁X���v be���>�T�]��*�KM5G��ʭ���챙sD4}Ue˩Z���#�1�G/H�!Ʀ�������K-���ɖד���2�c9���`����9��|r��SQ��	�4�F*f�ٖ��B|z�-�j�
+6A"��*h�Xq(QC�A���Ud�&�3�m��-�j:�$�j��B�g
+����-k �I�&����`o�!�.*q�+3݉��w
+ۥ,wc�U���"\(d]��f	n3yhy/��ލז�!B�Y"b�ŗ�wc�'
+�J� u[	���7�% %!뜍߳9bN���X�oH<�(������L�Z��!��h����?B	�)f��I��p7�'�=��~�����%(����6�+}���$���a��mr���$2����O�Agƫ8����N�0�ws��iBe����U� ��Y�?HT��6q�V��<K־3�+E0������g=�,�q���؆IHW��\�K��L��܉��Fr\��<�Xȃp1WAX�
+y@�@f�Er\���N��AG���F-A}TSv���P�fg�Q�n 0v��h�l@~�Q����TW$�����K�0���%t�+��"NA�ÝR�Hߜ�?�a㨾���A'�B�?ma������07��B�Ƈ| ��"��p��v�]�h��<i'����I�f'^�ִ!괆0�'���� ��,�Ԟ����:B��ٍLz=U?J���2jOPX��/���@��D~<L�eL�FF�)kxP�E#�d�<3 ���*O�c��I'���y�!���IJ�g;����n�(�򗹚=7vGrs�@R�/��C&=�_g�8O��Z�LQ�W�<�6�D�p���h`�WJS;uPq<o�D���[#�(�=(Aj|D�ni-�q�\#��ٲ��5\c�<���8+F2� !�m��o�X�u��@+!g�찪(p�Ry� Sp{�N�S�6��OZ@k��Y�l|�ze�Du󞶌7�{-/x�(�
+!��J9���D�����A���XB��6� �R�@�`�Y�29S�Xz��.� �,
+qk�0xjg~���Z X0+��Me4� 0��l^�����atFY�W�-��W�l��1jvC
+ۡ��¢�Y�.ǩ%��噀�*��u,O�A��f,��R9+�3L��]d�n��u��1�s\�8��<�:�}����
+� ɞ�,}�
+:�^�e��m"�D(�/D�it�/�%��e�1��`��`Y�G�\�m�i"ph΁a�	�4��h����m6�3q��,�����~��y��?�<?���.Õp?c��M% ��02��9��aiKdC&M�?׼��	&"JH��
+�C����	��:�R"
+lp������㻖J��B5�I�@z��-����Z���|@�v��ș����b��pm0��)E�HI�T�A�=�yD�Iv���'�!���*k�ٮ������}� D�i�X
+�4ΥqJ�Ĥ6Hr;��l9
+F,oe�7zG�瀜q95M�K̾��d���L��>�j1���m_%�"��܅���q�t�����~���'�ۜ4	:4 Ls�8��$�F�*}�	��l���`c�I�/�� ��A��8���pnv��
+N��(e�s����p�O!���zx+Z��QBY�:�묿�˛Г)�0c��ȑC`�� ���TƉALV��0jE{��#&<=nr A��KVuG,N���I�u�PyM���1s��$�s7���T\�Qf~�;�[p��u;�Iص\ )����`Y�K_̐�`>m)j��
+�M͕��$_�)�����ko�$�F���>
+Ysc���B��L6�����=ۗ�xň���D%������S�� h�v2�f�h_p����r���D:s�Z�Cf\�\JfJF!e�0�Y2)�tvc0�Z�T����s�w9Yn�����Q��8�LZ߬hXx=Gou�YEJ$�HX�F�aȶT�
+2�\"��
+�y�A����Jws���!�hfE�X7�9G�u;=��s�@�ԅ�����v_6/��p��9(|�d�FZ=�N���"K�-L�����@m����sȜnX"w�^�����T����]�#��`�a��'J[[ ;�h��>Ykq�M�wB�C[�v-�gŪ �tu�)X�*�����/&�)���s��`q��E���Jt�u9���ɀh#���&����Hh��=I<diT�����?!#)���!�s��"rW���������t���"�3���U��zV{��/���񄬐�1<W�!H������Y�e$*u�@ 	D����!`���w�>�^Hk+�D�����h/�ǒ!�rLc� q��P2^�>�����qع��|���Ϸ���w���s��o�gI���{�oηl?N�Oͷg.�D���̷?�Թȷ�cg;�|{���9�3��4��B&A�Xd\F+gXp�ؓU$5��}�Rm`��B�5Fy.�M�I\c�Tc 1�~K����J&�خ�4��vb<�d��N� ;�l�^�l��Pڙ��Im�]��H��O��r\�e��KΞ
+eF�g@1/ukc�U�g;��κ$�H˙��W�c�=�V��W�&jP��y��ne_6}�96��HX=*q�d�9�������X�)�y�24W��+�|�Z��hq�u�H9��~y���ȶ����6e����Ǆ��Ɍ�9tL��U�7̑qڃ����ޅ&�����ٷ|��}�m��g��s�k���x^�>h�����Gζ������G�{ރ�>�����݃o���cn_���/��pK<�.ۗ\�O���~��l���	�̷�C�f�G��g{�
+��������H���|���kMf��~�`��6c��� #ϐ�����򻧁u�._v�}�K�T�M%h���Wn,����߿���m��L/���o�9)���E����}�䁇�S?�x���_�t�Kz�Z�(��mU^9����/����7߼���Mc�/���P�W���0~��7ݫw��{����b�۹�g�_�Hf��ȟ�ysB�ˣ�K�ݷ��o_�{Jq���X�pk���gw[��&���b�z�o_m�kU�K]>7]�.n\���uܻ��5�$�NM�������S�4vy�X�R����ߚ뿕B��r*�����_mWgM�f�����Z{�^�ScWg-t��z�n*w�n*�=�ʍſR�|�T��~���_Tq��U�	;��.���Uq_*1˩I)\,�ԟ������9ʥ���=�����w�5W����y����k�u�t͓�� ]�|�������Ó����Ic>)��o>)�'e�����96��4X��f߽�.�5����w�@h�G�+�DY����6���6Ǡ�m=���v9��h�W	*?��������l��9o,'�!�
+2��V�=y��5�t��������?֫�T��*b�.�zO/�B�m�ȷT�T u�|����
+^�/�Vũy�z��8|�Y�5NVr{����w>|�Q�-�>+��ڦ'�n�x
+��
+�Ү���Y@��Z�o-��h����_�����w��So\����(�HySa'����?����)o��o�>�.4��xàɂ�,��_�刺�h�K)�ţ� �"%yOR����c�>��ˡ?��WϿ��J	�}Y��iL#o�ӱ��r���R6g�d���ݏ���������Ǘ?���_^�w������������״P{���%��o__�������l)ܱ��ڟ���Vgz�ۛ�o�����������o��7�؎���{����^����?��~�?���z���
+������������7x��x��_~}ӽ����o�݉���t���|�.�������X���t��[_��ݭ>o�tٛ_�����混����}z��6g�=�ŋ�����]�e�\���$97�`�W�w�G��=n�Ң�p��o�����6i�M��w�����6{yx�����Ax���>4����qz��?�ALL�t׉.�'o���H�9��9��s�������u�Af�+�u�9׬Q���;26!a�K�yΥ�m.-7y�5}�kz�<���s��\7ϒ�1פ9�υ/�+w.ߝk���#פze�<�R��^���\���9ה&)�L��R�<皔lfl_���9��zyΥ��KS�<�T/ϥʥ�KK��&-�V>W*^�_
+_�W�k�O���#פzy�5�7K��{�^�sM�7�ui����+��+�*#ᴬuj�R�T/Ϲ4�+�pn�y@��RFCi�ң��KK��&-�Z��T���/���]>]�/�\�����f�ty/��s�)����l��S�<��YF���0ϔr�2�KO��ZFKi�R�2VJs��.=ZZ���{�ui��,�����f�s�����~y�29�P.=^�|�H���(}=7�i�Γ6�:	��R&�<�OCun�Ӏ������6?��,N�6�ȩj��x���˧O����OE�W��O��O�-�Y��O�����n��]�g�U���G�n��n�w����Qf9�2?c5�\��=�O�'w���]���Q�V�g���&�O�b�-���[��P�4�C�Qg�K��񴞠9��5;�Y�a��%'a�����PK    πtY���N  �0  
+   deneme.xml�]o�8��W���r���U�h�ݭh˪��voFd�H��ο_��	�'��ȑ���ks�'���q�ާ���=_��Uѷ\�X�r3)f�Ū��֏��>
+~�����'��8�ЫN��Q^�ӷ|9��g}k_ku����[�p�A�o����m�v;���j���ǵ_�����]�3j�omׅ�^v���zU���t���m׭ZY�UO�E�̋M��,s�3U۫�R(}k����\柷�5���j:Y�Z����۾/��y�����|�w��b4�n��>�������ն�峽��o&_�#���������m^Lqe�m��������Pk}��z���,���2���߆,���s{m�ԫ);��4���Gcf�'���㳎����R�B�܋;\������.�pqp��w���Cк;�g���P�Ic��pd*0��q��lLE�7�b��!K�������f���0{ȞL�o�d�7��=�<�zr����4�>e��3Hv���S��C�d��?���Ch^���g���i�>��٬$ėA��$��/�B�Zde�������Zbյzж�P�V�$t�l\�9(WD�8�.NJ�uG���$Ui@�0̀1���x1I]48��;8A��`��%���(��$�U�����ꢄ$@$B�y��H����T�9�8DSL���J�������\�X��8���	,��,�q�( Z�A�,�9�T�%rI�X@TYB��������>L7�p�L&[ĵ`b��T�Q�/��hhj�a�<��8�� �Gb�e�(%1�%�Ķqt#��'1�1�(O��ax@l'���Px���&|�8 ��s4
+Pp҈x����S7AK�'8F�s4P='j�j �L��5���9�6�
+LD��u�D�!	
+�@�״�D( �]�T7�d���աI44B�4�1��t�ѥ���s�qO���؀(���u�j�<�.�Ӑo
+�|h|�T-乖��	Q��hȌ�j�]��.=n	P���gJ"�|
+��x��y��"��Ġ�΅E�X �3Ee�z��P��.I����AY�ۯ����8Y#��:I�O⠭Fh�G��C�b�,�Q ]��a-�"�AK3�����Q [�Q" ��/���8�ۥю<���2
+�*
+s.D��vi�c �qo����)��]��b Ҁ(Ӥ�A�&���hG ���� ���SJXT�?	�]���|��	
+Ѱ��i��.Md�ƍ��Zm�F;��y�m
+U!��8~�(Q ?�_V�/�{���,/��ߞ
+עZ|�oO?X�Խ�y-Bǟ�<�᧚�,d�%{���O��k�� v(}p��w���5��v�ҝw��xH��#a��g�w�PK     �xtY��x�� �T 
+                 deneme.dxfPK     πtY���N  �0  
+              deneme.xmlPK      p   �   
+2024-12-25 14:42:19 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 14:46:31 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 14:46:46 | UserID: 1 | Action: Seçilen Örnek Güncellendi: 
+Örnek Adı: OKayit -> OKayit, 
+Açıklama: deneme -> deneme, 
+Dosyalar Güncellendi.
+2024-12-25 14:47:23 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: veri  -> veri 
+Açıklama: ekleme -> ekleme
+Ülke: 4 -> 4
+Şehir: 4 -> 4
+Makineler: Turbocut 500 -> Turbocut 500
+Markalar: Testpen -> Testpen
+Profil Serileri:  -> 
+Profil Örnekleri:  -> kanat
+Seri Numaraları: 38451 -> 38451
+2024-12-25 14:47:44 | UserID: 1 | Action: Seçilen Örnek Güncellendi: 
+Örnek Adı: kanat -> kanat, 
+Açıklama: sirt ver krsm -> sirt ver krsm, 
+Dosyalar Güncellendi.
+2024-12-25 15:17:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 15:18:58 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 15:34:59 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 15:35:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 15:45:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 15:48:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:08:08 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:12:27 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:14:16 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:14:35 | UserID: 1 | Action: Seçilen Örnek Güncellendi: 
+Örnek Adı: OKayit -> OKayit, 
+Açıklama: deneme -> deneme, 
+Dosyalar Güncellendi.
+2024-12-25 16:25:21 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:25:49 | UserID: 1 | Action: Seçilen Örnek Güncellendi: 
+Örnek Adı: OKayit -> OKayit, 
+Açıklama: deneme -> deneme, 
+Dosyalar Güncellendi.
+2024-12-25 16:30:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:31:47 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: brandid deneme -> brandid deneme
+Açıklama: müsteri -> müsteri
+Ülke: 6 -> 6
+Şehir: 1007 -> 1007
+Makineler: Turbocut 500 -> Turbocut 500
+Markalar: Egepen -> Egepen
+Profil Serileri: Legend Sistemi -> Legend Sistemi
+Profil Örnekleri: OKayit -> PA7502101
+Seri Numaraları: 0123456 -> 0123456
+2024-12-25 16:33:45 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:50:49 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:51:38 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:52:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:54:06 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:55:00 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:57:16 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 16:59:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:00:24 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:01:24 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:02:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:03:47 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:05:57 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:10:29 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:11:00 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:14:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:15:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:16:24 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:17:58 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:20:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:21:26 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:23:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:26:43 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:27:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:29:04 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:33:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:35:15 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:35:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:37:16 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:39:08 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:39:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:42:06 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:42:31 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:43:09 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:52:32 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:54:07 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 17:55:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:25:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:29:04 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:31:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:32:57 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:36:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:41:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:42:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:51:06 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:56:24 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:59:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 22:59:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:00:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:05:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:05:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:08:39 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:10:16 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:13:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:21:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:33:04 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:37:39 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:38:03 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:39:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:41:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:42:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:43:23 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:51:30 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:52:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-25 23:55:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 07:55:49 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 07:59:06 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 07:59:23 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:02:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:04:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:05:39 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:08:57 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:12:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:21:59 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:22:31 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:24:51 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:26:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:30:51 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:34:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:36:25 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:39:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:42:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:43:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:48:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:51:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:52:38 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 08:58:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:09:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:10:48 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:12:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:17:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:17:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:20:46 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:29:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:37:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:40:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:42:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:46:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:52:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 09:52:30 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:07:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:15:51 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:16:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:18:58 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:20:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:27:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:32:29 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:33:15 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:37:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:38:39 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:40:30 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:42:48 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:44:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:48:35 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:51:14 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 10:59:02 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:04:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:13:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:19:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:20:19 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:38:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:39:08 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:41:55 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:44:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 11:59:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 12:00:49 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 12:04:29 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 12:07:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 12:08:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 12:09:29 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 12:53:06 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:17:55 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:18:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:37:51 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:41:46 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:43:54 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:45:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:48:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:50:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:57:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 13:59:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:05:38 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:06:31 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:07:14 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:10:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:15:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:15:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:19:55 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:23:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:24:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:25:26 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:26:31 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:28:54 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:37:26 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:49:24 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:49:49 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:50:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:50:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:50:55 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:51:48 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 14:52:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 15:15:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:12:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:12:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:14:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:15:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:18:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:25:46 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:26:32 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:28:00 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:28:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:29:35 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:31:17 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:32:19 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:37:16 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:39:09 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:39:49 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:41:25 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:49:26 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 16:55:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:14:01 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:15:01 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:17:06 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:19:49 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:22:42 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:23:23 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:24:14 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:25:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:26:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:33:47 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:34:43 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:38:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:47:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:49:48 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:53:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 17:56:09 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 21:25:07 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 21:26:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 21:39:59 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 22:28:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 22:29:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 22:58:29 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:02:45 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:04:04 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:05:25 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:07:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:08:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:09:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:14:38 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:16:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:19:25 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:20:29 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:34:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:37:25 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:38:43 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:42:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:42:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-26 23:46:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:02:48 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:04:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:22:02 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:22:55 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:24:14 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:26:15 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:27:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:28:38 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:29:35 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:31:54 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:37:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:40:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:45:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:45:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 00:48:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:01:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:02:35 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:04:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:05:04 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:07:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:09:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:11:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:13:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 01:14:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin

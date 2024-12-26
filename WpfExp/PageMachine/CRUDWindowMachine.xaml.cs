@@ -24,7 +24,7 @@ namespace WpfExp.PageMachine
     /// </summary>
     public partial class CRUDWindowMachine : Window
     {
-        public string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
+        private string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
         public CRUDWindowMachine()
         {
             InitializeComponent();

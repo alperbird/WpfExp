@@ -19,6 +19,13 @@ using System.Data;
 using WpfExp.Models;
 using Syncfusion.Windows.Tools.Controls;
 using WpfExp.LoginPage;
+using System.Diagnostics;
+using System.IO;
+using System.Data.SqlClient;
+using WpfExp.MainPage;
+using Path = System.IO.Path;
+using System.Collections;
+using System.Runtime.InteropServices;
 
 namespace WpfExp
 {
@@ -27,14 +34,21 @@ namespace WpfExp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ICommand OpenFileCommand { get; }
+
         public int selectedIndex { get; set; }
+
         private Connection conn;
 
         public MainWindow()
         {
             InitializeComponent();
-            conn = new Connection();
+            string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
+            conn = new Connection(connStr);
             LoadCountry();
+
+            OpenFileCommand = new RelayCommand<int>(OpenFile);
+            DataContext = this;
         }
         //Ülkeleri çeken fonksiyon
         private void LoadCountry()
@@ -49,21 +63,45 @@ namespace WpfExp
             var rowData = e.Row.Item as DataRowView;
             if (rowData == null) return;
 
-            int custId = Convert.ToInt32(rowData["Id"]);
-            //string sname = rowData["name"].ToString();
-            
-            var brandDetails = conn.DetailBrands(custId);
-            var seriesDetails = conn.DetailSeries(custId);
-            var exampleDetails = conn.DetailExamples(custId);
- 
-            var detailsContext = new
+            try
             {
-                DetailBrands = brandDetails.DefaultView,
-                DetailSeries = seriesDetails.DefaultView,
-                DetailExamples = exampleDetails.DefaultView
-            };
+                int custId = Convert.ToInt32(rowData["CustomerId"]); // Müşteri ID'sini alıyoruz
 
-            e.DetailsElement.DataContext = detailsContext;
+                // Müşteriye bağlı detayları çekiyoruz
+                var brandDetails = conn.DetailBrands(custId);
+                var seriesDetails = conn.DetailSeries(custId);
+                var exampleDetails = conn.DetailExamples(custId);
+                //var profileFiles = conn.GetFilesByCustomerId(custId);
+
+                // Detayları listeye ekliyoruz
+                var fileDetails = new List<object>();
+                foreach (DataRow row in exampleDetails.Rows)
+                {
+                    // Örnek ID ve diğer dosya detaylarını alıyoruz
+                    fileDetails.Add(new
+                    {
+                        Id = row["Id"], // Bu ID sabit kullanılıyor
+                        filetype = row["filetype"],
+                        ContentSize = row.Table.Columns.Contains("ContentSize") ? row["ContentSize"] : "0"
+                    });
+                }
+
+                // Final bağlamı oluşturuluyor
+                var finalContext = new
+                {
+                    DetailBrands = brandDetails.DefaultView,
+                    DetailSeries = seriesDetails.DefaultView,
+                    DetailExamples = exampleDetails.DefaultView,
+                    FileDetails = fileDetails, // Dosya detayları bağlanıyor
+                    //ProfileExamples = profileFiles.DefaultView
+                };
+
+                e.DetailsElement.DataContext = finalContext; // DataContext atama
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"HATA! Detaylar yüklenirken bir hata oluştu.\n{ex.Message}", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
@@ -130,7 +168,6 @@ namespace WpfExp
         {
             var grid = sender as DataGrid;
             var DataRow = grid.SelectedItem;
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -140,30 +177,104 @@ namespace WpfExp
         }
 
 
-      /*private void details(object sender, RoutedEventArgs e) //tablo içindeki sütunlardan daha ayrıntılı bilgi
-        {
-            for (var vis = sender as Visual; vis != null; vis = VisualTreeHelper.GetParent(vis) as Visual)
-                if (vis is DataGridRow)
-                {
-                    var row = (DataGridRow)vis;
-                    row.DetailsVisibility =
-                    row.DetailsVisibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
-                    break;
-                }
-        }*/
-
         private void ClosedWindow(object sender, EventArgs e)
         {
             AdminLoginPanel loginPanel = new AdminLoginPanel();
             loginPanel.Show();
         }
 
-        //protected override void OnClosed(EventArgs e)
-        //{
-        //    base.OnClosed(e);
+        private string SaveFileToDesktop(byte[] fileContent, string fileType)
+        {
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string denemeFolderPath = Path.Combine(desktopPath, "Deneme");
 
-        //    Application.Current.Shutdown();
+            // "Deneme" klasörünü oluştur
+            if (!Directory.Exists(denemeFolderPath))
+            {
+                Directory.CreateDirectory(denemeFolderPath);
+            }
+
+            // Benzersiz dosya adı oluştur
+            string uniqueFileName = $"{Path.GetFileNameWithoutExtension(fileType)}_{Guid.NewGuid()}{Path.GetExtension(fileType)}";
+
+            string tempPath = Path.Combine(denemeFolderPath, uniqueFileName);
+
+            // Dosyayı kaydet
+            File.WriteAllBytes(tempPath, fileContent);
+
+            return tempPath;
+        }
+
+
+        private void OpenFile(int fileId)
+        {
+            if (fileId == 0)
+            {
+                MessageBox.Show("Geçerli bir dosya seçilemedi!", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            string fileType;
+            byte[] fileContent = conn.GetFileContent(fileId, out fileType);
+
+            if (fileContent == null || string.IsNullOrEmpty(fileType))
+            {
+                MessageBox.Show("Dosya içeriği bulunamadı.", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            string filePath = SaveFileToDesktop(fileContent, fileType);
+
+            // Dosyayı aç
+            Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
+        }
+
+        private void OpenFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                if (int.TryParse(button.Tag.ToString(), out int fileId) && fileId > 0)
+                {
+                    MessageBox.Show($"Dosya ID: {fileId}");
+                    OpenFile(fileId);
+                }
+                else
+                {
+                    MessageBox.Show("Geçerli bir dosya seçilemedi veya ID değeri hatalı.", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+
+
+
+
+        //private void OpenFileBtn(object sender, RoutedEventArgs e)
+        //{
+        //    var button = sender as Button;
+        //    if (button == null)
+        //    {
+        //        MessageBox.Show("Buton null.");
+        //        return; 
+        //    }
+
+        //    var dataContext = button.DataContext;
+        //    if (dataContext == null)
+        //    {
+        //        MessageBox.Show("DataContext null.");
+        //        return;
+        //    }
+
+        //    MessageBox.Show($"DataContext Type: {dataContext.GetType()}");
+
+        //    if (button.CommandParameter is int fileId)
+        //    {
+        //        OpenFile(fileId);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("CommandParameter null veya int değil.");
+        //    }
         //}
     }
-
 }

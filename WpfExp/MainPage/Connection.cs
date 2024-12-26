@@ -12,15 +12,40 @@ namespace WpfExp
 {
     public class Connection
     {
-
-        private string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
+        #region DATABASE CONNECTION
+         
         private SqlConnection conn;
 
-        public Connection()
+        public Connection(string connectionString)
         {
-            conn = new SqlConnection(connectionString);
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new ArgumentException("Connection string is not initialized.");
+            }
         }
 
+        // Bağlantıyı döndüren bir metot
+        public SqlConnection GetConnection()
+        {
+            string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;"; // Her seferinde private olarak tanımladık
+            conn = new SqlConnection(connStr);
+
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open(); // Bağlantı açılmamışsa açıyoruz
+            }
+            return conn;
+        }
+
+        // Bağlantıyı kapatan bir metot
+        public void CloseConnection()
+        {
+            if (conn != null && conn.State == ConnectionState.Open)
+            {
+                conn.Close(); // Bağlantıyı kapatıyoruz
+            }
+        }
+        #endregion
 
         #region DataGridİşlemleri
         public List<string> GetCountry()
@@ -28,9 +53,8 @@ namespace WpfExp
 
             List<string> countries = new List<string>();
 
-            using (var conn = new SqlConnection(connectionString))
+            using (var conn = this.GetConnection())
             {
-                conn.Open();
                 string query = "SELECT name FROM COUNTRIES";
                 using (var command = new SqlCommand(query, conn))
                 using (var reader = command.ExecuteReader())
@@ -40,6 +64,7 @@ namespace WpfExp
                         countries.Add(reader["name"].ToString());
                     }
                 }
+                conn.Close();
                 return countries;
             }
         }
@@ -48,12 +73,11 @@ namespace WpfExp
         {
             List<string> cities = new List<string>();
 
-            using (var conn = new SqlConnection(connectionString))
+            using (var conn = this.GetConnection())
             {
-                conn.Open();
-                string citiesQuery = "SELECT CITIES.name FROM CITIES " +
-                                     "INNER JOIN COUNTRIES ON CITIES.countryId = COUNTRIES.Id " +
-                                     "WHERE COUNTRIES.name = @name";
+                string citiesQuery = "SELECT ci.name FROM CITIES ci " +
+                                     "INNER JOIN COUNTRIES co ON ci.countryId = co.Id " +
+                                     "WHERE co.name = @name";
 
                 using (var command = new SqlCommand(citiesQuery, conn))
                 {
@@ -67,6 +91,7 @@ namespace WpfExp
                         }
                     }
                 }
+                conn.Close();
                 return cities;
             }
         }
@@ -75,12 +100,11 @@ namespace WpfExp
         {
             List<Customers> customers = new List<Customers>();
 
-            using (var conn = new SqlConnection(connectionString))
+            using (var conn = this.GetConnection())
             {
-                conn.Open();
-                string customerQuery = "SELECT CUSTOMER.Id, CUSTOMER.name FROM CUSTOMER " +
-                    "INNER JOIN CITIES ON CUSTOMER.cityId = CITIES.Id " +
-                    "WHERE CITIES.name = @name";
+                string customerQuery = "SELECT cu.Id, cu.name FROM CUSTOMER cu " +
+                    "INNER JOIN CITIES ci ON cu.cityId = ci.Id " +
+                    "WHERE ci.name = @name";
 
                 using (var command = new SqlCommand(customerQuery, conn))
                 {
@@ -98,6 +122,7 @@ namespace WpfExp
                         }
                     }
                 }
+                conn.Close();
             }
             return customers;
         }
@@ -105,24 +130,29 @@ namespace WpfExp
         public DataTable GetMachines(int selectedCustomerId)
         {
             DataTable machineTbl = new DataTable();
-            string machineQuery = "SELECT cu.Id, ma.name, ma.description, cu.name AS customerName, snm.serialNum " +
-                          "FROM MACHINES ma " +
-                          "JOIN CUSTOMER cu ON cu.machineId = ma.Id " +  // Müşteri ve makine ilişkisi
-                          "JOIN SERIAL_NUMBERS snm ON cu.serialnumId = snm.Id " + // Seri numarası ile ilişki
-                          "WHERE cu.Id = @Id";  // Müşteri id'ye göre filtreleme
+            string machineQuery = @"
+                                    SELECT 
+                                    cm.customerId AS 'CustomerId',
+                                    ma.name AS 'MachineName',
+                                    ma.description AS 'description',
+                                    snm.serialNum AS 'SerialNumber'
+                                    FROM CUSTOMER_MACHINE cm
+                                    JOIN MACHINES ma ON cm.machineId = ma.Id
+                                    LEFT JOIN SERIAL_NUMBERS snm ON ma.Id = snm.machineId AND cm.customerId = snm.customerId
+                                    WHERE cm.customerId = @CustomerId";
 
 
-            using (var conn = new SqlConnection(connectionString))
+            using (var conn = this.GetConnection())
             {
-                conn.Open();
                 using (var command = new SqlCommand(machineQuery, conn))
                 {
-                    command.Parameters.AddWithValue("@Id", selectedCustomerId);
+                    command.Parameters.AddWithValue("@CustomerId", selectedCustomerId);
                     using (var adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(machineTbl);
                     }
                 }
+                conn.Close();
             }
             return machineTbl;
         }
@@ -133,21 +163,23 @@ namespace WpfExp
         public DataTable DetailBrands(int custId) // dayı buradan markaları çekeceğiz
         {
             DataTable brandTbl = new DataTable();
-            string brandQuery = "SELECT pb.name, pb.description FROM PROFILE_BRANDS pb " +
-                "JOIN CUSTOMER cu ON cu.pbrandId = pb.Id " +
-                "WHERE cu.Id = @Id";
+            string brandQuery = @"
+                                SELECT DISTINCT pb.name, pb.description 
+                                FROM CUSTOMER_BRANDS cb
+                                JOIN PROFILE_BRANDS pb ON cb.brandId = pb.Id
+                                WHERE cb.customerId = @customerId";
 
-            using (var conn = new SqlConnection(connectionString))
+            using (var conn = this.GetConnection())
             {
-                conn.Open();
                 using (var command = new SqlCommand(brandQuery, conn))
                 {
-                    command.Parameters.AddWithValue("@Id", custId);
+                    command.Parameters.AddWithValue("@customerId", custId);
                     using (var adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(brandTbl);
                     }
                 }
+                conn.Close();
             }
             return brandTbl;
         }
@@ -155,15 +187,19 @@ namespace WpfExp
         public DataTable DetailSeries(int custId) //markanın serisini çekeceğiz (search bir işe yaramadı kaldırdım)
         {
             DataTable seriesTbl = new DataTable();
-            string serieQuery = "SELECT ps.name, ps.description FROM PROFILE_SERIES ps " +
-                "JOIN CUSTOMER cu ON cu.pserieId = ps.Id " +
-                "WHERE cu.Id = @Id";
-            using (var conn = new SqlConnection(connectionString))
+            string serieQuery = @"
+                                SELECT DISTINCT ps.name, ps.description 
+                                FROM CUSTOMER_BRANDS cb
+                                JOIN BRAND_SERIES bs ON cb.brandId = bs.brandId
+                                JOIN PROFILE_SERIES ps ON bs.seriesId = ps.Id
+                                WHERE cb.customerId = @customerId
+                                AND bs.customerId = @customerId;
+                                ";
+            using (var conn = this.GetConnection())
             {
-                conn.Open();
                 using (var command = new SqlCommand(serieQuery, conn))
                 {
-                    command.Parameters.AddWithValue("@Id", custId);
+                    command.Parameters.AddWithValue("@customerId", custId);
 
 
                     using (var adapter = new SqlDataAdapter(command))
@@ -171,30 +207,64 @@ namespace WpfExp
                         adapter.Fill(seriesTbl);
                     }
                 }
+                conn.Close();
             }
             return seriesTbl;
         }
 
-        public DataTable DetailExamples(int brandId)//markanın serisinin örneğini çekeceğiz
+        public DataTable DetailExamples(int custId)//markanın serisinin örneğini çekeceğiz
         {
             DataTable exampleTbl = new DataTable();
-            string exmQuery = "SELECT pe.name, pe.description FROM PROFILE_EXAMPLE pe " +
-                "JOIN CUSTOMER cu ON cu.pexmId = pe.Id " +
-                "WHERE cu.Id = @Id ";
-            using (var conn = new SqlConnection(connectionString))
+            string exmQuery = @"
+                              SELECT 
+                              pe.Id, 
+                              pe.filetype, 
+                              DATALENGTH(pe.filecontent) / 1024 AS ContentSize -- KB olarak
+                              FROM CUSTOMER_PROFILE_EXAMPLES cpe
+                              INNER JOIN PROFILE_EXAMPLE pe ON cpe.profileExampleId = pe.Id
+                              WHERE cpe.customerId = @customerId";
+
+            using (var conn = this.GetConnection())
             {
-                conn.Open();
                 using (var command = new SqlCommand(exmQuery, conn))
                 {
-                    command.Parameters.AddWithValue("@Id", brandId);
+                    command.Parameters.AddWithValue("@customerId", custId);
                     using (var adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(exampleTbl);
                     }
                 }
+                conn.Close();
             }
             return exampleTbl;
         }
+
+        public byte[] GetFileContent(int fileId, out string fileType)
+        {
+            fileType = null;
+            byte[] fileContent = null;
+
+            using (var connection = this.GetConnection())
+            {
+                string query = "SELECT filetype, filecontent FROM PROFILE_EXAMPLE WHERE Id = @Id";
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", fileId);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            fileType = reader["filetype"].ToString();
+                            fileContent = reader["filecontent"] as byte[];
+                        }
+                    }
+                }
+            }
+
+            return fileContent;
+        }
+
+
         #endregion
     }
 

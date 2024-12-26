@@ -25,7 +25,7 @@ namespace WpfExp.VisitorPage
         public VisitorPage()
         {
             InitializeComponent();
-            conn = new Connection();
+            conn = new Connection(@"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;");
             LoadCountry();
         }
 
@@ -42,23 +42,33 @@ namespace WpfExp.VisitorPage
         private void DataGrid_LoadingRowDetails(object sender, DataGridRowDetailsEventArgs e)
         {
             var rowData = e.Row.Item as DataRowView;
-            if (rowData == null) return;
+            if (rowData == null) return; // Eğer satır verisi boşsa geri dön
 
-            int custId = Convert.ToInt32(rowData["Id"]);
-            //string sname = rowData["name"].ToString();
-
-            var brandDetails = conn.DetailBrands(custId);
-            var seriesDetails = conn.DetailSeries(custId);
-            var exampleDetails = conn.DetailExamples(custId);
-
-            var detailsContext = new
+            try
             {
-                DetailBrands = brandDetails.DefaultView,
-                DetailSeries = seriesDetails.DefaultView,
-                DetailExamples = exampleDetails.DefaultView
-            };
+                // Müşteri ID'sini al
+                int custId = Convert.ToInt32(rowData["CustomerId"]);
 
-            e.DetailsElement.DataContext = detailsContext;
+                // Detayları al
+                var brandDetails = conn.DetailBrands(custId);
+                var seriesDetails = conn.DetailSeries(custId);
+                var exampleDetails = conn.DetailExamples(custId);
+
+                // Detay verilerini bağlamak için bir bağlam oluştur
+                var detailsContext = new
+                {
+                    DetailBrands = brandDetails.DefaultView,
+                    DetailSeries = seriesDetails.DefaultView,
+                    DetailExamples = exampleDetails.DefaultView
+                };
+
+                // Detay elemanına bağlamı ata
+                e.DetailsElement.DataContext = detailsContext;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"HATA! Detaylar yüklenirken bir hata oluştu.\n{ex.Message}", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
@@ -99,6 +109,8 @@ namespace WpfExp.VisitorPage
                 string selectedCities = sehirler.SelectedItem.ToString();
                 List<Customers> customerList = conn.GetCustomers(selectedCities);
                 musteri.ItemsSource = customerList;
+
+
             }
 
         }

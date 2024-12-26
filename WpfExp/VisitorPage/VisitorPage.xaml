@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfExp.VisitorPage"
         mc:Ignorable="d"
         Closed="ClosedWindow"
-        Title="VisitorPage" Height="450" Width="800">
+        Title="VisitorPage" Height="500" Width="800">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -52,21 +52,21 @@
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="Profil Markaları :" FontWeight="Bold" />
-                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}"/>
+                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}" IsReadOnly="True"/>
 
                         <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0" />
-                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}"/>
+                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}" IsReadOnly="True"/>
 
                         <TextBlock Text="Profil Örnekleri :" FontWeight="Bold" Margin="0,10,0,0" />
-                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailExamples}" />
+                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailExamples}" IsReadOnly="True"/>
                     </StackPanel>
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Makine Adı" Binding="{Binding name}" Width="*"/>
-                <DataGridTextColumn Header="Açıklama" Binding="{Binding description}" Width="2*"/>
-                <DataGridTextColumn Header="Müşteri Adı" Binding="{Binding customerName}" Width="100"/>
-                <DataGridTextColumn Header="Seri No" Binding="{Binding serialNum}" Width="100"/>
+                <DataGridTextColumn Header="Makine Adı" Binding="{Binding Path =MachineName}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Açıklama" Binding="{Binding  Path=description}" Width="2*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Müşteri ID" Binding="{Binding Path=CustomerId}" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Seri No" Binding="{Binding Path=SerialNumber}" Width="100" IsReadOnly="True"/>
             </DataGrid.Columns>
 
         </DataGrid>

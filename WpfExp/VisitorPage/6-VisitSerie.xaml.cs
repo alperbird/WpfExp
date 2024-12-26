@@ -21,7 +21,7 @@ namespace WpfExp.VisitorPage
     /// </summary>
     public partial class _6_VisitSerie : Window
     {
-        public string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
+        private string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
         public _6_VisitSerie()
         {
             InitializeComponent();

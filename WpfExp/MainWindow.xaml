@@ -2,11 +2,12 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfExp.MainPage"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfExp"
         mc:Ignorable="d"
         Closed="ClosedWindow"
-        Title="Machines Detail" Height="450" Width="800">
+        Title="Machines Detail" Height="500" Width="800">
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,7 +23,6 @@
                       Width="150"
                       IsTextSearchEnabled="True"
                       SelectionChanged="countries_SelectionChanged"
-                      
                       Margin="0,0,15,0"/>
 
             <Label Content="Şehirler" VerticalAlignment="Center" Margin="0,0,5,0"/>
@@ -47,38 +47,45 @@
                   CanUserAddRows="False"
                   HeadersVisibility="Column"
                   IsReadOnly="True"
-                  LoadingRowDetails="DataGrid_LoadingRowDetails">
+                  LoadingRowDetails="DataGrid_LoadingRowDetails"
+                  RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="Profil Markaları :" FontWeight="Bold" />
-                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}"/>
+                        <TextBlock Text="Profil Markaları :" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}" Height="100" IsReadOnly="True"/>
 
-                        <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0" />
-                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}"/>
+                        <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}" Height="100" IsReadOnly="True"/>
 
-                        <TextBlock Text="Profil Örnekleri :" FontWeight="Bold" Margin="0,10,0,0" />
-                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailExamples}" />
+                        <TextBlock Text="Profil Örnekleri :" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding DetailExamples}" Height="150" IsReadOnly="True">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="100" />
+                                <DataGridTextColumn Header="Dosya Adı" Binding="{Binding filetype}" Width="200" />
+                                <DataGridTextColumn Header="Boyut (KB)" Binding="{Binding ContentSize}" Width="200" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Button Content="Dosyayı Aç" 
+                                Click="OpenFileButton_Click" 
+                                Command="{Binding DataContext.OpenFileCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                Tag="1008" 
+                                Margin="5" />
+
+
+
                     </StackPanel>
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>
+
+
             <DataGrid.Columns>
-                <!--<DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Click="details">Makina Detay</Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>-->
-                <DataGridTextColumn Header="Makine Adı" Binding="{Binding name}" Width="*"/>
-                <DataGridTextColumn Header="Açıklama" Binding="{Binding description}" Width="2*"/>
-                <DataGridTextColumn Header="Müşteri Adı" Binding="{Binding customerName}" Width="100"/>
-                <DataGridTextColumn Header="Seri No" Binding="{Binding serialNum}" Width="100"/>
-
+                <DataGridTextColumn Header="Makine Adı" Binding="{Binding Path=MachineName}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Açıklama" Binding="{Binding Path=description}" Width="2*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Müşteri ID" Binding="{Binding Path=CustomerId}" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Seri No" Binding="{Binding Path=SerialNumber}" Width="100" IsReadOnly="True"/>
             </DataGrid.Columns>
-
         </DataGrid>
         <Button Content="Buton Sayfası" HorizontalAlignment="Left" Margin="688,6,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click"/>
-
     </Grid>
 </Window>

@@ -22,7 +22,7 @@ namespace WpfExp.ModeratorPage
     /// </summary>
     public partial class _4_ModMachine : Window
     {
-        public string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
+        private string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
         public _4_ModMachine()
         {
             InitializeComponent();

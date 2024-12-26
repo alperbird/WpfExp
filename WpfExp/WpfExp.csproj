@@ -194,6 +194,8 @@
       <DependentUpon>LogRecords.xaml</DependentUpon>
     </Compile>
     <Compile Include="LogRecords\LogUserProcess.cs" />
+    <Compile Include="MainPage\Converter.cs" />
+    <Compile Include="MainPage\RelayCommand.cs" />
     <Compile Include="VisitorPage\1-VisitCountry.xaml.cs">
       <DependentUpon>1-VisitCountry.xaml</DependentUpon>
     </Compile>

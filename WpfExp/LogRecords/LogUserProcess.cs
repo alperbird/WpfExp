@@ -10,7 +10,8 @@ namespace WpfExp.LogRecords
 {
     public static class LogUserProcess
     {
-        private static  string connStr = @"Server=(localdb)\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;";
+        private static string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
+
         private static string logFilePath = "C:\\Users\\root\\source\\repos\\WpfExp\\WpfExp\\LogRecords\\Logs.txt"; 
 
         public static void AddLog(int userId, string action) // datagrid içinde tutacağımız log kayıtları (uygulama içinde evet)

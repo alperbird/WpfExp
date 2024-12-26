@@ -29,7 +29,7 @@ namespace WpfExp.LogRecords
 
         private void LoadLogs()
         {
-            using (SqlConnection conn = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Database=OZGENC;Trusted_Connection=True;"))
+            using (SqlConnection conn = new SqlConnection("Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;"))
             {
                 conn.Open();
                 string logQuery = "SELECT l.Id, l.Action, l.Timestamp, u.UserName FROM LOGS l " +
