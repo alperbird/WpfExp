@@ -22,7 +22,6 @@
                   Width="150"
                   IsTextSearchEnabled="True"
                   SelectionChanged="countries_SelectionChanged"
-                  
                   Margin="0,0,15,0"/>
 
             <Label Content="Şehirler" VerticalAlignment="Center" Margin="0,0,5,0"/>
@@ -47,30 +46,46 @@
               CanUserAddRows="False"
               HeadersVisibility="Column"
               IsReadOnly="True"
-              LoadingRowDetails="DataGrid_LoadingRowDetails">
+              LoadingRowDetails="DataGrid_LoadingRowDetails"
+              RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="Profil Markaları :" FontWeight="Bold" Margin="0,10,0,0"/>
                         <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}" Height="100" IsReadOnly="True"/>
 
-                        <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0" />
-                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}" Height="100" IsReadOnly="True"/>
+                        <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}" Height="100" IsReadOnly="True"/>
 
-                        <TextBlock Text="Profil Örnekleri :" FontWeight="Bold" Margin="0,10,0,0" />
-                        <DataGrid ColumnWidth="Auto" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailExamples}" Height="100" IsReadOnly="True"/>
+                        <TextBlock Text="Profil Örnekleri :" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding DetailExamples}" Height="150" IsReadOnly="True">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="100" />
+                                <DataGridTextColumn Header="Dosya Adı" Binding="{Binding filetype}" Width="200" />
+                                <DataGridTextColumn Header="Boyut (KB)" Binding="{Binding ContentSize}" Width="200" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Button x:Name="OpenFileButton"
+                            Content="Dosyayı Aç" 
+                            Click="OpenFileButton_Click" 
+                            Command="{Binding DataContext.OpenFileCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                            CommandParameter="{Binding Id}" 
+                            Margin="5" />
+
+
+
                     </StackPanel>
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>
+
+
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Makine Adı" Binding="{Binding Path =MachineName}" Width="*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Açıklama" Binding="{Binding  Path=description}" Width="2*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Makine Adı" Binding="{Binding Path=MachineName}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Açıklama" Binding="{Binding Path=description}" Width="2*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Müşteri ID" Binding="{Binding Path=CustomerId}" Width="100" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Seri No" Binding="{Binding Path=SerialNumber}" Width="100" IsReadOnly="True"/>
             </DataGrid.Columns>
-
         </DataGrid>
         <Button Content="Buton Sayfası" HorizontalAlignment="Left" Margin="688,6,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click"/>
-
     </Grid>
 </Window>

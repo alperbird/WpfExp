@@ -66,10 +66,11 @@
                                 <DataGridTextColumn Header="Boyut (KB)" Binding="{Binding ContentSize}" Width="200" />
                             </DataGrid.Columns>
                         </DataGrid>
-                        <Button Content="Dosyayı Aç" 
+                        <Button x:Name="OpenFileButton"
+                                Content="Dosyayı Aç" 
                                 Click="OpenFileButton_Click" 
                                 Command="{Binding DataContext.OpenFileCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
-                                Tag="1008" 
+                                CommandParameter="{Binding Id}" 
                                 Margin="5" />
 
 

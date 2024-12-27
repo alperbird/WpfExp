@@ -27,6 +27,7 @@ using Path = System.IO.Path;
 using System.Collections;
 using System.Runtime.InteropServices;
 
+
 namespace WpfExp
 {
     /// <summary>
@@ -71,7 +72,6 @@ namespace WpfExp
                 var brandDetails = conn.DetailBrands(custId);
                 var seriesDetails = conn.DetailSeries(custId);
                 var exampleDetails = conn.DetailExamples(custId);
-                //var profileFiles = conn.GetFilesByCustomerId(custId);
 
                 // Detayları listeye ekliyoruz
                 var fileDetails = new List<object>();
@@ -86,14 +86,27 @@ namespace WpfExp
                     });
                 }
 
-                // Final bağlamı oluşturuluyor
+                // Button'un Tag özelliğini ayarlıyoruz
+                var detailsElement = e.DetailsElement; // RowDetails içeriği
+                if (detailsElement != null)
+                {
+                    var button = detailsElement.FindName("OpenFileButton") as Button;
+                    if (button != null)
+                    {
+                        // İlk dosyanın ID'sini Tag olarak atıyoruz (örnek)
+                        if (fileDetails.Count > 0)
+                        {
+                            button.Tag = fileDetails[0].GetType().GetProperty("Id")?.GetValue(fileDetails[0]);
+                        }
+                    }
+                }
+
                 var finalContext = new
                 {
                     DetailBrands = brandDetails.DefaultView,
                     DetailSeries = seriesDetails.DefaultView,
                     DetailExamples = exampleDetails.DefaultView,
-                    FileDetails = fileDetails, // Dosya detayları bağlanıyor
-                    //ProfileExamples = profileFiles.DefaultView
+                    FileDetails = fileDetails
                 };
 
                 e.DetailsElement.DataContext = finalContext; // DataContext atama
@@ -103,6 +116,7 @@ namespace WpfExp
                 MessageBox.Show($"HATA! Detaylar yüklenirken bir hata oluştu.\n{ex.Message}", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
 
 
         private void selectCities(string selectedCountry)
@@ -233,7 +247,7 @@ namespace WpfExp
         {
             if (sender is Button button)
             {
-                if (int.TryParse(button.Tag.ToString(), out int fileId) && fileId > 0)
+                if (button != null && button.Tag != null && int.TryParse(button.Tag.ToString(), out int fileId) && fileId > 0)
                 {
                     MessageBox.Show($"Dosya ID: {fileId}");
                     OpenFile(fileId);
