@@ -44,7 +44,7 @@ namespace WpfExp
         public MainWindow()
         {
             InitializeComponent();
-            string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
+            string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;";
             conn = new Connection(connStr);
             LoadCountry();
 

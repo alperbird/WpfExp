@@ -27,7 +27,7 @@ namespace WpfExp
         // Bağlantıyı döndüren bir metot
         public SqlConnection GetConnection()
         {
-            string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;"; // Her seferinde private olarak tanımladık
+            string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;"; // Her seferinde private olarak tanımladık
             conn = new SqlConnection(connStr);
 
             if (conn.State != ConnectionState.Open)

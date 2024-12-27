@@ -22,7 +22,7 @@ namespace WpfExp.VisitorPage
     /// </summary>
     public partial class _1_VisitCountry : Window
     {
-        private string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
+        private string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;";
         public _1_VisitCountry()
         {
             InitializeComponent();

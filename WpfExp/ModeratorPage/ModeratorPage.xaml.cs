@@ -28,7 +28,7 @@ namespace WpfExp.ModeratorPage
         public ModeratorPage()
         {
             InitializeComponent();
-            conn = new Connection(@"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;");
+            conn = new Connection(@"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;");
             LoadCountry();
         }
 
