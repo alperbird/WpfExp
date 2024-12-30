@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data.SQLite;
 using System.Runtime.InteropServices.ComTypes;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using System.Data;
@@ -39,25 +38,34 @@ namespace WpfExp
 
         public int selectedIndex { get; set; }
 
-        private Connection conn;
+        private readonly Connection _conn;
+        private readonly CountryRepo _countryRepo;
+        private readonly CityRepo _cityRepo;
+        private readonly CustomerRepo _customerRepo;
+        private readonly MachineRepo _machineRepo;
+        private readonly BrandRepo _brandRepo;
+        private readonly SerieRepo _serieRepo;
+        private readonly ExampleRepo _exampleRepo;
+        private readonly FileRepo _fileRepo;
 
         public MainWindow()
         {
             InitializeComponent();
-            string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;";
-            conn = new Connection(connStr);
+            _conn = new Connection(); // App.config kısmında connection oluşturuldu
+            _countryRepo = new CountryRepo(_conn);
+            _cityRepo = new CityRepo(_conn);
+            _customerRepo = new CustomerRepo(_conn);
+            _machineRepo = new MachineRepo(_conn);
+            _brandRepo = new BrandRepo(_conn);
+            _serieRepo = new SerieRepo(_conn);
+            _exampleRepo = new ExampleRepo(_conn);
+            _fileRepo = new FileRepo(_conn);
             LoadCountry();
 
             OpenFileCommand = new RelayCommand<int>(OpenFile);
             DataContext = this;
         }
-        //Ülkeleri çeken fonksiyon
-        private void LoadCountry()
-        {
-            List<string> countries = conn.GetCountry();
-            ulkeler.ItemsSource = countries;
-
-        }
+        
 
         private void DataGrid_LoadingRowDetails(object sender, DataGridRowDetailsEventArgs e)
         {
@@ -69,9 +77,9 @@ namespace WpfExp
                 int custId = Convert.ToInt32(rowData["CustomerId"]); // Müşteri ID'sini alıyoruz
 
                 // Müşteriye bağlı detayları çekiyoruz
-                var brandDetails = conn.DetailBrands(custId);
-                var seriesDetails = conn.DetailSeries(custId);
-                var exampleDetails = conn.DetailExamples(custId);
+                var brandDetails = _brandRepo.DetailBrands(custId);
+                var seriesDetails = _serieRepo.DetailSeries(custId);
+                var exampleDetails = _exampleRepo.DetailExamples(custId);
 
                 // Detayları listeye ekliyoruz
                 var fileDetails = new List<object>();
@@ -80,7 +88,7 @@ namespace WpfExp
                     // Örnek ID ve diğer dosya detaylarını alıyoruz
                     fileDetails.Add(new
                     {
-                        Id = row["Id"], // Bu ID sabit kullanılıyor
+                        Id = row["Id"], 
                         filetype = row["filetype"],
                         ContentSize = row.Table.Columns.Contains("ContentSize") ? row["ContentSize"] : "0"
                     });
@@ -117,12 +125,11 @@ namespace WpfExp
             }
         }
 
-
-
-        private void selectCities(string selectedCountry)
+        #region ComboBox ve DataGrid İşlemleri
+        private void LoadCountry()
         {
-            List<string> cities = conn.GetCities(selectedCountry);
-            sehirler.ItemsSource = cities;
+            List<string> countries = _countryRepo.GetCountry();
+            ulkeler.ItemsSource = countries;
 
         }
 
@@ -139,14 +146,13 @@ namespace WpfExp
 
         }
 
-        private void selectCustomers(string selectedCities)
+        private void selectCities(string selectedCountry)
         {
-            List<Customers> customer = conn.GetCustomers(selectedCities);
-            musteri.ItemsSource = customer;
+            List<string> cities = _cityRepo.GetCities(selectedCountry);
+            sehirler.ItemsSource = cities;
 
-            musteri.DisplayMemberPath = "name";
-            musteri.SelectedValuePath = "CustomerID";
         }
+
         private void sehirler_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var cmbx = sender as ComboBox;
@@ -154,12 +160,21 @@ namespace WpfExp
             if (cmbx.SelectedItem != null)
             {
                 string selectedCities = sehirler.SelectedItem.ToString();
-                List<Customers> customerList = conn.GetCustomers(selectedCities);
+                List<Customers> customerList = _customerRepo.GetCustomers(selectedCities);
                 musteri.ItemsSource = customerList;
 
 
             }
 
+        }
+
+        private void selectCustomers(string selectedCities)
+        {
+            List<Customers> customer = _customerRepo.GetCustomers(selectedCities);
+            musteri.ItemsSource = customer;
+
+            musteri.DisplayMemberPath = "name";
+            musteri.SelectedValuePath = "CustomerID";
         }
 
         private void musteri_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -174,7 +189,7 @@ namespace WpfExp
 
         private void LoadMachines(int selectedCustomerId)
         {
-            var machineData = conn.GetMachines(selectedCustomerId);
+            var machineData = _machineRepo.GetMachines(selectedCustomerId);
             dgMakina.ItemsSource = machineData.DefaultView;
         }
 
@@ -183,20 +198,9 @@ namespace WpfExp
             var grid = sender as DataGrid;
             var DataRow = grid.SelectedItem;
         }
+        #endregion
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            GoButtonsWindow buttonWindow = new GoButtonsWindow();
-            buttonWindow.Show();
-        }
-
-
-        private void ClosedWindow(object sender, EventArgs e)
-        {
-            AdminLoginPanel loginPanel = new AdminLoginPanel();
-            loginPanel.Show();
-        }
-
+        #region Dosya İşlemleri
         private string SaveFileToDesktop(byte[] fileContent, string fileType)
         {
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -219,7 +223,6 @@ namespace WpfExp
             return tempPath;
         }
 
-
         private void OpenFile(int fileId)
         {
             if (fileId == 0)
@@ -229,7 +232,8 @@ namespace WpfExp
             }
 
             string fileType;
-            byte[] fileContent = conn.GetFileContent(fileId, out fileType);
+            byte[] fileContent = _fileRepo
+                .GetFileContent(fileId, out fileType);
 
             if (fileContent == null || string.IsNullOrEmpty(fileType))
             {
@@ -258,37 +262,20 @@ namespace WpfExp
                 }
             }
         }
+        #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            GoButtonsWindow buttonWindow = new GoButtonsWindow();
+            buttonWindow.Show();
+        }
+
+        private void ClosedWindow(object sender, EventArgs e)
+        {
+            AdminLoginPanel loginPanel = new AdminLoginPanel();
+            loginPanel.Show();
+        }
 
 
-
-
-
-        //private void OpenFileBtn(object sender, RoutedEventArgs e)
-        //{
-        //    var button = sender as Button;
-        //    if (button == null)
-        //    {
-        //        MessageBox.Show("Buton null.");
-        //        return; 
-        //    }
-
-        //    var dataContext = button.DataContext;
-        //    if (dataContext == null)
-        //    {
-        //        MessageBox.Show("DataContext null.");
-        //        return;
-        //    }
-
-        //    MessageBox.Show($"DataContext Type: {dataContext.GetType()}");
-
-        //    if (button.CommandParameter is int fileId)
-        //    {
-        //        OpenFile(fileId);
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("CommandParameter null veya int değil.");
-        //    }
-        //}
     }
 }

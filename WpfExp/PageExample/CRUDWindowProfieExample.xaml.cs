@@ -20,6 +20,7 @@ using System.Xml.Linq;
 using WpfExp.LogRecords;
 using System.Collections.ObjectModel;
 using Microsoft.Win32;
+using System.Configuration;
 
 namespace WpfExp.PageExample
 {
@@ -28,11 +29,12 @@ namespace WpfExp.PageExample
     /// </summary>
     public partial class CRUDWindowProfieExample : Window
     {
-        private string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;";
+        private string connStr;
         public ObservableCollection<string> FileList { get; set; }
         public CRUDWindowProfieExample()
         {
             InitializeComponent();
+            connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             FileList = new ObservableCollection<string>();
             lstFiles.ItemsSource = FileList;
             TableRead();
@@ -44,12 +46,15 @@ namespace WpfExp.PageExample
                 conn.Open();
                 string exmQuery = @"
             SELECT 
-                Id, 
-                name AS 'Ad', 
-                description AS 'Açıklama', 
-                filetype AS 'Dosyalar', 
-                DATALENGTH(filecontent) / 1024 AS 'ContentSize' 
-                FROM PROFILE_EXAMPLE";
+            pe.Id, 
+            pe.name AS 'Ad', 
+            pe.description AS 'Açıklama', 
+            pe.filetype AS 'Dosyalar', 
+            DATALENGTH(pe.filecontent) / 1024 AS 'ContentSize',
+            ps.name AS 'Profil Serisi'
+            FROM PROFILE_EXAMPLE pe 
+	        JOIN PROFILE_SERIES ps ON
+	        pe.serieId = ps.Id";
                 using (SqlCommand cmd = new SqlCommand(exmQuery, conn))
                 {
                     SqlDataAdapter adapt = new SqlDataAdapter(cmd);
@@ -70,6 +75,10 @@ namespace WpfExp.PageExample
                 {
                     txtExmName.Text = row["Ad"].ToString();
                     txtExmDesc.Text = row["Açıklama"].ToString();
+                    var selectedSerie = cmbSerie.Items
+                        .Cast<DataRowView>()
+                        .FirstOrDefault(item => item["name"].ToString() == row["Profil Serisi"].ToString());
+                    cmbSerie.SelectedItem = selectedSerie;
 
                     // FileList'i temizle ve seçili satırın dosyalarını yükle
                     FileList.Clear();
@@ -113,14 +122,15 @@ namespace WpfExp.PageExample
                         string fileName = System.IO.Path.GetFileName(filePath);
                         byte[] fileContent = File.ReadAllBytes(filePath); // Dosya içeriğini oku
 
-                        string insertQuery = "INSERT INTO PROFILE_EXAMPLE (name, description, filetype, filecontent) " +
-                                             "VALUES (@name, @description, @filetype, @filecontent)";
+                        string insertQuery = "INSERT INTO PROFILE_EXAMPLE (name, description, filetype, filecontent, serieId) " +
+                                             "VALUES (@name, @description, @filetype, @filecontent, @serieId)";
 
                         SqlCommand cmd = new SqlCommand(insertQuery, conn);
                         cmd.Parameters.AddWithValue("@name", txtExmName.Text);
                         cmd.Parameters.AddWithValue("@description", txtExmDesc.Text);
                         cmd.Parameters.AddWithValue("@filetype", fileName);
                         cmd.Parameters.AddWithValue("@filecontent", fileContent);
+                        cmd.Parameters.AddWithValue("@serieId", cmbSerie.SelectedValue);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -132,6 +142,7 @@ namespace WpfExp.PageExample
             }
 
             MessageBox.Show("Kayıt işlemi tamamlandı.", "Bilgi", MessageBoxButton.OK, MessageBoxImage.Information);
+            LogUserProcess.AddLog(currentUserId, $"Profil örneği eklemesi yapıldı. {txtExmName.Text}");
             TableRead();
             Clean();
         }
@@ -140,7 +151,7 @@ namespace WpfExp.PageExample
 
         private void updateBtn(object sender, RoutedEventArgs e)
         {
-            if (!(dgExamples.SelectedItem is DataRowView row)) // Modern 'is not' yerine klasik yazım
+            if (!(dgExamples.SelectedItem is DataRowView row)) 
             {
                 MessageBox.Show("Lütfen bir satır seçin.", "Uyarı", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -163,7 +174,8 @@ namespace WpfExp.PageExample
                                              "name = @name, " +
                                              "description = @description, " +
                                              "filetype = @filetype, " +
-                                             "filecontent = @filecontent " +
+                                             "filecontent = @filecontent," +
+                                             "serieId = @serieId " +
                                              "WHERE Id = @Id";
 
                         SqlCommand cmd = new SqlCommand(updateQuery, conn);
@@ -171,6 +183,7 @@ namespace WpfExp.PageExample
                         cmd.Parameters.AddWithValue("@description", txtExmDesc.Text);
                         cmd.Parameters.AddWithValue("@filetype", fileName);
                         cmd.Parameters.AddWithValue("@filecontent", fileContent);
+                        cmd.Parameters.AddWithValue("@serieId", cmbSerie.SelectedValue);
                         cmd.Parameters.AddWithValue("@Id", row["Id"]);
 
                         cmd.ExecuteNonQuery();
@@ -204,6 +217,7 @@ namespace WpfExp.PageExample
                 string deletedName = "";
                 string deletedDesc = "";
                 string deletedftype = "";
+                int deletedserieId = 0;
 
                 // Silinecek veriyi al
                 using (SqlConnection conn = new SqlConnection(connStr))
@@ -249,7 +263,8 @@ namespace WpfExp.PageExample
                     string logMessage = $"Kayıt Silindi: " +
                                         $"Profil Örneği: {deletedName},\n " +
                                         $"Açıklama: {deletedDesc},\n" +
-                                        $"Dosya: {deletedftype}";
+                                        $"Dosya: {deletedftype},\n" +
+                                        $"Profil Serisi: {deletedserieId}";
                     LogUserProcess.AddLog(currentUserId, logMessage);
 
                     Clean();

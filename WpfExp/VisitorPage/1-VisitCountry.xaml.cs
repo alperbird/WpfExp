@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfExp.Models;
+using System.Configuration;
 
 namespace WpfExp.VisitorPage
 {
@@ -22,10 +23,11 @@ namespace WpfExp.VisitorPage
     /// </summary>
     public partial class _1_VisitCountry : Window
     {
-        private string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;";
+        private string connStr;
         public _1_VisitCountry()
         {
             InitializeComponent();
+            connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             TableRead();
         }
 

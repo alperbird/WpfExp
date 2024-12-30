@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -10,13 +11,13 @@ namespace WpfExp.LogRecords
 {
     public static class LogUserProcess
     {
-        private static string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;";
+        private static string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         private static string logFilePath = "C:\\Users\\root\\source\\repos\\WpfExp\\WpfExp\\LogRecords\\Logs.txt"; 
 
         public static void AddLog(int userId, string action) // datagrid içinde tutacağımız log kayıtları (uygulama içinde evet)
         {
-            using(SqlConnection conn = new SqlConnection(connStr))
+            using(var conn = new SqlConnection(connStr))
             {
                 conn.Open();
                 string insertQuery = "INSERT INTO LOGS(UserId, Action, TimeStamp) VALUES (@UserId, @Action, @TimeStamp)";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -22,11 +23,13 @@ namespace WpfExp.LoginPage
     /// </summary>
     public partial class LoginPage : Window
     {
-        private string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;";
+
+        private string connStr;
 
         public LoginPage()
         {
             InitializeComponent();
+            connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfExp"
         mc:Ignorable="d"
         Closed="ClosedWindow"
-        Title="AdminLoginPanel" Height="450" Width="800">
+        Title="Admin Panel" Height="450" Width="800">
     <Grid  Background="BlueViolet">
         <TextBlock Text="Hangi işlemi yapmak istiyorsunuz?" 
                    HorizontalAlignment="Center" 

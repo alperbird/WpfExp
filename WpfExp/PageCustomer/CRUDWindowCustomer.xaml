@@ -28,17 +28,17 @@
                 <ComboBox x:Name="cmbCity" Width="200" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
 
                 <TextBlock Text="Makineler:"/>
-                <ListBox x:Name="lstMachine" Width="200" Height="100" SelectionMode="Multiple" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
+                <ListBox x:Name="lstMachine" Width="200" Height="100" SelectionMode="Single" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
 
                 <TextBlock Text="Markalar:"/>
-                <ListBox x:Name="lstpBrand" Width="200" Height="100" SelectionMode="Multiple" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10" 
+                <ListBox x:Name="lstpBrand" Width="200" Height="100" SelectionMode="Single" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10" 
              SelectionChanged="lstpBrand_SelectionChanged"/>
 
                 <TextBlock Text="Profil Serileri:"/>
-                <ListBox x:Name="lstpSeries" Width="200" Height="100" SelectionMode="Multiple" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
+                <ListBox x:Name="lstpSeries" Width="200" Height="100" SelectionMode="Single" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
 
                 <TextBlock Text="Profil Örnekleri:"/>
-                <ListBox x:Name="lstpexm" Width="200" Height="100" SelectionMode="Multiple" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
+                <ListBox x:Name="lstpexm" Width="200" Height="100" SelectionMode="Single" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
 
                 <TextBlock Text="Seri Numarası:"/>
                 <TextBox x:Name="txtSerieNumber" Width="200" Margin="0,0,0,10"/>

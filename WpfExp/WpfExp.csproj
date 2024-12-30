@@ -137,6 +137,7 @@
       <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
@@ -195,8 +196,15 @@
       <DependentUpon>LogRecords.xaml</DependentUpon>
     </Compile>
     <Compile Include="LogRecords\LogUserProcess.cs" />
-    <Compile Include="MainPage\Converter.cs" />
+    <Compile Include="MainPage\BrandRepo.cs" />
+    <Compile Include="MainPage\CityRepo.cs" />
+    <Compile Include="MainPage\CountryRepo.cs" />
+    <Compile Include="MainPage\CustomerRepo.cs" />
+    <Compile Include="MainPage\ExampleRepo.cs" />
+    <Compile Include="MainPage\FileRepo.cs" />
+    <Compile Include="MainPage\MachineRepo.cs" />
     <Compile Include="MainPage\RelayCommand.cs" />
+    <Compile Include="MainPage\SerieRepo.cs" />
     <Compile Include="VisitorPage\1-VisitCountry.xaml.cs">
       <DependentUpon>1-VisitCountry.xaml</DependentUpon>
     </Compile>
@@ -345,7 +353,6 @@
     <Compile Include="PageCountry\CRUDWindowCountry.xaml.cs">
       <DependentUpon>CRUDWindowCountry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageCustomer\CRUDCustomer.cs" />
     <Compile Include="PageCustomer\CRUDWindowCustomer.xaml.cs">
       <DependentUpon>CRUDWindowCustomer.xaml</DependentUpon>
     </Compile>

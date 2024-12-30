@@ -21,7 +21,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Sol Panel -->
-        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="10">
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="10,10,10,0" Height="403">
             <!-- Örnek Bilgileri -->
             <Label Content="Örnek Adı:" Margin="5,0,5,0" />
             <TextBox Name="txtExmName" Margin="5,0,5,10" Width="200" />
@@ -36,14 +36,17 @@
                     <ColumnDefinition Width="3*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                <ListBox Name="lstFiles" Height="100" Margin="5" Grid.Column="0" SelectionMode="Single" />
+                <ListBox Name="lstFiles" Height="100" Margin="5" Grid.Column="0" SelectionMode="Multiple" />
                 <StackPanel Orientation="Vertical" Grid.Column="1" Margin="5,0,0,0">
                     <Button Content="Dosya Ekle" Width="100" Margin="0,5,0,5" Click="addFileBtn" />
                     <Button Content="Seçili Dosyayı Sil" Width="100" Margin="0,5,0,5" Click="removeFileBtn" />
                     <Button Content="Tüm Dosyaları Sil" Width="100" Margin="0,5,0,5" Click="clearAllFilesBtn" />
                 </StackPanel>
             </Grid>
-
+            <Label Content="Profil Serisi:" Margin="5,10,5,0"/>
+            <ComboBox Name="cmbSerie" Margin="5,0,5,10" Width="200"
+                      SelectedValuePath="Id"
+                      DisplayMemberPath="name"/>
             <!-- İşlem Butonları -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                 <Button Content="Ekle" Width="75" Margin="5" Click="insertBtn" />

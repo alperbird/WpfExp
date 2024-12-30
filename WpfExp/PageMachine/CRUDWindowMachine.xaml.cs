@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using WpfExp.Models;
 using System.Data.SqlClient;
 using WpfExp.LogRecords;
+using System.Configuration;
 
 namespace WpfExp.PageMachine
 {
@@ -24,10 +25,11 @@ namespace WpfExp.PageMachine
     /// </summary>
     public partial class CRUDWindowMachine : Window
     {
-        private string connStr = @"Server=DESKTOP-F5QQ2O8;Database=OZGENC;Trusted_Connection=True;";
+        private string connStr;
         public CRUDWindowMachine()
         {
             InitializeComponent();
+            connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             TableRead();
             cmbxFull();
         }

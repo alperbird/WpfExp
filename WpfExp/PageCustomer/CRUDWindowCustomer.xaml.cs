@@ -19,9 +19,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfExp.Models;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using WpfExp.PageCustomer;
+
 using System.Data.SQLite;
 using WpfExp.LogRecords;
+using System.Configuration;
 
 namespace WpfExp
 {
@@ -31,10 +32,11 @@ namespace WpfExp
     public partial class CRUDWindowCustomer : Window
     {
         private DataRowView row; // güncelleme için seçiyoruz
-        private string connStr = @"Server=192.168.5.68,1433;Database=OZGENC;User Id=sa; Password=ozgencmachine16;Trusted_Connection=True;";
+        private string connStr;
         public CRUDWindowCustomer()
         {
             InitializeComponent();
+            connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             //datagridi doldurma
             TableRead();
 
@@ -394,42 +396,60 @@ namespace WpfExp
                     .Cast<DataRowView>()
                     .FirstOrDefault(item => item["name"].ToString() == selectedRow["Şehir"].ToString());
 
-                // Makineler (Çoklu Seçim)
-                var selectedMachines = selectedRow["Makineler"].ToString().Split(',').Select(m => m.Trim());
-                foreach (var machine in lstMachine.Items.Cast<DataRowView>())
+                // Makineler 
+                var selectedMachine = selectedRow["Makineler"].ToString().Split(',').FirstOrDefault();
+                if (selectedMachine != null)
                 {
-                    if (selectedMachines.Contains(machine["name"].ToString()))
-                        lstMachine.SelectedItems.Add(machine);
+                    var machine = lstMachine.Items.Cast<DataRowView>()
+                                   .FirstOrDefault(m => m["name"].ToString() == selectedMachine);
+
+                    if (machine != null)
+                    {
+                        lstMachine.SelectedItem = machine; // Tek seçim modu için
+                    }
                 }
+
 
                 // Markalar
-                var selectedBrands = selectedRow["Markalar"].ToString().Split(',').Select(b => b.Trim());
-                foreach (var brand in lstpBrand.Items.Cast<DataRowView>())
+                var selectedBrands = selectedRow["Markalar"].ToString().Split(',').FirstOrDefault();
+                if (selectedBrands != null)
                 {
-                    if (selectedBrands.Contains(brand["name"].ToString()))
-                        lstpBrand.SelectedItems.Add(brand);
-                }
+                    var brand = lstpBrand.Items.Cast<DataRowView>()
+                                   .FirstOrDefault(b => b["name"].ToString() == selectedBrands);
+                    if (brand != null)
+                    {
+                        lstpBrand.SelectedItem = brand; // Tek seçim modu için
+                    }
 
-                // Profil Serileri
-                var selectedSeries = selectedRow["Profil Serileri"].ToString().Split(',').Select(s => s.Trim());
-                foreach (var series in lstpSeries.Items.Cast<DataRowView>())
-                {
-                    if (selectedSeries.Contains(series["name"].ToString()))
-                        lstpSeries.SelectedItems.Add(series);
-                }
 
-                // Profil Örnekleri
-                var selectedExamples = selectedRow["Profil Örnekleri"].ToString().Split(',').Select(pe => pe.Trim());
-                foreach (var example in lstpexm.Items.Cast<DataRowView>())
-                {
-                    if (selectedExamples.Contains(example["name"].ToString()))
-                        lstpexm.SelectedItems.Add(example);
-                }
+                    // Profil Serileri
+                    var selectedSeries = selectedRow["Profil Serileri"].ToString().Split(',').FirstOrDefault();
+                    if (selectedSeries != null)
+                    {
+                        var series = lstpSeries.Items.Cast<DataRowView>()
+                                       .FirstOrDefault(s => s["name"].ToString() == selectedSeries);
+                        if (series != null)
+                        {
+                            lstpSeries.SelectedItem = series; // Tek seçim modu için
+                        }
 
-                // Seri Numaraları
-                txtSerieNumber.Text = selectedRow["Seri Numaraları"].ToString();
+                        // Profil Örnekleri
+                        var selectedExamples = selectedRow["Profil Örnekleri"].ToString().Split(',').FirstOrDefault();
+                        if (selectedExamples != null)
+                        {
+                            var example = lstpexm.Items.Cast<DataRowView>()
+                                           .FirstOrDefault(ex => ex["name"].ToString() == selectedExamples);
+                            if (example != null)
+                            {
+                                lstpexm.SelectedItem = example; // Tek seçim modu için
+                            }
+                        }
+                        // Seri Numaraları
+                        txtSerieNumber.Text = selectedRow["Seri Numaraları"].ToString();
+                    }
+
+                }
             }
-
         }
 
         #region Customer Update

@@ -1290,3 +1290,75 @@ Seri Numaraları: 0123456 -> 0123456
 2024-12-27 09:08:16 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
 2024-12-27 09:09:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
 2024-12-27 09:11:24 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 10:02:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 10:26:31 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli profil,
+ Açıklama: yok,
+Dosya: 5533.zip
+2024-12-27 10:26:52 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli profil,
+ Açıklama: yok,
+Dosya: 5505.zip
+2024-12-27 10:26:56 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli profil,
+ Açıklama: yok,
+Dosya: 5504.zip
+2024-12-27 10:27:01 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli profil,
+ Açıklama: yok,
+Dosya: 5500.zip
+2024-12-27 10:27:04 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli profil,
+ Açıklama: yok,
+Dosya: 571.zip
+2024-12-27 10:27:55 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 10:29:42 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli seçim,
+ Açıklama: yok,
+Dosya: 5533.zip
+2024-12-27 10:29:45 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli seçim,
+ Açıklama: yok,
+Dosya: 5505.zip
+2024-12-27 10:29:48 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli seçim,
+ Açıklama: yok,
+Dosya: 5504.zip
+2024-12-27 10:29:51 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli seçim,
+ Açıklama: yok,
+Dosya: 5500.zip
+2024-12-27 10:29:58 | UserID: 1 | Action: Kayıt Silindi: Profil Örneği: besli seçim,
+ Açıklama: yok,
+Dosya: 571.zip
+2024-12-27 13:32:59 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-27 13:40:04 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-27 15:16:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 08:19:03 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 08:24:06 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 09:16:15 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 09:39:25 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-30 09:39:53 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-30 09:41:44 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-30 09:41:54 | UserID: 3 | Action: Giriş işlemi yapıldı. Kullanıcı: ibrahim, Rolü: visitor
+2024-12-30 09:42:13 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-30 09:42:25 | UserID: 3 | Action: Giriş işlemi yapıldı. Kullanıcı: ibrahim, Rolü: visitor
+2024-12-30 09:43:28 | UserID: 3 | Action: Giriş işlemi yapıldı. Kullanıcı: ibrahim, Rolü: visitor
+2024-12-30 09:46:47 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-30 09:46:58 | UserID: 3 | Action: Giriş işlemi yapıldı. Kullanıcı: ibrahim, Rolü: visitor
+2024-12-30 10:04:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 10:12:48 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 10:13:42 | UserID: 1 | Action: Müşteri Kaydı Eklendi: customer tarafı?
+2024-12-30 10:14:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 10:25:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 10:25:40 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: customer tarafi? -> customer tarafi?
+Açıklama: projede bir sey oldu deneme -> güncelleme
+Ülke: 4 -> 4
+Şehir: 4 -> 4
+Makineler: CNC Köse Temizleme 119 -> CNC Köse Temizleme 119
+Markalar: Testpen -> Egepen
+Profil Serileri: 456 serisi -> Zendow Sistemi
+Profil Örnekleri: Süleyman -> PA7502101
+Seri Numaraları: 31 -> 31
+2024-12-30 10:25:49 | UserID: 1 | Action: Müşteri Silindi:
+Ad: customer tarafi?,
+Açıklama: güncelleme,
+Ülke: Canada
+,Şehir: Ottava,
+Makineler: CNC Köse Temizleme 119,
+Markalar: Egepen,
+Profil Serileri: Zendow Sistemi,
+Profil Örnekleri: PA7502101,
+Seri Numaraları: 31
