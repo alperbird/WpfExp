@@ -38,7 +38,7 @@
                 <ListBox x:Name="lstpSeries" Width="200" Height="100" SelectionMode="Single" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
 
                 <TextBlock Text="Profil Örnekleri:"/>
-                <ListBox x:Name="lstpexm" Width="200" Height="100" SelectionMode="Single" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
+                <ListBox x:Name="lstpexm" Width="200" Height="100" SelectionMode="Multiple" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
 
                 <TextBlock Text="Seri Numarası:"/>
                 <TextBox x:Name="txtSerieNumber" Width="200" Margin="0,0,0,10"/>

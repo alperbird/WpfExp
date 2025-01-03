@@ -186,39 +186,34 @@ namespace WpfExp.VisitorPage
         #endregion
 
         #region Dosya İşlemleri
-        private string SaveFileToDesktop(byte[] fileContent, string fileType)
+        private string SaveFileToDesktop(byte[] fileContent, string fileType, OpenFilePaths paths)
         {
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string denemeFolderPath = Path.Combine(desktopPath, "Deneme");
+            string targetFolder = Path.Combine(desktopPath, "Profiller", paths.Country, paths.City, paths.Customer, paths.Brand);
 
-            // "Deneme" klasörünü oluştur
-            if (!Directory.Exists(denemeFolderPath))
+            if (!Directory.Exists(targetFolder))
             {
-                Directory.CreateDirectory(denemeFolderPath);
+                Directory.CreateDirectory(targetFolder);
             }
 
-            // Benzersiz dosya adı oluştur
-            string uniqueFileName = $"{Path.GetFileNameWithoutExtension(fileType)}_{Guid.NewGuid()}{Path.GetExtension(fileType)}";
+            string fileName = $"{Path.GetFileNameWithoutExtension(fileType)}_{Guid.NewGuid()}{Path.GetExtension(fileType)}";
+            string filePath = Path.Combine(targetFolder, fileName);
 
-            string tempPath = Path.Combine(denemeFolderPath, uniqueFileName);
+            File.WriteAllBytes(filePath, fileContent);
 
-            // Dosyayı kaydet
-            File.WriteAllBytes(tempPath, fileContent);
-
-            return tempPath;
+            return filePath;
         }
 
-        private void OpenFile(int fileId)
+        private void OpenFile(OpenFilePaths paths)
         {
-            if (fileId == 0)
+            if (paths == null || paths.FileId <= 0)
             {
                 MessageBox.Show("Geçerli bir dosya seçilemedi!", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             string fileType;
-            byte[] fileContent = _fileRepo
-                .GetFileContent(fileId, out fileType);
+            byte[] fileContent = _fileRepo.GetFileContent(paths.FileId, out fileType);
 
             if (fileContent == null || string.IsNullOrEmpty(fileType))
             {
@@ -226,7 +221,7 @@ namespace WpfExp.VisitorPage
                 return;
             }
 
-            string filePath = SaveFileToDesktop(fileContent, fileType);
+            string filePath = SaveFileToDesktop(fileContent, fileType, paths);
 
             // Dosyayı aç
             Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
@@ -234,18 +229,105 @@ namespace WpfExp.VisitorPage
 
         private void OpenFileButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button)
+            if (sender is Button button && button.DataContext is object dataContext)
             {
-                if (button != null && button.Tag != null && int.TryParse(button.Tag.ToString(), out int fileId) && fileId > 0)
+                try
                 {
-                    MessageBox.Show($"Dosya ID: {fileId}");
-                    OpenFile(fileId);
+                    // FileDetails listesini DataContext'ten çek
+                    var fileDetailsProperty = dataContext.GetType().GetProperty("FileDetails");
+                    var fileDetails = fileDetailsProperty?.GetValue(dataContext) as IEnumerable<object>;
+
+                    if (fileDetails == null || !fileDetails.Any())
+                    {
+                        MessageBox.Show("Açılacak dosya bulunamadı.", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+
+                    string country = ulkeler.SelectedItem?.ToString();
+                    string city = sehirler.SelectedItem?.ToString();
+                    string customer = GetCustomerNameSelectedRow();
+                    string brand = GetBrandFromSelectedRow();
+
+                    foreach (var file in fileDetails)
+                    {
+                        var idProperty = file.GetType().GetProperty("Id");
+                        var fileTypeProperty = file.GetType().GetProperty("FileType");
+                        var contentProperty = file.GetType().GetProperty("ContentSize");
+
+                        if (idProperty != null && fileTypeProperty != null && contentProperty != null)
+                        {
+                            int fileId = Convert.ToInt32(idProperty.GetValue(file));
+                            string fileType = fileTypeProperty.GetValue(file)?.ToString();
+                            byte[] fileContent = contentProperty.GetValue(file) as byte[];
+
+                            if (fileId > 0 && fileContent != null)
+                            {
+                                var paths = new OpenFilePaths
+                                {
+                                    FileId = fileId,
+                                    Country = country,
+                                    City = city,
+                                    Customer = customer,
+                                    Brand = brand
+                                };
+
+                                string filePath = SaveFileToDesktop(fileContent, fileType, paths);
+                                Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Dosya ID: {fileId} içerik eksik veya geçersiz!", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Tüm dosyalar başarıyla açıldı.", "Başarılı", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Geçerli bir dosya seçilemedi veya ID değeri hatalı.", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Dosyalar açılırken hata oluştu: {ex.Message}", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
+            else
+            {
+                MessageBox.Show("Geçerli bir dosya bağlamı bulunamadı.", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        #endregion
+
+        #region Dosya İşlemleri Yardımcı Metotlar
+        private string GetBrandFromSelectedRow()
+        {
+            if (dgMakina.SelectedItem is DataRowView selectedRow)
+            {
+                // Seçili satırdaki veriye doğrudan eriş
+                if (selectedRow["BrandName"] != DBNull.Value)
+                {
+                    return selectedRow["BrandName"].ToString(); // Doğrudan "name" kolonunu al
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bir satır seçilmedi!");
+            }
+            return "Marka bilgisi bulunamadı!";
+        }
+
+        private string GetCustomerNameSelectedRow()
+        {
+            if (dgMakina.SelectedItem is DataRowView selectedRow)
+            {
+                // Seçili satırdaki veriye doğrudan eriş
+                if (selectedRow["CustomerName"] != DBNull.Value)
+                {
+                    return selectedRow["CustomerName"].ToString(); // Doğrudan "name" kolonunu al
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bir satır seçilmedi!");
+            }
+            return "Müşterinin adı bulunamadı!";
         }
         #endregion
 

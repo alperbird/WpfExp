@@ -1362,3 +1362,161 @@ Markalar: Egepen,
 Profil Serileri: Zendow Sistemi,
 Profil Örnekleri: PA7502101,
 Seri Numaraları: 31
+2024-12-30 13:02:20 | UserID: 2 | Action: Giriş işlemi yapıldı. Kullanıcı: harun, Rolü: moderator
+2024-12-30 13:14:03 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 13:56:03 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 15:47:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 15:48:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 15:58:57 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:00:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:01:13 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:04:23 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:05:03 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:10:04 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:11:26 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:12:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:13:23 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:14:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:15:59 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:31:45 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:31:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:33:29 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:37:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:38:39 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 16:58:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:00:48 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:01:17 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:01:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:04:38 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:05:47 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:07:05 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:11:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:16:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:17:28 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:18:01 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:19:09 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:20:00 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:21:17 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:31:45 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:32:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:44:51 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:53:55 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:57:39 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-30 17:58:20 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 07:44:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 07:56:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 07:58:41 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:00:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:01:46 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:03:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:03:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:12:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:15:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:19:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:21:59 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:22:27 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:26:15 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:26:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:30:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:32:08 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:33:09 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:34:31 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:35:19 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 08:48:42 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 09:01:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 09:57:21 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 09:57:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:00:26 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:06:50 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:08:14 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:10:06 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:12:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:13:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:21:09 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:29:58 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:31:00 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:35:32 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:38:43 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:41:57 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 10:43:52 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:02:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:07:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:08:10 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:09:01 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:39:23 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:39:49 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:41:09 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:44:17 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:48:47 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:52:17 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:53:42 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 11:55:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 14:01:12 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 14:04:49 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 14:05:22 | UserID: 1 | Action: Müşteri Güncellendi:
+Ad: harun ekliyor -> harun ekliyor
+Açıklama: deneme yapiyoruz -> deneme yapiyoruz
+Ülke: 2 -> 2
+Şehir: 2 -> 2
+Makineler: Turbocut 500 -> Turbocut 500
+Markalar: Egepen -> Egepen
+Profil Serileri: Legend Sistemi -> Legend Sistemi
+Profil Örnekleri:  -> Süleyman
+Seri Numaraları: 3691215 -> 3691215
+2024-12-31 14:06:27 | UserID: 1 | Action: Müşteri Silindi:
+Ad: harun ekliyor,
+Açıklama: deneme yapiyoruz,
+Ülke: Serbia
+,Şehir: Belgrad,
+Makineler: Turbocut 500,
+Markalar: Egepen,
+Profil Serileri: Legend Sistemi,
+Profil Örnekleri: Süleyman,
+Seri Numaraları: 3691215
+2024-12-31 14:12:04 | UserID: 1 | Action: Müşteri Silindi:
+Ad: harun ekliyor,
+Açıklama: deneme yapiyoruz,
+Ülke: Serbia
+,Şehir: Belgrad,
+Makineler: Turbocut 400, Turbocut 500, CNC Köse Temizleme 119,
+Markalar: Adopen, Testpen, Egepen, Firatpen,
+Profil Serileri: Selenit 75, Yeni Garnet 70, Elegance 80, Redonit 85, 888 Serisi, Atlantik 777, Atlantik 760, Legend Sistemi, Legend Art Sistemi, Zendow Sistemi, 123 serisi, 456 serisi, 789 serisi,
+Profil Örnekleri: kanat, OKayit, deneme1, deneme2, deneme3, deneme4, PA7502101, Süleyman,
+Seri Numaraları: 3691215, 3691215, 3691215
+2024-12-31 14:14:03 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 15:14:37 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 15:15:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 15:16:26 | UserID: 1 | Action: Müşteri Kaydı Eklendi: Mansur
+2024-12-31 16:33:32 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 16:50:16 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 17:10:18 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2024-12-31 17:47:44 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:09:48 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:12:32 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:13:24 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:14:04 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:27:22 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:30:08 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:30:46 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:39:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:49:35 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:50:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 08:52:30 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:13:46 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:14:42 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:15:00 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:32:58 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:33:40 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:40:11 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:50:43 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:54:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:56:23 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:56:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:58:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 09:59:21 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 10:00:56 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 10:01:34 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 10:05:51 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 10:07:53 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 10:12:36 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin
+2025-01-02 10:13:33 | UserID: 1 | Action: Giriş işlemi yapıldı. Kullanıcı: alper, Rolü: admin

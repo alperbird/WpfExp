@@ -19,15 +19,20 @@ namespace WpfExp.MainPage
         {
             DataTable machineTbl = new DataTable();
             string machineQuery = @"
-                                    SELECT 
-                                    cm.customerId AS 'CustomerId',
-                                    ma.name AS 'MachineName',
-                                    ma.description AS 'description',
-                                    snm.serialNum AS 'SerialNumber'
-                                    FROM CUSTOMER_MACHINE cm
-                                    JOIN MACHINES ma ON cm.machineId = ma.Id
-                                    LEFT JOIN SERIAL_NUMBERS snm ON ma.Id = snm.machineId AND cm.customerId = snm.customerId
-                                    WHERE cm.customerId = @CustomerId";
+                SELECT 
+                cu.Id AS CustomerId,    
+                cu.name AS CustomerName,
+                ma.name AS MachineName,
+                ma.description AS description,
+                pb.name AS BrandName,
+                sn.serialNum AS SerialNumber
+                FROM CUSTOMER cu
+                LEFT JOIN CUSTOMER_MACHINE cm ON cu.Id = cm.customerId
+                LEFT JOIN MACHINES ma ON cm.machineId = ma.Id
+                LEFT JOIN SERIAL_NUMBERS sn ON ma.Id = sn.machineId AND cu.Id = sn.customerId
+                LEFT JOIN CUSTOMER_BRANDS cb ON cu.Id = cb.customerId
+                LEFT JOIN PROFILE_BRANDS pb ON cb.brandId = pb.Id
+                WHERE cu.Id = @CustomerId";
 
 
             using (var conn = _conn.GetConnection())

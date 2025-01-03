@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Closed="ClosedWindow"
-        Title="Machines Detail" Height="500" Width="800">
+        Title="Machines Detail" Height="590" Width="800">
 
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -53,7 +53,7 @@
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="Profil Markaları :" FontWeight="Bold" Margin="0,10,0,0"/>
-                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}" Height="100" IsReadOnly="True"/>
+                        <DataGrid x:Name="Brand" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}" Height="100" IsReadOnly="True"/>
 
                         <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0"/>
                         <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}" Height="100" IsReadOnly="True"/>
@@ -70,7 +70,7 @@
                                 Content="Dosyayı Aç" 
                                 Click="OpenFileButton_Click" 
                                 Command="{Binding DataContext.OpenFileCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
-                                CommandParameter="{Binding Id}" 
+                                CommandParameter="{Binding FileId}" 
                                 Margin="5" />
 
 
@@ -81,9 +81,11 @@
 
 
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=CustomerId}" Width="50" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Müşteri Adı" Binding="{Binding Path=CustomerName}" Width="*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Makine Adı" Binding="{Binding Path=MachineName}" Width="*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Açıklama" Binding="{Binding Path=description}" Width="2*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Müşteri ID" Binding="{Binding Path=CustomerId}" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Açıklama" Binding="{Binding Path=description}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Marka" Binding="{Binding Path=BrandName}" Width="100" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Seri No" Binding="{Binding Path=SerialNumber}" Width="100" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>

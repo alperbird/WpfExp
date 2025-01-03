@@ -203,8 +203,10 @@
     <Compile Include="MainPage\ExampleRepo.cs" />
     <Compile Include="MainPage\FileRepo.cs" />
     <Compile Include="MainPage\MachineRepo.cs" />
+    <Compile Include="MainPage\OpenFilePaths.cs" />
     <Compile Include="MainPage\RelayCommand.cs" />
     <Compile Include="MainPage\SerieRepo.cs" />
+    <Compile Include="Models\FileModel.cs" />
     <Compile Include="VisitorPage\1-VisitCountry.xaml.cs">
       <DependentUpon>1-VisitCountry.xaml</DependentUpon>
     </Compile>
@@ -476,6 +478,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="LogRecords\Logs.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

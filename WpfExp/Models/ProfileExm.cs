@@ -12,6 +12,6 @@ namespace WpfExp.Models
         public string name { get; set; }
         public string description { get; set; }
         public string filetype { get; set; }
-        public byte filecontent { get; set; }
+        public byte[] filecontent { get; set; }
     }
 }

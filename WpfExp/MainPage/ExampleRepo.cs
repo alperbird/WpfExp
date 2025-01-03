@@ -23,7 +23,7 @@ namespace WpfExp.MainPage
                               SELECT 
                               pe.Id, 
                               pe.filetype, 
-                              DATALENGTH(pe.filecontent) / 1024 AS ContentSize -- KB olarak
+                              pe.filecontent AS ContentSize 
                               FROM CUSTOMER_PROFILE_EXAMPLES cpe
                               INNER JOIN PROFILE_EXAMPLE pe ON cpe.profileExampleId = pe.Id
                               WHERE cpe.customerId = @customerId";
