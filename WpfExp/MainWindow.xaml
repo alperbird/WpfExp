@@ -1,94 +1,192 @@
 ﻿<Window x:Class="WpfExp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:WpfExp.MainPage"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        Closed="ClosedWindow"
-        Title="Machines Detail" Height="590" Width="800">
+        Title="Machines Detail" Height="600" Width="800"
+        Closed="ClosedWindow">
 
     <Grid Margin="10">
+        <!-- Satır Tanımları -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Üstteki filtreler -->
+            <!-- Filtreler -->
             <RowDefinition Height="*"/>
-            <!-- DataGrid alanı -->
+            <!-- DataGrid -->
+            <RowDefinition Height="Auto"/>
+            <!-- RadioButton ve Alt Buton -->
         </Grid.RowDefinitions>
 
-        <!-- Üst Filtreler -->
-        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Left">
-            <Label Content="Ülkeler" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox x:Name="ulkeler"
-                      Width="150"
-                      IsTextSearchEnabled="True"
-                      SelectionChanged="countries_SelectionChanged"
-                      Margin="0,0,15,0"/>
+        <!-- Filtreler -->
+        <Grid Grid.Row="0" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
 
-            <Label Content="Şehirler" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox x:Name="sehirler"
-                      Width="150"
-                      SelectionChanged="sehirler_SelectionChanged"
-                      Margin="0,0,15,0"/>
+            <!-- Müşteriler için filtre -->
+            <StackPanel x:Name="MusterilerGrid" Orientation="Horizontal" Visibility="Visible" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,0,10">
+                <Label Content="Ülkeler:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox x:Name="ulkeler"
+                          Width="150"
+                          IsTextSearchEnabled="True"
+                          SelectionChanged="countries_SelectionChanged"
+                          Margin="0,0,15,0"/>
+                <Label Content="Şehirler:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox x:Name="sehirler"
+                          Width="150"
+                          SelectionChanged="sehirler_SelectionChanged"
+                          Margin="0,0,15,0"/>
+                <Label Content="Müşteri:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox x:Name="musteri"
+                          DisplayMemberPath="name"
+                          SelectedValuePath="CustomerID"
+                          Width="150"
+                          SelectionChanged="musteri_SelectionChanged"
+                          Margin="0,0,15,0"/>
+            </StackPanel>
 
-            <Label Content="Müşteri" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox x:Name="musteri" 
-                      DisplayMemberPath="name" 
-                      SelectedValuePath="CustomerID" 
-                      Width="150" 
-                      SelectionChanged="musteri_SelectionChanged" 
-                      Margin="0,0,15,0"/>
-        </StackPanel>
+            <!-- Markalar için filtre -->
+            <StackPanel x:Name="MarkalarGrid" Orientation="Horizontal" Visibility="Collapsed" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,0,10">
+                <Label Content="Markalar:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox x:Name="markalar"
+                          Width="150"
+                          IsTextSearchEnabled="True"
+                          DisplayMemberPath="name"
+                          SelectedValuePath="Id"
+                          SelectionChanged="markalar_SelectionChanged"
+                          Margin="0,0,15,0"/>
+                <Label Content="Profil Serileri:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox x:Name="seriler"
+                          Width="150"
+                          SelectionChanged="seriler_SelectionChanged"
+                          DisplayMemberPath="name"
+                          SelectedValuePath="Id"
+                          Margin="0,0,15,0"/>
+            </StackPanel>
+        </Grid>
 
         <!-- DataGrid -->
         <DataGrid x:Name="dgMakina"
-                  Grid.Row="1"
-                  AutoGenerateColumns="False"
-                  CanUserAddRows="False"
-                  HeadersVisibility="Column"
-                  IsReadOnly="True"
-                  LoadingRowDetails="DataGrid_LoadingRowDetails"
-                  RowDetailsVisibilityMode="VisibleWhenSelected">
+          ItemsSource="{Binding}"
+          Grid.Row="1"
+          AutoGenerateColumns="False"
+          CanUserAddRows="False"
+          HeadersVisibility="Column"
+          IsReadOnly="True"
+          LoadingRowDetails="DataGrid_LoadingRowDetails"
+          RowDetailsVisibilityMode="VisibleWhenSelected"
+          Margin="0,10,0,0">
+            <!-- Satır Detayları -->
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
                     <StackPanel>
+                        <!-- Profil Markaları -->
                         <TextBlock Text="Profil Markaları :" FontWeight="Bold" Margin="0,10,0,0"/>
-                        <DataGrid x:Name="Brand" CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailBrands}" Height="100" IsReadOnly="True"/>
+                        <DataGrid x:Name="Brand" 
+                          CanUserAddRows="False" 
+                          AutoGenerateColumns="True" 
+                          ItemsSource="{Binding DetailBrands}" 
+                          Height="100" 
+                          IsReadOnly="True"/>
 
+                        <!-- Profil Serileri -->
                         <TextBlock Text="Profil Serileri :" FontWeight="Bold" Margin="0,10,0,0"/>
-                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="True" ItemsSource="{Binding DetailSeries}" Height="100" IsReadOnly="True"/>
+                        <DataGrid CanUserAddRows="False" 
+                          AutoGenerateColumns="True" 
+                          ItemsSource="{Binding DetailSeries}" 
+                          Height="100" 
+                          IsReadOnly="True"/>
 
+                        <!-- Profil Örnekleri -->
                         <TextBlock Text="Profil Örnekleri :" FontWeight="Bold" Margin="0,10,0,0"/>
-                        <DataGrid CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding DetailExamples}" Height="150" IsReadOnly="True">
+                        <DataGrid CanUserAddRows="False" 
+                          AutoGenerateColumns="False" 
+                          ItemsSource="{Binding DetailExamples}" 
+                          Height="150" 
+                          IsReadOnly="True">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="100" />
                                 <DataGridTextColumn Header="Dosya Adı" Binding="{Binding filetype}" Width="200" />
-                                <DataGridTextColumn Header="Boyut (KB)" Binding="{Binding ContentSize}" Width="200" />
+                                <DataGridTextColumn Header="Boyut (KB)" Binding="{Binding FileSize}" Width="200" />
                             </DataGrid.Columns>
                         </DataGrid>
+                        <!-- Dosya Açma Butonu -->
                         <Button x:Name="OpenFileButton"
-                                Content="Dosyayı Aç" 
-                                Click="OpenFileButton_Click" 
-                                Command="{Binding DataContext.OpenFileCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
-                                CommandParameter="{Binding FileId}" 
-                                Margin="5" />
-
-
-
+                        Content="Dosyayı Aç" 
+                        Click="OpenFileButton_Click" 
+                        Command="{Binding DataContext.OpenFileCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                        CommandParameter="{Binding FileId}" 
+                        Margin="5" />
                     </StackPanel>
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>
 
-
+            <!-- Ana Kolonlar -->
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding Path=CustomerId}" Width="50" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Müşteri Adı" Binding="{Binding Path=CustomerName}" Width="*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Makine Adı" Binding="{Binding Path=MachineName}" Width="*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Açıklama" Binding="{Binding Path=description}" Width="*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Marka" Binding="{Binding Path=BrandName}" Width="100" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Seri No" Binding="{Binding Path=SerialNumber}" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Id" 
+                            Binding="{Binding Path=CustomerId}" 
+                            Width="50" 
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Header="Müşteri Adı" 
+                            Binding="{Binding Path=CustomerName}" 
+                            Width="*" 
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Header="Makine Adı" 
+                            Binding="{Binding Path=MachineName}" 
+                            Width="*" 
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Header="Açıklama" 
+                            Binding="{Binding Path=description}" 
+                            Width="*" 
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Header="Marka" 
+                            Binding="{Binding Path=BrandName}" 
+                            Width="100" 
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Header="Seri No" 
+                            Binding="{Binding Path=SerialNumber}" 
+                            Width="100" 
+                            IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Buton Sayfası" HorizontalAlignment="Left" Margin="688,6,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click"/>
+        <DataGrid x:Name="dgMarka"
+          Grid.Row="1"
+          AutoGenerateColumns="True"
+          CanUserAddRows="False"
+          HeadersVisibility="Column"
+          IsReadOnly="True"
+          Visibility="Collapsed"
+          Margin="0,20,0,0"
+          RowDetailsVisibilityMode="VisibleWhenSelected">
+            <!-- RowDetails Template -->
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Button Content="Dosyaları Aç"
+                        Click="OpenFileForBrands_Click"
+                        Margin="5,0,0,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+        <!-- Alt Kısım: RadioButton ve Buton -->
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+            <RadioButton x:Name="rbMusteriler"
+                         Content="Müşteriler"
+                         GroupName="FilterType"
+                         IsChecked="True"
+                         Checked="RbMusteriler_Checked"
+                         Margin="0,0,15,0"/>
+            <RadioButton x:Name="rbMarkalar"
+                         Content="Markalar"
+                         GroupName="FilterType"
+                         Checked="RbMarkalar_Checked"
+                         
+                         Margin="0,0,15,0"/>
+            <Button Content="Buton Sayfası"
+                    Click="Button_Click"
+                    Width="120"
+                    Height="35"
+                    Margin="15,0,0,0"/>
+        </StackPanel>
     </Grid>
 </Window>

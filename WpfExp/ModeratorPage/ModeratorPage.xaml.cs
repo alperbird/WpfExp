@@ -72,12 +72,13 @@ namespace WpfExp.ModeratorPage
                 var fileDetails = new List<FileModel>();
                 foreach (DataRow row in exampleDetails.Rows)
                 {
+                    byte[] contentSize = row["ContentSize"] as byte[];
                     // Örnek ID ve diğer dosya detaylarını alıyoruz
                     fileDetails.Add(new FileModel
                     {
                         Id = Convert.ToInt32(row["Id"]),
                         FileType = row["filetype"].ToString(),
-                        ContentSize = row.Table.Columns.Contains("ContentSize") ? row["ContentSize"] as byte[] : null
+                        ContentSize = contentSize
                     });
                 }
 

@@ -38,6 +38,7 @@ namespace WpfExp.PageExample
             FileList = new ObservableCollection<string>();
             lstFiles.ItemsSource = FileList;
             TableRead();
+            cmbxFull();
         }
         public void TableRead()
         {
@@ -63,6 +64,24 @@ namespace WpfExp.PageExample
 
                     dgExamples.ItemsSource = dt.DefaultView;
                 }
+            }
+        }
+
+        private void cmbxFull()
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string query = "SELECT Id, name FROM PROFILE_SERIES";
+
+                SqlCommand pbcmd = new SqlCommand(query, conn);
+                SqlDataAdapter adpb = new SqlDataAdapter(pbcmd);
+                DataTable dt = new DataTable();
+                adpb.Fill(dt);
+
+                cmbSerie.ItemsSource = dt.DefaultView;
+                cmbSerie.DisplayMemberPath = "name";
+                cmbSerie.SelectedValuePath = "Id";
             }
         }
 
@@ -147,8 +166,6 @@ namespace WpfExp.PageExample
             Clean();
         }
 
-
-
         private void updateBtn(object sender, RoutedEventArgs e)
         {
             if (!(dgExamples.SelectedItem is DataRowView row)) 
@@ -199,8 +216,6 @@ namespace WpfExp.PageExample
             TableRead();
             Clean();
         }
-
-
 
         private void deleteBtn(object sender, RoutedEventArgs e)
         {
@@ -277,12 +292,12 @@ namespace WpfExp.PageExample
             }
         }
 
-
         private void Clean()
         {
             txtExmName.Text = "";
             txtExmDesc.Text = "";
             FileList.Clear();
+            cmbSerie.SelectedIndex = -1;
         }
 
         #region File Upload

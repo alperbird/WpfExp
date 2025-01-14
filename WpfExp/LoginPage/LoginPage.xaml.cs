@@ -26,7 +26,7 @@ namespace WpfExp.LoginPage
 
         private string connStr;
 
-        public LoginPage()
+            public LoginPage()
         {
             InitializeComponent();
             connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;

@@ -761,7 +761,7 @@ namespace WpfExp
                             cmd.ExecuteNonQuery();
                         }
                         string logMessage = $"Müşteri Silindi:\n" +
-                                $"Ad: {customerName},\nAçıklama: {customerDescription},\nÜlke: {country}\n,Şehir: {city},\n" +
+                                $"Ad: {customerName},\nAçıklama: {customerDescription},\nÜlke: {country},\nŞehir: {city},\n" +
                                 $"Makineler: {machines},\nMarkalar: {brands},\nProfil Serileri: {profileSeries},\n" +
                                 $"Profil Örnekleri: {examples},\nSeri Numaraları: {serialNumbers}";
                         LogUserProcess.AddLog(currentUserId, logMessage);

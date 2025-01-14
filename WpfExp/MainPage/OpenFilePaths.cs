@@ -13,5 +13,6 @@ namespace WpfExp.MainPage
         public string City { get; set; }
         public string Customer { get; set; }
         public string Brand { get; set; }
+        public string Series { get; set; }
     }
 }

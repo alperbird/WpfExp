@@ -21,7 +21,7 @@ namespace WpfExp
     {
         public AdminLoginPanel()
         {
-            InitializeComponent();
+            InitializeComponent();  
         }
 
         private void btnAdminPanel(object sender, RoutedEventArgs e)

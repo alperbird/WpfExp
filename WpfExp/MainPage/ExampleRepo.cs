@@ -20,13 +20,14 @@ namespace WpfExp.MainPage
         {
             DataTable exampleTbl = new DataTable();
             string exmQuery = @"
-                              SELECT 
-                              pe.Id, 
-                              pe.filetype, 
-                              pe.filecontent AS ContentSize 
-                              FROM CUSTOMER_PROFILE_EXAMPLES cpe
-                              INNER JOIN PROFILE_EXAMPLE pe ON cpe.profileExampleId = pe.Id
-                              WHERE cpe.customerId = @customerId";
+                             SELECT 
+                             pe.Id, 
+                             pe.filetype, 
+                             pe.filecontent, -- Dosya içeriği
+                             DATALENGTH(pe.filecontent) / 1024 AS ContentSize -- KB cinsinden dosya boyutu
+                             FROM CUSTOMER_PROFILE_EXAMPLES cpe
+                             INNER JOIN PROFILE_EXAMPLE pe ON cpe.profileExampleId = pe.Id
+                             WHERE cpe.customerId = @customerId";
 
             using (var conn = _conn.GetConnection())
             {

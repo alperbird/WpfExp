@@ -11,5 +11,7 @@ namespace WpfExp.Models
         public int Id { get; set; }
         public string FileType { get; set; }
         public byte[] ContentSize { get; set; }
+        public long FileSize { get; set; }
+
     }
 }

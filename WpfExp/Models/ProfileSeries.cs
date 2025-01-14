@@ -8,7 +8,7 @@ namespace WpfExp.Models
 {
     public class ProfileSeries
     {
-        public int serieID { get; set; }
+        public int Id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public int pbrandID { get; set; }
