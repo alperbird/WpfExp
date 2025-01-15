@@ -156,6 +156,7 @@ namespace WpfExp.ModeratorPage
             lstpSeries.DisplayMemberPath = "name";
             lstpSeries.SelectedValuePath = "Id";
 
+            lstpexm.ItemsSource = null;
             lstpexm.DisplayMemberPath = "name";
             lstpexm.SelectedValuePath = "Id";
         }
@@ -481,6 +482,56 @@ namespace WpfExp.ModeratorPage
             else
             {
                 lstpSeries.ItemsSource = null;
+            }
+        }
+
+        private void lstpSeries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lstpSeries.SelectedItems.Count > 0)
+            {
+                var seriesIds = lstpSeries.SelectedItems
+                    .Cast<DataRowView>()
+                    .Select(item => Convert.ToInt32(item["Id"]))
+                    .ToList();
+
+                LoadProfileExamples(seriesIds);
+            }
+            else
+            {
+                lstpexm.ItemsSource = null;
+            }
+        }
+
+        private void LoadProfileExamples(List<int> seriesIds)
+        {
+            if (seriesIds == null || seriesIds.Count == 0) return;
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    string queryExamples = $@"
+                SELECT DISTINCT Id, name 
+                FROM PROFILE_EXAMPLE
+                WHERE serieId IN ({string.Join(",", seriesIds)});";
+
+                    SqlCommand cmd = new SqlCommand(queryExamples, conn);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dtExamples = new DataTable();
+                    adapter.Fill(dtExamples);
+
+                    // Profil örneklerini ListBox'a yükle
+                    lstpexm.ItemsSource = dtExamples.DefaultView;
+                    lstpexm.DisplayMemberPath = "name";
+                    lstpexm.SelectedValuePath = "Id";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"HATA: {ex.Message}", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

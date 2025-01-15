@@ -168,6 +168,7 @@ namespace WpfExp
             lstpSeries.DisplayMemberPath = "name";
             lstpSeries.SelectedValuePath = "Id";
 
+            lstpexm.ItemsSource = null;
             lstpexm.DisplayMemberPath= "name";
             lstpexm.SelectedValuePath = "Id";
         }
@@ -195,6 +196,79 @@ namespace WpfExp
             }
         }
         #endregion
+        private void dgCustomer(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgCustomers.SelectedItem is DataRowView selectedRow)
+            {
+                txtName.Text = selectedRow["Müşteri Adı"].ToString();
+                txtDesc.Text = selectedRow["Açıklama"].ToString();
+
+                // Ülke ve Şehir
+                cmbCountry.SelectedItem = cmbCountry.Items
+                    .Cast<DataRowView>()
+                    .FirstOrDefault(item => item["name"].ToString() == selectedRow["Ülke"].ToString());
+                cmbCity.SelectedItem = cmbCity.Items
+                    .Cast<DataRowView>()
+                    .FirstOrDefault(item => item["name"].ToString() == selectedRow["Şehir"].ToString());
+
+                // Makineler 
+                var selectedMachine = selectedRow["Makineler"].ToString().Split(',').FirstOrDefault();
+                if (selectedMachine != null)
+                {
+                    var machine = lstMachine.Items.Cast<DataRowView>()
+                                   .FirstOrDefault(m => m["name"].ToString() == selectedMachine);
+
+                    if (machine != null)
+                    {
+                        lstMachine.SelectedItem = machine; // Tek seçim modu için
+                    }
+                }
+
+
+                // Markalar
+                var selectedBrands = selectedRow["Markalar"].ToString().Split(',').FirstOrDefault();
+                if (selectedBrands != null)
+                {
+                    var brand = lstpBrand.Items.Cast<DataRowView>()
+                                   .FirstOrDefault(b => b["name"].ToString() == selectedBrands);
+                    if (brand != null)
+                    {
+                        lstpBrand.SelectedItem = brand; // Tek seçim modu için
+                    }
+
+
+                    // Profil Serileri
+                    var selectedSeries = selectedRow["Profil Serileri"].ToString().Split(',').FirstOrDefault();
+                    if (selectedSeries != null)
+                    {
+                        var series = lstpSeries.Items.Cast<DataRowView>()
+                                       .FirstOrDefault(s => s["name"].ToString() == selectedSeries);
+                        if (series != null)
+                        {
+                            lstpSeries.SelectedItem = series; // Tek seçim modu için
+                        }
+
+                        // Profil Örnekleri
+                        var selectedExamples = selectedRow["Profil Örnekleri"].ToString().Split(',').FirstOrDefault();
+                        if (selectedExamples != null)
+                        {
+                            var example = lstpexm.Items.Cast<DataRowView>()
+                                           .FirstOrDefault(ex => ex["name"].ToString() == selectedExamples);
+                            if (example != null)
+                            {
+                                lstpexm.SelectedItem = example; // Tek seçim modu için
+                            }
+                        }
+                        // Seri Numaraları
+                        txtSerieNumber.Text = selectedRow["Seri Numaraları"].ToString();
+                    }
+
+                }
+            }
+        }
+
+
+
 
         #region Customer Insert
         private void insertBtn(object sender, RoutedEventArgs e)
@@ -377,79 +451,6 @@ namespace WpfExp
         }
 
         #endregion
-
-
-
-        private void dgCustomer(object sender, SelectionChangedEventArgs e)
-        {
-            if (dgCustomers.SelectedItem is DataRowView selectedRow)
-            {
-                txtName.Text = selectedRow["Müşteri Adı"].ToString();
-                txtDesc.Text = selectedRow["Açıklama"].ToString();
-
-                // Ülke ve Şehir
-                cmbCountry.SelectedItem = cmbCountry.Items
-                    .Cast<DataRowView>()
-                    .FirstOrDefault(item => item["name"].ToString() == selectedRow["Ülke"].ToString());
-                cmbCity.SelectedItem = cmbCity.Items
-                    .Cast<DataRowView>()
-                    .FirstOrDefault(item => item["name"].ToString() == selectedRow["Şehir"].ToString());
-
-                // Makineler 
-                var selectedMachine = selectedRow["Makineler"].ToString().Split(',').FirstOrDefault();
-                if (selectedMachine != null)
-                {
-                    var machine = lstMachine.Items.Cast<DataRowView>()
-                                   .FirstOrDefault(m => m["name"].ToString() == selectedMachine);
-
-                    if (machine != null)
-                    {
-                        lstMachine.SelectedItem = machine; // Tek seçim modu için
-                    }
-                }
-
-
-                // Markalar
-                var selectedBrands = selectedRow["Markalar"].ToString().Split(',').FirstOrDefault();
-                if (selectedBrands != null)
-                {
-                    var brand = lstpBrand.Items.Cast<DataRowView>()
-                                   .FirstOrDefault(b => b["name"].ToString() == selectedBrands);
-                    if (brand != null)
-                    {
-                        lstpBrand.SelectedItem = brand; // Tek seçim modu için
-                    }
-
-
-                    // Profil Serileri
-                    var selectedSeries = selectedRow["Profil Serileri"].ToString().Split(',').FirstOrDefault();
-                    if (selectedSeries != null)
-                    {
-                        var series = lstpSeries.Items.Cast<DataRowView>()
-                                       .FirstOrDefault(s => s["name"].ToString() == selectedSeries);
-                        if (series != null)
-                        {
-                            lstpSeries.SelectedItem = series; // Tek seçim modu için
-                        }
-
-                        // Profil Örnekleri
-                        var selectedExamples = selectedRow["Profil Örnekleri"].ToString().Split(',').FirstOrDefault();
-                        if (selectedExamples != null)
-                        {
-                            var example = lstpexm.Items.Cast<DataRowView>()
-                                           .FirstOrDefault(ex => ex["name"].ToString() == selectedExamples);
-                            if (example != null)
-                            {
-                                lstpexm.SelectedItem = example; // Tek seçim modu için
-                            }
-                        }
-                        // Seri Numaraları
-                        txtSerieNumber.Text = selectedRow["Seri Numaraları"].ToString();
-                    }
-
-                }
-            }
-        }
 
         #region Customer Update
         private void updateBtn(object sender, RoutedEventArgs e)
@@ -889,7 +890,7 @@ namespace WpfExp
             }
         }
 
-        #region Select Multiple Brand and Profile Series
+        #region Markalara göre profil serisi, Profil serisine göre profil örneği listeleme
         private void lstpBrand_SelectionChanged(object sender, SelectionChangedEventArgs e) // marka seçimine göre gelen profil serisi listbox
         {
             if (lstpBrand.SelectedItems.Count > 0)
@@ -924,7 +925,6 @@ namespace WpfExp
             }
         }
 
-
         private void LoadProfileSeries(List<int> brandIds)
         {
             if (brandIds == null || brandIds.Count == 0) return;
@@ -958,7 +958,58 @@ namespace WpfExp
                 MessageBox.Show($"HATA: {ex.Message}", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        private void lstpSeries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lstpSeries.SelectedItems.Count > 0)
+            {
+                var seriesIds = lstpSeries.SelectedItems
+                    .Cast<DataRowView>()
+                    .Select(item => Convert.ToInt32(item["Id"]))
+                    .ToList();
+
+                LoadProfileExamples(seriesIds);
+            }
+            else
+            {
+                lstpexm.ItemsSource = null;
+            }
+        }
+
+        private void LoadProfileExamples(List<int> seriesIds)
+        {
+            if (seriesIds == null || seriesIds.Count == 0) return;
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    string queryExamples = $@"
+                SELECT DISTINCT Id, name 
+                FROM PROFILE_EXAMPLE
+                WHERE serieId IN ({string.Join(",", seriesIds)});";
+
+                    SqlCommand cmd = new SqlCommand(queryExamples, conn);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dtExamples = new DataTable();
+                    adapter.Fill(dtExamples);
+
+                    // Profil örneklerini ListBox'a yükle
+                    lstpexm.ItemsSource = dtExamples.DefaultView;
+                    lstpexm.DisplayMemberPath = "name";
+                    lstpexm.SelectedValuePath = "Id";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"HATA: {ex.Message}", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         #endregion
+
     }
 
 }

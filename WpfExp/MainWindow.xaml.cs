@@ -287,13 +287,22 @@ namespace WpfExp
                 Directory.CreateDirectory(targetFolder);
             }
 
-            string fileName = $"{Path.GetFileNameWithoutExtension(fileType)}_{Guid.NewGuid()}{Path.GetExtension(fileType)}";
+            string fileName = $"{Path.GetFileNameWithoutExtension(fileType)}_{DateTime.Now:yyyyMMddHHmmss}{Path.GetExtension(fileType)}";
             string filePath = Path.Combine(targetFolder, fileName);
 
             File.WriteAllBytes(filePath, fileContent);
 
+            // Klasörü aç
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = targetFolder,
+                UseShellExecute = true,
+                Verb = "open"
+            });
+
             return filePath;
         }
+
 
         private void OpenFile(OpenFilePaths paths)
         {
@@ -320,15 +329,14 @@ namespace WpfExp
 
         private void OpenFileButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button && button.DataContext is object dataContext)    
+            if (sender is Button button && button.DataContext is object dataContext)
             {
                 try
                 {
-                    // FileDetails listesini DataContext'ten çek
                     var fileDetailsProperty = dataContext.GetType().GetProperty("FileDetails");
                     var fileDetails = fileDetailsProperty?.GetValue(dataContext) as IEnumerable<object>;
 
-                        if (fileDetails == null || !fileDetails.Any())
+                    if (fileDetails == null || !fileDetails.Any())
                     {
                         MessageBox.Show("Açılacak dosya bulunamadı.", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
@@ -338,6 +346,8 @@ namespace WpfExp
                     string city = sehirler.SelectedItem?.ToString();
                     string customer = GetCustomerNameSelectedRow();
                     string brand = GetBrandFromSelectedRow();
+
+                    string targetFolder = null;
 
                     foreach (var file in fileDetails)
                     {
@@ -362,14 +372,20 @@ namespace WpfExp
                                     Brand = brand
                                 };
 
-                                string filePath = SaveFileToDesktop(fileContent, fileType, paths);
-                                Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
-                            }
-                            else
-                            {
-                                MessageBox.Show($"Dosya ID: {fileId} içerik eksik veya geçersiz!", "Hata", MessageBoxButton.OK, MessageBoxImage.Error);
+                                targetFolder = SaveFileToDesktop(fileContent, fileType, paths);
                             }
                         }
+                    }
+
+                    if (!string.IsNullOrEmpty(targetFolder))
+                    {
+                        // İşlem tamamlandıktan sonra klasörü aç
+                        Process.Start(new ProcessStartInfo
+                        {
+                            FileName = Path.GetDirectoryName(targetFolder),
+                            UseShellExecute = true,
+                            Verb = "open"
+                        });
                     }
 
                     MessageBox.Show("Tüm dosyalar başarıyla açıldı.", "Başarılı", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -385,42 +401,74 @@ namespace WpfExp
             }
         }
 
+
         // Markalar için dosya açma işlemleri
         private string SaveFileToDesktopForBrands(byte[] fileContent, string fileType, OpenFilePaths paths)
         {
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string targetFolder = Path.Combine(desktopPath, "Profiller", paths.Brand, paths.Series);
 
+            // Hedef klasörü oluştur
             if (!Directory.Exists(targetFolder))
             {
                 Directory.CreateDirectory(targetFolder);
             }
 
+            // Dosya adını oluştur ve kaydet
             string fileName = $"{Path.GetFileNameWithoutExtension(fileType)}_{DateTime.Now:yyyyMMddHHmmss}{Path.GetExtension(fileType)}";
             string filePath = Path.Combine(targetFolder, fileName);
-
             File.WriteAllBytes(filePath, fileContent);
+
+            // Klasörü aç
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = targetFolder,
+                UseShellExecute = true,
+                Verb = "open"
+            });
 
             return filePath;
         }
+
 
         private void OpenFileForBrands_Click(object sender, RoutedEventArgs e)
         {
             if (seriler.SelectedValue != null)
             {
                 int seriesId = Convert.ToInt32(seriler.SelectedValue);
+
+                // Seçili seriye ait dosyaları getir
                 var files = _serieRepoNonCustomer.GetFilesBySeriesId(seriesId);
+
+                if (files.Count == 0)
+                {
+                    MessageBox.Show("Bu seri için hiçbir dosya bulunamadı.", "Bilgi", MessageBoxButton.OK, MessageBoxImage.Information);
+                    return;
+                }
+
+                string targetFolder = null;
 
                 foreach (var file in files)
                 {
-                    string filePath = SaveFileToDesktopForBrands(file.ContentSize, file.FileType, new OpenFilePaths
+                    targetFolder = SaveFileToDesktopForBrands(file.ContentSize, file.FileType, new OpenFilePaths
                     {
                         Brand = markalar.Text,
                         Series = seriler.Text
                     });
-
-                    Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
                 }
+
+                // Dosyaları kaydettikten sonra klasörü aç
+                if (!string.IsNullOrEmpty(targetFolder))
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = Path.GetDirectoryName(targetFolder),
+                        UseShellExecute = true,
+                        Verb = "open"
+                    });
+                }
+
+                MessageBox.Show("Dosyalar başarıyla yüklendi ve klasör açıldı!", "Başarılı", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -494,7 +542,9 @@ namespace WpfExp
 
             dgMakina.Visibility = Visibility.Visible; // Müşteri DataGrid’i görünür
             dgMarka.Visibility = Visibility.Collapsed; // Marka DataGrid’i gizle
-            
+
+            btnBrandsFileOpen.Visibility = Visibility.Collapsed; 
+
         }
 
         private void RbMarkalar_Checked(object sender, RoutedEventArgs e)
@@ -504,6 +554,8 @@ namespace WpfExp
 
             dgMakina.Visibility = Visibility.Collapsed; // Müşteri DataGrid gizle
             dgMarka.Visibility = Visibility.Visible; // Marka DataGrid göster
+
+            btnBrandsFileOpen.Visibility = Visibility.Visible;
             dgMarka.ItemsSource = null; 
 
             LoadBrands(); 

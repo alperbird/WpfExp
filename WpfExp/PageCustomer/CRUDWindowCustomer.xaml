@@ -35,7 +35,8 @@
              SelectionChanged="lstpBrand_SelectionChanged"/>
 
                 <TextBlock Text="Profil Serileri:"/>
-                <ListBox x:Name="lstpSeries" Width="200" Height="100" SelectionMode="Single" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
+                <ListBox x:Name="lstpSeries" Width="200" Height="100" SelectionMode="Single" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"
+                         SelectionChanged="lstpSeries_SelectionChanged"/>
 
                 <TextBlock Text="Profil Örnekleri:"/>
                 <ListBox x:Name="lstpexm" Width="200" Height="100" SelectionMode="Multiple" DisplayMemberPath="name" SelectedValuePath="Id" Margin="0,0,0,10"/>
