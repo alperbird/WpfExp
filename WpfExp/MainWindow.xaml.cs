@@ -509,6 +509,7 @@ namespace WpfExp
             LoadBrands(); 
         }
 
+        //Markalar combobox
         private void markalar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (markalar.SelectedItem != null)
